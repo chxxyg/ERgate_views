@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="ERgateProject">
-        <wb-resource deploy-path="/" source-path="/webapp" tag="defaultRootSource"/>
+    <wb-module deploy-name="ERgate">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="ergate"/>
-        <property name="java-output-path" value="/ERgateProject/webapp/WEB-INF/classes"/>
+        <property name="java-output-path" value="/ERgate/WebContent/WEB-INF/classes"/>
     </wb-module>
 </project-modules>

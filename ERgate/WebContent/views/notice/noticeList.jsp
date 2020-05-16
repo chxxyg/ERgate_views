@@ -112,6 +112,90 @@
 }
 
 /* 게시판 스타일 */
+
+/* 큰버튼 스타일 */
+.bigBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 18px;
+}
+
+.bigBtn:hover {
+	cursor: pointer;
+}
+/* 큰버튼 스타일 */
+
+/* 검색창 스타일 */
+.searchBar>select {
+	height: 36px;
+	width: 70px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	font-family: inherit;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.searchBar>input {
+	padding: 5px;
+	width: 220px;
+	height: 25px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}
+
+.searchBar>svg {
+	fill: rgb(26, 188, 156);
+	width: 37px;
+	display: inline-block;
+	vertical-align: bottom;
+	height: 100%;
+}
+
+.searchBar>svg:hover {
+	cursor: pointer;
+	opacity: 70%;
+}
+/* 검색창 스타일 */
+
+/* 페이징바 스타일 */
+.pagingBar {
+	list-style: none;
+	margin-left: 400px;
+}
+
+.pagingBar li {
+	float: left;
+}
+
+.pagingBar li * {
+	float: left;
+	padding: 4px;
+	margin-right: 3px;
+	width: 20px;
+	color: rgb(190, 190, 190);
+	font: bold 12px tahoma;
+	border: 1px solid rgb(190, 190, 190);
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.pagingBar li>span {
+	color: rgb(26, 188, 156);
+	border: 1px solid rgb(26, 188, 156);
+}
+
+.pagingBar li a:hover {
+	color: rgb(26, 188, 156);
+	border: 1px solid rgb(26, 188, 156);
+}
+
+/* 페이징바 스타일 */
 </style>
 </head>
 <body>
@@ -122,7 +206,7 @@
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
-			<span>메뉴명</span>
+			<span>공지</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
@@ -131,79 +215,132 @@
 			</ul>
 		</div>
 		<div class="contentArea">
-			<!-- 내용 작성 영역 입니다-->
+
+			<button class="bigBtn">작성</button>
+
+			<!-- 검색바 -->
+			<form id="searchForm" action="" method="get">
+			<div class="searchBar">
+				<select name="condition">
+					<option>작성자</option>
+					<option>제목</option>
+					<option>내용</option>
+					<option>재목+내용</option>
+				</select> 
+				<input name="keyword" type="text">
+				<svg onclick="document.getElementById('searchForm').submit();" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+					fill="black" width="48px" height="48px">
+		<path
+						d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+		<path d="M0 0h24v24H0z" fill="none" /></svg>
+			</div>
+			</form>
+			<!-- 검색바 -->
+			
+			
 			<!-- 게시판 -->
 			<table class="boardTable">
 				<thead>
 					<tr>
-						<th>ㅁㅁㅁ</th>
-						<th>ㅇㅇㅇ</th>
-						<th>ㅅㅅㅅ</th>
-						<th>ㄷㄷㄷ</th>
+						<th>No.</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>작성일</th>
+						<th>조회수</th>
 					</tr>
 				</thead>
 				<tr>
-					<td>게시판</td>
-					<td>내용</td>
-					<td>입니다~</td>
-					<td>~~~</td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>200</td>
+					<td>공지사항제목</td>
+					<td>김관리</td>
+					<td>2020/05/10</td>
+					<td>23</td>
 				</tr>
 			</table>
 			<!-- 게시판 -->
+
+			<!-- 페이징바 -->
+			<ul class="pagingBar">
+				<li><a href="#">&lt;&lt;</a></li>
+				<li><a href="#">&lt;</a></li>
+				<li><span>1</span></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>
+				<li><a href="#">&gt;</a></li>
+				<li><a href="#">&gt;&gt;</a></li>
+			</ul>
+			<!-- 페이징바 -->
+
 		</div>
 	</div>
 </body>

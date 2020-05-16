@@ -130,6 +130,10 @@
 /* 큰버튼 스타일 */
 
 /* 검색창 스타일 */
+.searchBar{
+	margin-left:500px;
+}
+
 .searchBar>select {
 	height: 36px;
 	width: 70px;
@@ -142,7 +146,7 @@
 
 .searchBar>input {
 	padding: 5px;
-	width: 220px;
+	width: 280px;
 	height: 25px;
 	border: 1px solid lightgray;
 	border-radius: 3px;
@@ -237,16 +241,16 @@
 			</form>
 			<!-- 검색바 -->
 			
-			
+			<br>
 			<!-- 게시판 -->
 			<table class="boardTable">
 				<thead>
 					<tr>
-						<th>No.</th>
-						<th>제목</th>
-						<th>작성자</th>
-						<th>작성일</th>
-						<th>조회수</th>
+						<th width="150">No.</th>
+						<th width="800">제목</th>
+						<th width="150">작성자</th>
+						<th width="150">작성일</th>
+						<th width="150">조회수</th>
 					</tr>
 				</thead>
 				<tr>
@@ -321,7 +325,9 @@
 				</tr>
 			</table>
 			<!-- 게시판 -->
-
+			
+			<br>
+	
 			<!-- 페이징바 -->
 			<ul class="pagingBar">
 				<li><a href="#">&lt;&lt;</a></li>

@@ -160,30 +160,43 @@
 		</div>
 		<div class="contentArea">
 			<h4 style="margin-left: 1200px;">공지사항 작성</h4>
-			<table id="noticeDetail">
-				<tr>
-					<th colspan="2">제목</th>
-					<td colsapn="6"><input class="inputs" type="text"></td>
-				</tr>
-				<tr>
-					<th colspan="2">첨부파일</th>
-					<td colspan="6"><button class="bigBtn">첨부파일</button>
-						&nbsp;&nbsp;<a href="#">첨부파일.jpg</a>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="8" rowspan="20">
-						<textarea class="textArea" cols="160" rows="25"></textarea>
-					</td>
-				</tr>
-			</table>
+			<form name="noticeEnroll" action="#" method="post">
+				<table id="noticeDetail">
+					<tr>
+						<th colspan="2">제목</th>
+						<td colsapn="6"><input name="noticeTitle" class="inputs" type="text"></td>
+					</tr>
+					<tr>
+						<th colspan="2">첨부파일</th>
+						<td colspan="6"><button type="button" class="bigBtn" onclick="addFile();">추가</button>
+							&nbsp;&nbsp;<a href="#">첨부파일.jpg</a>
+							<input id="addFiles" type="file" name="noticeFile" multiple style="display:none;">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="8" rowspan="20">
+							<textarea class="textArea" cols="160" rows="25"></textarea>
+						</td>
+					</tr>
+				</table>
+			</form>
 			<br>
 			<div id="btnArea">
-				<button class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
+				<button id="submitNotice" class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
 				<button class="bigBtn">취소</button>
 			</div>
 			<br> <br><br>
 		</div>
 	</div>
+	
+	<script>
+		function addFile(){
+			$("#addFiles").click();
+		}
+		
+		$("#submitNotice").click(function(){
+			$("form[name=noticeEnroll]").submit();
+		});
+	</script>
 </body>
 </html>

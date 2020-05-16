@@ -10,8 +10,10 @@
 
 
 <!-- 모달 사용페이지에 복사해주세요 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <!-- 모달 사용페이지에 복사해주세요 -->
 
 
@@ -78,6 +80,14 @@ html, body * {
 	border-radius: 3px;
 }
 /* input창 스타일 */
+
+/* textarea스타일 */
+.textArea {
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	resize: none;
+}
+/* textarea스타일 */
 
 /* 검색창 스타일 */
 .searchBar>select {
@@ -237,6 +247,13 @@ html, body * {
 <br>
 <br>
 
+<!-- 텍스트에리어 -->
+<!-- 용도에 따라 cols(가로) rows(세로) 적절히 변경-->
+<textarea class="textArea" cols="70" rows="13"></textarea>
+<!-- 텍스트에리어 -->
+
+<br>
+<br>
 
 <!-- 검색바 -->
 <div class="searchBar">
@@ -403,12 +420,12 @@ html, body * {
 
 <!-- 모달용 스크립트 -->
 <script>
-    $('.open-modal').click(function(){
-        $(this).modal({
-            fadeDuration: 150
-        });
-        
-    });
+	$('.open-modal').click(function() {
+		$(this).modal({
+			fadeDuration : 150
+		});
+
+	});
 </script>
 
 
@@ -420,7 +437,8 @@ html, body * {
      팝업 띄우고싶은 요소에 onclick복사,
      팝업은 template_popup.jsp파일 복사해서 만들어주세요.
 -->
-<a href="#" onclick="window.open('template_popup.jsp','popup_name','_blank')">팝업</a>
+<a href="#"
+	onclick="window.open('template_popup.jsp','popup_name','_blank')">팝업</a>
 
 
 <!-- 일반팝업 띄우기 -->

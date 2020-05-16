@@ -70,6 +70,35 @@
     /* 콘텐츠영역 */
 
 /* ==========페이지영역========== */
+
+#noticeDetail{
+	padding:20px;
+	background:white;
+	min-height:600px;
+	width:1000px;
+	height:auto;
+}
+
+/* 큰버튼 스타일 */
+.bigBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background:rgb(190, 190, 190);
+	color: white;
+	font-size: 18px;
+}
+
+.bigBtn:hover {
+	cursor: pointer;
+}
+/* 큰버튼 스타일 */
+
+#btnArea{
+	margin-left:350px;
+}
+
 </style>
 </head>
 <body>
@@ -80,20 +109,31 @@
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
-			<span>메뉴명</span>
+			<span>공지</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn subActive">메뉴1</button></li>
-				<li><button class="subBtn">메뉴2</button></li>
-				<li><button class="subBtn">메뉴3</button></li>
-				<li><button class="subBtn">메뉴4</button></li>
+				<li><button class="subBtn subActive">공지사항</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">
 			<!-- 내용 작성 영역 입니다-->
-
+			<div id="noticeDetail">
+				<h3>공지사항 제목</h3>
+				<h4>No.140 | 김관리 | 2020/05/01 | 120</h3>
+				<hr>
+				<br><br>
+				공지사항내용
+				
+				<p>첨부파일 : <a>첨부파일.jpg</a></p>
+			</div>
+			<br>
+			<div id="btnArea">
+				<button class="bigBtn" style="background:rgb(26, 188, 156);">목록</button>
+				<button class="bigBtn">수정</button>
+				<button class="bigBtn">삭제</button>			
+			</div>
 		</div>
 	</div>
 </body>

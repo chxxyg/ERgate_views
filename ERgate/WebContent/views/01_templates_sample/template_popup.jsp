@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
@@ -18,7 +18,7 @@
         overflow-x: hidden;
       }
 
-      /* ÇöÀçÆË¾÷Ã¢ »çÀÌÁîÁ¶Àı */
+      /* í˜„ì¬íŒì—…ì°½ ì‚¬ì´ì¦ˆì¡°ì ˆ */
       .popup-outer {
         width: 800px;
         height: 800px;
@@ -47,24 +47,24 @@
 
    <div class="popup-outer">
       <div class="popup-title">
-        ÆË¾÷Å¸ÀÌÆ²
+        íŒì—…íƒ€ì´í‹€
       </div>
       <div class="popup-content">
-        ÆË¾÷³»¿ë
+        íŒì—…ë‚´ìš©
       </div>
     </div>
 
 
 
 
-	<!-- ÆË¾÷Ã¢ ÀÚµ¿ »çÀÌÁî¸ÂÃã¿ë ½ºÅ©¸³Æ® -->
+	<!-- íŒì—…ì°½ ìë™ ì‚¬ì´ì¦ˆë§ì¶¤ìš© ìŠ¤í¬ë¦½íŠ¸ -->
     <script>
       $(document).ready(function () {
-        // ÆË¾÷ Ã¢ Å©±â¸¦ HTML Å©±â¿¡ ¸ÂÃß¾î ÀÚµ¿À¸·Î Å©±â¸¦ Á¶Á¤ÇÏ´Â ÇÔ¼ö.
+        // íŒì—… ì°½ í¬ê¸°ë¥¼ HTML í¬ê¸°ì— ë§ì¶”ì–´ ìë™ìœ¼ë¡œ í¬ê¸°ë¥¼ ì¡°ì •í•˜ëŠ” í•¨ìˆ˜.
         var strWidth;
         var strHeight;
 
-        //innerWidth / innerHeight / outerWidth / outerHeight Áö¿ø ºê¶ó¿ìÀú
+        //innerWidth / innerHeight / outerWidth / outerHeight ì§€ì› ë¸Œë¼ìš°ì €
         if (
           window.innerWidth &&
           window.innerHeight &&

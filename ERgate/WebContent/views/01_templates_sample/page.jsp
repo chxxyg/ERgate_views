@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-/* ==========ÆäÀÌÁö¿µ¿ª========== */
+/* ==========í˜ì´ì§€ì˜ì—­========== */
     .outer{
         padding-left: 320px;
         float: left;
@@ -26,7 +26,7 @@
         font-weight: 500;
     }
 
-    /* ¼­ºê¸Ş´º¹Ù ¿µ¿ª */
+    /* ì„œë¸Œë©”ë‰´ë°” ì˜ì—­ */
     .subMenuArea{
         background-color: white;
         width: 100%;
@@ -39,9 +39,9 @@
         float:left;
         text-decoration-style: none;
     }
-    /* ¼­ºê¸Ş´º¹Ù ¿µ¿ª */
+    /* ì„œë¸Œë©”ë‰´ë°” ì˜ì—­ */
 
-    /* ¼­ºê¸Ş´º¹Ù ¸Ş´º¹öÆ°(±âº») */
+    /* ì„œë¸Œë©”ë‰´ë°” ë©”ë‰´ë²„íŠ¼(ê¸°ë³¸) */
     .subBtn{
         border:0;
         width:150px;
@@ -52,14 +52,14 @@
         border-radius: 25px;
     }
     .subBtn:hover{cursor: pointer;}
-    /* ¼­ºê¸Ş´º¹Ù ¸Ş´º¹öÆ°(±âº») */
-    /* ¼­ºê¸Ş´º¹Ù ¸Ş´º¹öÆ°(ÇöÀçÆäÀÌÁöÀÏ¶§) */
+    /* ì„œë¸Œë©”ë‰´ë°” ë©”ë‰´ë²„íŠ¼(ê¸°ë³¸) */
+    /* ì„œë¸Œë©”ë‰´ë°” ë©”ë‰´ë²„íŠ¼(í˜„ì¬í˜ì´ì§€ì¼ë•Œ) */
     .subActive{
         border:4px solid rgb(26, 188, 156);
     }
-    /* ¼­ºê¸Ş´º¹Ù ¸Ş´º¹öÆ°(ÇöÀçÆäÀÌÁöÀÏ¶§) */
+    /* ì„œë¸Œë©”ë‰´ë°” ë©”ë‰´ë²„íŠ¼(í˜„ì¬í˜ì´ì§€ì¼ë•Œ) */
 
-    /* ÄÜÅÙÃ÷¿µ¿ª */
+    /* ì½˜í…ì¸ ì˜ì—­ */
     .contentArea {
         margin-top: 50px;
         margin-left:100px;
@@ -67,32 +67,32 @@
         height:auto;
         float:left;
     }
-    /* ÄÜÅÙÃ÷¿µ¿ª */
+    /* ì½˜í…ì¸ ì˜ì—­ */
 
-/* ==========ÆäÀÌÁö¿µ¿ª========== */
+/* ==========í˜ì´ì§€ì˜ì—­========== */
 </style>   
 </head>
 <body>
-	<!-- ÀÌ°÷¿¡ ¸Ş´º¹Ù include -->
+	<!-- ì´ê³³ì— ë©”ë‰´ë°” include -->
 	
-	<!-- ÀÌ°÷¿¡ ¸Ş´º¹Ù include -->
+	<!-- ì´ê³³ì— ë©”ë‰´ë°” include -->
 	
 	<div class="outer">
 		<div class="topBar">
-			<!-- ¸Ş´º¸í -->
-			<span>¸Ş´º¸í</span>
+			<!-- ë©”ë‰´ëª… -->
+			<span>ë©”ë‰´ëª…</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
-				<!-- ¼­ºê¸Ş´º ¹öÆ° ¿µ¿ª. ±âº»:subBtn , È°¼ºÈ­½Ã: subBtn subActive Å¬·¡½º Ãß°¡ÇØÁÖ¼¼¿ä -->
-				<li><button class="subBtn subActive">¸Ş´º1</button></li>
-				<li><button class="subBtn">¸Ş´º2</button></li>
-				<li><button class="subBtn">¸Ş´º3</button></li>
-				<li><button class="subBtn">¸Ş´º4</button></li>
+				<!-- ì„œë¸Œë©”ë‰´ ë²„íŠ¼ ì˜ì—­. ê¸°ë³¸:subBtn , í™œì„±í™”ì‹œ: subBtn subActive í´ë˜ìŠ¤ ì¶”ê°€í•´ì£¼ì„¸ìš” -->
+				<li><button class="subBtn subActive">ë©”ë‰´1</button></li>
+				<li><button class="subBtn">ë©”ë‰´2</button></li>
+				<li><button class="subBtn">ë©”ë‰´3</button></li>
+				<li><button class="subBtn">ë©”ë‰´4</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">
-			<!-- ³»¿ë ÀÛ¼º ¿µ¿ª ÀÔ´Ï´Ù-->
+			<!-- ë‚´ìš© ì‘ì„± ì˜ì—­ ì…ë‹ˆë‹¤-->
 
 		</div>
 	</div>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>notice Enroll Form</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <style>
@@ -83,20 +83,34 @@
 
 /* ==========페이지영역========== */
 #noticeDetail {
-	padding: 20px;
+	padding-top: 20px;
+    padding-left: 30px;
 	background: white;
-	min-height: 400px;
 	width: 1300px;
-	height: auto;
-	position: relative;
+	height: 600px;
+	border-collapse: separate;
+    border-spacing: 0 20px;
+    font-size:18px;
 }
 
-#noticeContent {
-	width: 1300px;
-	min-height: 400px;
-	height: auto;
-	margin-bottom: 30px;
+/* input창 스타일(가로크기는 자유) */
+.inputs {
+	height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	width:1065px;
 }
+/* input창 스타일 */
+
+/* textarea스타일 */
+.textArea {
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	resize: none;
+}
+/* textarea스타일 */
+
+
 
 /* 큰버튼 스타일 */
 .bigBtn {
@@ -126,28 +140,6 @@
 	margin: 5px;
 }
 
-.bottomArea {
-	padding: 20px;
-	width: 1300px;
-	height: 72px;
-	background: white;
-}
-
-.material-icons {
-	color: white;
-	display: inline-block;
-	vertical-align: text-top;
-	font-size: 20px;
-}
-
-.roundIcon {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: rgb(26, 188, 156);
-	display: inline-block;
-	margin-top: 5px;
-}
 </style>
 </head>
 <body>
@@ -167,48 +159,30 @@
 			</ul>
 		</div>
 		<div class="contentArea">
-			<h4 style="margin-left: 1240px;">공지사항 상세</h4>
-			<div id="noticeDetail">
-				<h3>공지사항 제목</h3>
-				<h4>
-					No.140 | 김관리 | 2020/05/01 | 120
-					</h3>
-					<hr>
-					<br> <br>
-					<div id="noticeContent">공지사항 내용</div>
-					<b style="position: absolute; bottom: 0px; margin-bottom: 20px;">
-						첨부파일 : <a href="#">첨부파일.jpg</a>
-					</b>
-			</div>
+			<h4 style="margin-left: 1200px;">공지사항 작성</h4>
+			<table id="noticeDetail">
+				<tr>
+					<th colspan="2">제목</th>
+					<td colsapn="6"><input class="inputs" type="text"></td>
+				</tr>
+				<tr>
+					<th colspan="2">첨부파일</th>
+					<td colspan="6"><button class="bigBtn">첨부파일</button>
+						&nbsp;&nbsp;<a href="#">첨부파일.jpg</a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="8" rowspan="20">
+						<textarea class="textArea" cols="160" rows="25"></textarea>
+					</td>
+				</tr>
+			</table>
 			<br>
 			<div id="btnArea">
-				<button class="bigBtn" style="background: rgb(26, 188, 156);">목록</button>
-				<button class="bigBtn">수정</button>
-				<button class="bigBtn">삭제</button>
+				<button class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
+				<button class="bigBtn">취소</button>
 			</div>
-			<br> <br>
-			<div class="bottomArea">
-				<div class="roundIcon">
-					<span class="material-icons">arrow_drop_up</span>
-				</div>
-				<p style="display: inline;">다음글</p>
-				<p
-					style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
-				<p align="right"
-					style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px;">2020/05/10
-					| 김관리</p>
-				<hr>
-				<div class="roundIcon">
-					<span class="material-icons">arrow_drop_down</span>
-				</div>
-				<p style="display: inline;">이전글</p>
-				<p
-					style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
-				<p align="right"
-					style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px;">2020/05/10
-					| 김관리</p>
-			</div>
-			<br> <br> <br>
+			<br> <br><br>
 		</div>
 	</div>
 </body>

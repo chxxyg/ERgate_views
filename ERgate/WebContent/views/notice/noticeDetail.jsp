@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <style>
 /* ==========페이지영역========== */
     .outer{
@@ -75,7 +77,7 @@
 	padding:20px;
 	background:white;
 	min-height:600px;
-	width:1000px;
+	width:1300px;
 	height:auto;
 }
 
@@ -99,6 +101,19 @@
 	margin-left:350px;
 }
 
+.bottomArea{
+padding:10px;
+	width:1300px;
+	height:60px;
+	background:white;
+}
+
+.roundIcon{
+width:20px;
+height:20px;
+	border-radius:50%;
+	background:rgb(26, 188, 156);
+}
 </style>
 </head>
 <body>
@@ -118,7 +133,7 @@
 			</ul>
 		</div>
 		<div class="contentArea">
-			<!-- 내용 작성 영역 입니다-->
+			<h4>공지사항 상세</h4>
 			<div id="noticeDetail">
 				<h3>공지사항 제목</h3>
 				<h4>No.140 | 김관리 | 2020/05/01 | 120</h3>
@@ -126,7 +141,7 @@
 				<br><br>
 				공지사항내용
 				
-				<p>첨부파일 : <a>첨부파일.jpg</a></p>
+				<p align="bottom">첨부파일 : <a>첨부파일.jpg</a></p>
 			</div>
 			<br>
 			<div id="btnArea">
@@ -134,6 +149,17 @@
 				<button class="bigBtn">수정</button>
 				<button class="bigBtn">삭제</button>			
 			</div>
+			<br>
+			<div class="bottomArea">
+				<div class="roundIcon">
+					<span style="color:white;" class="material-icons">arrow_drop_up</span>		
+				</div>
+					<hr>
+				<div class="roundIcon">
+					<span style="color:white;" class="material-icons">arrow_drop_down</span>			
+				</div>
+			</div>
+			<br><br><br>
 		</div>
 	</div>
 </body>

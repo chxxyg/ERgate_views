@@ -75,7 +75,7 @@
 </head>
 <body>
 	<!-- 이곳에 메뉴바 include -->
-	
+	<jsp:include page="../common/menubar.jsp"/>
 	<!-- 이곳에 메뉴바 include -->
 	
 	<div class="outer">

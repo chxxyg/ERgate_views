@@ -81,15 +81,15 @@
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
-			<span>메뉴명</span>
+			<span>사내메일</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn subActive">메뉴1</button></li>
-				<li><button class="subBtn">메뉴2</button></li>
-				<li><button class="subBtn">메뉴3</button></li>
-				<li><button class="subBtn">메뉴4</button></li>
+				<li><button class="subBtn">받은메일함</button></li>
+				<li><button class="subBtn">보낸메일함</button></li>
+				<li><button class="subBtn subActive">중요메일함</button></li>
+				<li><button class="subBtn">메일작성</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">

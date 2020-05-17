@@ -1,83 +1,195 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<!-- 사내게시판 상세페이지 -->
+<!-- 사내 게시판 상세페이지 -->
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>board Detail</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <style>
 /* ==========페이지영역========== */
-    .outer{
-        padding-left: 320px;
-        float: left;
-        width: 100%;
-        min-height: 100%;
-        background-color: rgba(224, 224, 224, 0.12);
-    }
-    .topBar {
-        background-color:rgba(22, 160, 133, 0.39);
-        width: 100%;
-        height: 50px;
-        color: white;
-        font-size: 25px;
-        box-sizing: border-box;
-        padding-top: 10px;
-        padding-left: 30px;
-        font-weight: 500;
-    }
+.outer {
+	padding-left: 320px;
+	float: left;
+	width: 100%;
+	min-height: 100%;
+	background-color: rgba(224, 224, 224, 0.12);
+}
 
-    /* 서브메뉴바 영역 */
-    .subMenuArea{
-        background-color: white;
-        width: 100%;
-        height: 70px;
-    }
-    #subMenuList{margin: 0;list-style:none;padding-left: 0;}
-    #subMenuList li{
-        margin-top: 10px;
-        margin-left: 20px;
-        float:left;
-        text-decoration-style: none;
-    }
-    /* 서브메뉴바 영역 */
+.topBar {
+	background-color: rgba(22, 160, 133, 0.39);
+	width: 100%;
+	height: 50px;
+	color: white;
+	font-size: 25px;
+	box-sizing: border-box;
+	padding-top: 10px;
+	padding-left: 30px;
+	font-weight: 500;
+}
 
-    /* 서브메뉴바 메뉴버튼(기본) */
-    .subBtn{
-        border:0;
-        width:150px;
-        height:50px;
-        font-size: 19px;
-        color:rgb(127, 127, 127);
-        background-color: white;
-        border-radius: 25px;
-    }
-    .subBtn:hover{cursor: pointer;}
-    /* 서브메뉴바 메뉴버튼(기본) */
-    /* 서브메뉴바 메뉴버튼(현재페이지일때) */
-    .subActive{
-        border:4px solid rgb(26, 188, 156);
-    }
-    /* 서브메뉴바 메뉴버튼(현재페이지일때) */
+/* 서브메뉴바 영역 */
+.subMenuArea {
+	background-color: white;
+	width: 100%;
+	height: 70px;
+}
 
-    /* 콘텐츠영역 */
-    .contentArea {
-        margin-top: 50px;
-        margin-left:100px;
-        width:1600px;
-        height:auto;
-        float:left;
-    }
-    /* 콘텐츠영역 */
+#subMenuList {
+	margin: 0;
+	list-style: none;
+	padding-left: 0;
+}
+
+#subMenuList li {
+	margin-top: 10px;
+	margin-left: 20px;
+	float: left;
+	text-decoration-style: none;
+}
+/* 서브메뉴바 영역 */
+
+/* 서브메뉴바 메뉴버튼(기본) */
+.subBtn {
+	border: 0;
+	width: 150px;
+	height: 50px;
+	font-size: 19px;
+	color: rgb(127, 127, 127);
+	background-color: white;
+	border-radius: 25px;
+}
+
+.subBtn:hover {
+	cursor: pointer;
+}
+/* 서브메뉴바 메뉴버튼(기본) */
+/* 서브메뉴바 메뉴버튼(현재페이지일때) */
+.subActive {
+	border: 4px solid rgb(26, 188, 156);
+}
+/* 서브메뉴바 메뉴버튼(현재페이지일때) */
+
+/* 콘텐츠영역 */
+.contentArea {
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 1600px;
+	height: auto;
+	float: left;
+}
+/* 콘텐츠영역 */
 
 /* ==========페이지영역========== */
-</style>   
+#noticeDetail {
+	padding: 20px;
+	background: white;
+	min-height: 400px;
+	width: 1300px;
+	height: auto;
+	position: relative;
+}
+
+#noticeContent {
+	width: 1300px;
+	min-height: 400px;
+	height: auto;
+	margin-bottom: 30px;
+}
+
+/* 큰버튼 스타일 */
+.bigBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(190, 190, 190);
+	color: white;
+	font-size: 18px;
+}
+
+.bigBtn:hover {
+	cursor: pointer;
+}
+/* 큰버튼 스타일 */
+#btnArea {
+	margin-left: 420px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#btnArea button {
+	display: inline-block;
+	margin: 5px;
+}
+
+.bottomArea {
+	padding: 20px;
+	width: 1300px;
+	height: 72px;
+	background: white;
+}
+
+.material-icons {
+	color: white;
+	display: inline-block;
+	vertical-align: text-top;
+	font-size: 20px;
+}
+
+.roundIcon {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: rgb(26, 188, 156);
+	display: inline-block;
+	margin-top: 5px;
+}
+/* textarea스타일 */
+.textArea {
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	resize: none;
+}
+/* textarea스타일 */
+/* 작은버튼 스타일 */
+.smallBtn {
+	width: 60px;
+	height: 25px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 12px;
+}
+
+.smallBtn:hover {
+	cursor: pointer;
+}
+/* 작은버튼 스타일 */
+
+/* 댓글 영역 스타일 */
+.replyContent tr td:nth-child(1n) {
+	color:gray;
+	font-weight:700;
+}
+#reContent {
+	color:black;
+}
+#reContentWrap {
+	height:30px;
+}
+</style>
 </head>
 <body>
 	<!-- 이곳에 메뉴바 include -->
-	<jsp:include page="../common/menubar.jsp"/>
+	<jsp:include page="../common/menubar.jsp" />
 	<!-- 이곳에 메뉴바 include -->
-	
+
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
@@ -87,14 +199,98 @@
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn subActive">사내게시판</button></li>
-<!-- 			<li><button class="subBtn">메뉴2</button></li>
-				<li><button class="subBtn">메뉴3</button></li>
-				<li><button class="subBtn">메뉴4</button></li> -->
 			</ul>
 		</div>
 		<div class="contentArea">
-			<!-- 내용 작성 영역 입니다-->
-
+			<h4 style="margin-left: 1230px;">사내게시판 상세</h4>
+			<div id="noticeDetail">
+				<h3>사내게시판 제목</h3>
+				<h4>
+					No.195 | 케빈 | 2020/05/01 | 70
+					</h3>
+					<hr>
+					<br> <br>
+					<div id="noticeContent">사내게시판 내용</div>
+					<b style="position: absolute; bottom: 0px; margin-bottom: 20px;">
+						첨부파일 : <a href="#">첨부파일.jpg</a>
+					</b>
+			</div>
+			<br>
+			
+			<!-- 답글 입력 영역 -->
+			<div class="replyWrap" style="width:100%;">
+			<form action="">
+				<div class="replyArea" style="float:left;">
+					<!-- 텍스트에리어 -->
+					<!-- 용도에 따라 cols(가로) rows(세로) 적절히 변경-->
+					<textarea class="textArea" cols="170" rows="5" placeholder="내용을 입력하세요."></textarea>
+					<!-- 텍스트에리어 -->
+				</div>
+				<div class="btnArea" style="float:left; height:81px;">
+					<button class="smallBtn" type="submit" style="margin-left:35px; margin-top:27px; background: rgb(190, 190, 190);">등록</button>
+				</div>
+			</form>
+			</div>
+			
+			<!-- 답글 표시 영역 -->
+			<br style="clear:both;">
+			<div style="height:10px;"></div>
+			<hr style="width:1340px; margin-left:0px;">
+			<div class="replyShow">
+				<div style="width:1240px; float:left;">
+					<table class="replyContent">
+						<tr>
+							<td>개발 1팀 케빈 </td>
+						</tr>
+						<tr>
+							<td id="reContentWrap"><span id="reContent">댓글 내용</span> </td>
+						</tr>
+						<tr>
+							<td id="reDate" style="font-size:14px; color:lightgray;">2020.05.10 13:11</td>
+						</tr>
+					</table>
+				</div>
+				<div class="userControl" style="width:100px; float:left; padding-bottom:10px;">
+					<table style="height:81px;">
+						<tr>
+							<td><button class="smallBtn">수정</button></td>
+						</tr>
+						<tr>
+							<td><button class="smallBtn" style="background: rgb(190, 190, 190);">삭제</button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<hr style="width:1340px; margin-left:0px; margin-top:10px; margin-bottom:0px;">
+			<br>
+			<div id="btnArea">
+				<button class="bigBtn" style="background: rgb(26, 188, 156);">목록</button>
+				<button class="bigBtn">수정</button>
+				<button class="bigBtn">삭제</button>
+			</div>
+			<br> <br>
+			<div class="bottomArea">
+				<div class="roundIcon">
+					<span class="material-icons">arrow_drop_up</span>
+				</div>
+				<p style="display: inline;">다음글</p>
+				<p
+					style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
+				<p align="right"
+					style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10
+					| 엘리스</p>
+				<hr>
+				<div class="roundIcon">
+					<span class="material-icons">arrow_drop_down</span>
+				</div>
+				<p style="display: inline;">이전글</p>
+				<p
+					style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
+				<p align="right"
+					style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10
+					| 잭슨</p>
+			</div>
+			<br> <br> <br>
 		</div>
 	</div>
 </body>

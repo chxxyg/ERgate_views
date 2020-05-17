@@ -201,20 +201,8 @@
 
 /* 체크박스 모양 변경 */
 
-input[id="cb1"] + label {
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	border: 2px solid rgb(26, 188, 156);
-	cursor: pointer;
-}
-
-input[id="cb1"]:checked + label {
-	background-color: rgb(26, 188, 156);
-}
-
-input[id="cb1"] {
-	display: none;
+.importbox {
+	display:none;
 }
 
 </style>   
@@ -248,7 +236,7 @@ input[id="cb1"] {
 						<td id="leftArea">
 							<button class="middleBtn">답장</button>&nbsp;
 							<button class="middleBtn" style="background:gray;">전달</button>&nbsp;
-							<button class="middleBtn" style="background:rgb(190, 190, 190);">삭제</button>
+							<button class="middleBtn takeManyBtn" style="background:rgb(190, 190, 190);">삭제</button>
 						</td>
 						<td id="rightArea">
 							<!-- 검색바 -->
@@ -276,14 +264,12 @@ input[id="cb1"] {
 				<thead>
 					<tr>
 						<th width="50">
-							    <input type="checkbox" id="cb1">
-   							    <label for="cb1"></label>
+							<div class="">
+					    		<label><input class="checkbox" type="checkbox" id="checkall" value="" style="vertical-align: middle; transform: scale(1.6);"></label>
+					        </div>
    						</th>
 						<th width="50">
-							<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-								<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-								<path d="M0 0h24v24H0z" fill="none" />
-							</svg>
+								<label><input type="checkbox" class="importbox" id="importAll" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 						</th>
 						<th width="150">계정</th>
 						<th width="500">제목</th>
@@ -291,155 +277,117 @@ input[id="cb1"] {
 					</tr>
 				</thead>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td>	
-						<input type="checkbox" id="cb1">
-   						<label for="cb1"></label>
+					<td>
+						<label><input class="checkbox chk" type="checkbox" name="chk" value="" style="vertical-align: middle; transform: scale(1.5);"></label>
    					</td>
 					<td>
-						<svg class="star_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="25px" height="25px">
-							<path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-							<path d="M0 0h24v24H0z" fill="none" />
-						</svg>
+						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
 					<td>케빈</td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
+				
+				
 				
 				
 			</table>
@@ -466,6 +414,56 @@ input[id="cb1"] {
 
 		</div>
 	</div>
+	<script>
+	
+	//최상단 체크박스 클릭
+	$("#checkall").click(function(){
+	     //클릭되었으면
+	     if($("#checkall").prop("checked")){
+	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
+	            $("input[name=chk]").prop("checked",true);
+	            //클릭이 안되있으면
+	     }else{
+	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
+	            $("input[name=chk]").prop("checked",false);
+	     }
+	 });
+	//최상단 중요메일 클릭
+	$("#importAll").click(function(){
+	     //클릭되었으면
+	     if($("#importAll").prop("checked")){
+	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
+	            $("input[name=ichk]").prop("checked",true);
+	            $("input[name=ichk]").parent().find('img').attr('src','../../resources/icons/star-black-48dp.svg');
+	            //클릭이 안되있으면
+	     }else{
+	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
+	            $("input[name=ichk]").prop("checked",false);
+	            $("input[name=ichk]").parent().find('img').attr('src','../../resources/icons/star_border-black-48dp.svg');
+	     }
+	 });
+	$(document).ready(function() { 
+		$(".importbox").on('click', function() { 
+			if ( $(this).prop('checked') ) {
+				$(this).parent().find('img').attr('src','../../resources/icons/star-black-48dp.svg');
+			}else { 
+				$(this).parent().find('img').attr('src','../../resources/icons/star_border-black-48dp.svg');
+			} 
+		}); 
+	});
+
+	
+	
+	
+	$(".takeManyBtn").click(function(){
+		 var delchk = []; // key 값을 담을 배열
+		 $('.chk:checked').each(function(){
+		    delchk.push($(this).val());
+		 });
+		 
+		 location.href="";
+	})
+	</script>
 </body>
 </html>
 

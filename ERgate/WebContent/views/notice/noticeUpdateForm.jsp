@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>notice Enroll Form</title>
+<title>notice Update Form</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <style>
@@ -159,12 +159,12 @@
 			</ul>
 		</div>
 		<div class="contentArea">
-			<h4 style="margin-left: 1200px;">공지사항 작성</h4>
-			<form name="noticeEnroll" action="#" method="post">
+			<h4 style="margin-left: 1200px;">공지사항 수정</h4>
+			<form name="noticeUpdate" action="#" method="post">
 				<table id="noticeDetail">
 					<tr>
 						<th colspan="2">제목</th>
-						<td colsapn="6"><input name="noticeTitle" class="inputs" type="text"></td>
+						<td colsapn="6"><input name="noticeTitle" class="inputs" type="text" value="제목입니다"></td>
 					</tr>
 					<tr>
 						<th colspan="2">첨부파일</th>
@@ -175,14 +175,15 @@
 					</tr>
 					<tr>
 						<td colspan="8" rowspan="20">
-							<textarea class="textArea" cols="160" rows="25"></textarea>
+							<textarea class="textArea" cols="160" rows="25">공지사항내용~~~~
+							</textarea>
 						</td>
 					</tr>
 				</table>
 			</form>
 			<br>
 			<div id="btnArea">
-				<button id="submitNotice" class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
+				<button id="submitNotice" class="bigBtn" style="background: rgb(26, 188, 156);">수정</button>
 				<button class="bigBtn">취소</button>
 			</div>
 			<br> <br><br>
@@ -195,7 +196,7 @@
 		}
 		
 		$("#submitNotice").click(function(){
-			$("form[name=noticeEnroll]").submit();
+			$("form[name=noticeUpdate]").submit();
 		});
 	</script>
 </body>

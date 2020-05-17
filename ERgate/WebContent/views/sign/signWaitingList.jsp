@@ -5,6 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>sign waiting list</title>
+<jsp:include page="../common/menubar.jsp" />
+<!-- <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css"> -->
+
+<!-- 모달 사용페이지에 복사해주세요 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- 모달 사용페이지에 복사해주세요 -->
 <style>
 /* ==========페이지영역========== */
 .outer {
@@ -148,6 +157,23 @@
 
 /* 게시판 스타일 */
 
+/* 작은버튼 스타일 */
+.smallBtn {
+	width: 60px;
+	height: 25px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(190, 190, 190); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 12px;
+	margin-left:50px;
+}
+
+.smallBtn:hover {
+	cursor: pointer;
+}
+/* 작은버튼 스타일 */
+
 /* 큰버튼 스타일 */
 .bigBtn {
 	width: 140px;
@@ -168,11 +194,43 @@
 .checkBox {
 	zoom: 1.7;
 }
+
+/* 모달팝업 스타일 */
+.modal {
+	width: 300px;
+	height: 400px; /* 모달 크기지정 */
+	padding: 0px;
+	border-radius: 0px;
+}
+
+.modal-title {
+	margin: 0;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(22, 160, 133, 0.68);
+	font-size: 25px;
+	padding: 10px;
+	color: white;
+	box-sizing: border-box;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+#sign_thumb{
+	width:200px;
+	height:200px;
+	border:1px solid lightgray;
+	margin:auto;
+}
+
+/* 모달팝업 스타일 */
 </style>
 </head>
 <body>
 	<!-- 이곳에 메뉴바 include -->
-	<jsp:include page="../common/menubar.jsp" />
+	
 	<!-- 이곳에 메뉴바 include -->
 
 	<div class="outer">
@@ -192,10 +250,10 @@
 		</div>
 		<div class="contentArea">
 			<button class="bigBtn">선택결재</button>
-			<button class="bigBtn" style="background: rgb(190, 190, 190);">서명등록</button>
-			<h2 style="display: inline-block; margin-left: 300px;">2020년 5월 10일</h2>
-			<br>
-			<br>
+			<button class="bigBtn" style="background: rgb(190, 190, 190);" onclick="open_modal();">서명등록</button>
+			<h2 style="display: inline-block; margin-left: 300px;">2020년 5월
+				10일</h2>
+			<br> <br>
 
 			<table class="boardTable">
 				<thead>
@@ -330,6 +388,46 @@
 				<li><a href="#">&gt;&gt;</a></li>
 			</ul>
 			<!-- 페이징바 -->
+
+
+			<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)-->
+
+			<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
+     용도에 따라 href와 id는 변경해주세요.(여러개 가능)
+     모달타겟으로 쓸 요소에 class와 href 복사해주세요.
+-->
+			<a class="open-modal" href="#modal-form" style="display:none;">모달열기</a> <br>
+
+
+			<div id="modal-form" class="modal">
+				<div class="modal-title">서명등록</div>
+				<div class="modal-content">
+					<div id="sign_thumb">
+					</div>
+					<br>
+					<button class="smallBtn">첨부파일</button>
+					<a href="#">첨부파일.jsp</a>
+					<br><br>
+					<button class="bigBtn" style="margin-left:60px;">등록</button>
+				</div>
+			</div>
+
+			<!-- 모달용 스크립트 -->
+			<script>
+				function open_modal(){
+					$(".open-modal").click();
+				};
+			
+				$('.open-modal').click(function() {
+					$(this).modal({
+						fadeDuration : 150
+					});
+
+				});
+			</script>
+
+
+			<!-- 모달팝업 -->
 		</div>
 	</div>
 </body>

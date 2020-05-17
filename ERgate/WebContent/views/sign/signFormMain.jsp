@@ -101,7 +101,7 @@
 /* 큰버튼 스타일 */
 .selectArea {
 	background: white;
-	width: 1000px;
+	width: 920px;
 	height: 450px;
 	padding: 20px;
 }
@@ -116,13 +116,16 @@
 }
 
 .selectDiv:hover {
-	cursor: ponter;
+	cursor: pointer;
 	opacity: 70%;
 }
 
-.material-icons{
-	font-size:150px;
-	color:rgb(190, 190, 190);
+.material-icons {
+	font-size: 150px;
+	color: rgb(190, 190, 190);
+	display: table;
+	margin:auto;
+	margin-top:30px;
 }
 </style>
 </head>
@@ -150,19 +153,19 @@
 			<button class="bigBtn">상신내역으로</button>
 			<br> <br> <br>
 			<div class="selectArea">
-				<p>※문서 양식을 선택해주세요.</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※문서 양식을 선택해주세요.</p>
 				<br>
-				<div class="selectDiv">
+				<div id="selectAnnual" class="selectDiv" onclick="window.open('signFormAnnualVacation.jsp','annualVacationForm','_blank')">
 					<span class="material-icons"> emoji_food_beverage </span>
-					<h2>휴가계</h2>
+					<h2 align="center">휴가계</h2>
 				</div>
-				<div class="selectDiv">
+				<div id="selectExpense" class="selectDiv" onclick="window.open('signFormExpense.jsp','expenseForm','_blank')">
 					<span class="material-icons"> account_balance_wallet </span>
-					<h2>지출결의서</h2>
+					<h2 align="center">지출결의서</h2>
 				</div>
-				<div class="selectDiv">
+				<div id="selectBusiness" class="selectDiv" onclick="window.open('signFormBusinessTrip.jsp','businessTripForm','_blank')">
 					<span class="material-icons"> work </span>
-					<h2>외근신청서</h2>
+					<h2 align="center">외근신청서</h2>
 				</div>
 			</div>
 

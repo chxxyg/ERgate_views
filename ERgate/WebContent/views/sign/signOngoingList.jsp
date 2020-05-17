@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>sign waiting list</title>
+<title>sign ongoing list</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <style>
 /* ==========페이지영역========== */
 .outer {
@@ -168,6 +171,23 @@
 .checkBox {
 	zoom: 1.7;
 }
+
+/* 스케줄관련 아이콘스타일 */
+.schedule_icons {
+	fill: rgb(190, 190, 190); /* 검은색 : rgb(94, 94, 94)*/
+	width: 35px;
+	vertical-align: bottom;
+}
+/* 스케줄관련 아이콘스타일 */
+
+.material-icons{
+	font-size:40px;
+	vertical-align:middle;
+}
+.material-icons:hover{
+	cursor:pointer;
+}
+
 </style>
 </head>
 <body>
@@ -183,129 +203,113 @@
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn subActive">결재대기함</button></li>
-				<li><button class="subBtn">진행결재함</button></li>
+				<li><button class="subBtn">결재대기함</button></li>
+				<li><button class="subBtn subActive">진행결재함</button></li>
 				<li><button class="subBtn">상신내역</button></li>
 				<li><button class="subBtn">지출결의내역</button></li>
 				<li><button class="subBtn">외근&휴가내역</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">
-			<button class="bigBtn">선택결재</button>
-			<button class="bigBtn" style="background: rgb(190, 190, 190);">서명등록</button>
-			<h2 style="display: inline-block; margin-left: 300px;">2020년 5월 10일</h2>
-			<br>
-			<br>
+			<button class="bigBtn">기안</button>
+			<h2 style="display: inline-block; margin-left: 400px;">
+				<span class="material-icons"> arrow_left </span> 2020년 5월
+				<svg class="schedule_icons" xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24" fill="black" width="48px" height="48px">
+				<path
+						d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" />
+				<path d="M0 0h24v24H0z" fill="none" /></svg>
+				<span class="material-icons"> arrow_right </span>
+			</h2>
+			<br> <br>
 
 			<table class="boardTable">
 				<thead>
 					<tr>
-						<th width="40"><input class="checkBox" type="checkbox"></th>
 						<th>상태</th>
 						<th>문서분류</th>
 						<th>문서번호</th>
-						<th>기안부서</th>
-						<th>기안자</th>
+						<th>결재자</th>
 						<th>제목</th>
 						<th>기안일시</th>
 					</tr>
 				</thead>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>
 				</tr>
 				<tr>
-					<td><input class="checkBox" type="checkbox"></td>
 					<td>진행중</td>
 					<td>지출결의서</td>
 					<td>25</td>
-					<td>경영부</td>
 					<td>김길동</td>
 					<td>경영1팀 지출결의서</td>
 					<td>2020/05/10</td>

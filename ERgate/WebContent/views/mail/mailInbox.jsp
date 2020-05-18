@@ -205,6 +205,45 @@
 	display:none;
 }
 
+/* 변경된 체크박스 이미지 위치 조정 */
+.mailTable tr td label img, .mailTable tr th label img {
+	 margin-top:3.5px;
+}
+
+/* 계정 주소 표시를 위한 ToolTip 설정 */
+[data-tooltip-text]:hover {
+	position: relative;
+}
+
+[data-tooltip-text]:hover:after {
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.8);
+
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+	box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	color: #FFFFFF;
+	font-size: 12px;
+	content: attr(data-tooltip-text);
+
+  margin-bottom: 10px;
+	top: 130%;
+	left: 0;    
+	padding: 7px 12px;
+	position: absolute;
+	width: 150px;
+	min-width: 100px;
+	max-width: 300px;
+	word-wrap: break-word;
+
+	z-index: 9999;
+}
+
 </style>   
 </head>
 <body>
@@ -260,7 +299,7 @@
 			
 			<div style="height:10px;"></div>
 			<!-- 게시판 -->
-			<table class="boardTable">
+			<table class="boardTable mailTable">
 				<thead>
 					<tr>
 						<th width="50">
@@ -283,7 +322,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -294,7 +333,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -305,7 +344,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -316,7 +355,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -327,7 +366,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -338,7 +377,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -349,7 +388,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -360,7 +399,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -371,7 +410,7 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
@@ -382,10 +421,12 @@
 					<td>
 						<label><input type="checkbox" class="importbox" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 					</td>
-					<td>케빈</td>
+					<td><span data-tooltip-text="kevin76@ergate.com">케빈</span></td>
 					<td>메일 제목입니다. 좀 말려주세요</td>
 					<td>2020/05/10</td>
 				</tr>
+				
+				
 				
 				
 				

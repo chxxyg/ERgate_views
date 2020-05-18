@@ -85,6 +85,7 @@
 	<!-- 이곳에 메뉴바 include -->
 	
 	<!-- 이곳에 메뉴바 include -->
+	<jsp:include page="../common/menubar.jsp" />
 	
 	<div class="outer">
 		<div class="topBar">
@@ -106,7 +107,7 @@
                         <td>
                             <table style="text-align: center;">
                                 <tr>
-                                    <td><div style="width: 250px; height: 205px;"><input type="image"></div></td>
+                                    <td><div style="width: 250px; height: 205px;" border="1"><input type="image"></div></td>
                                 </tr>
                                 <tr>
                                     <td><button>편집</button></td>

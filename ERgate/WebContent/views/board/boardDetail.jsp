@@ -219,13 +219,14 @@
 			
 			<!-- 답글 입력 영역 -->
 			<div class="replyWrap" style="width:100%;">
-			<form action="">
+			<form action="reply.bo" method="get">
 				<div class="replyArea" style="float:left;">
 					<!-- 텍스트에리어 -->
 					<!-- 용도에 따라 cols(가로) rows(세로) 적절히 변경-->
-					<textarea class="textArea" cols="170" rows="5" placeholder="내용을 입력하세요."></textarea>
+					<textarea class="textArea" name="replyContent" cols="170" rows="5" placeholder="내용을 입력하세요."></textarea>
 					<!-- 텍스트에리어 -->
 				</div>
+				<input type="hidden" name="userNo" value="로그인한유저번호">
 				<div class="btnArea" style="float:left; height:81px;">
 					<button class="smallBtn" type="submit" style="margin-left:35px; margin-top:27px; background: rgb(190, 190, 190);">등록</button>
 				</div>
@@ -251,12 +252,13 @@
 					</table>
 				</div>
 				<div class="userControl" style="width:100px; float:left; padding-bottom:10px;">
+					<!-- 해당 table의 경우 작성자가 현재 로그인한 사용자와 일치할 경우에만 보이도록 if문 쓰게 될 것임 -->
 					<table style="height:81px;">
 						<tr>
-							<td><button class="smallBtn">수정</button></td>
+							<td><button class="smallBtn replyUpdateBtn">수정</button></td>
 						</tr>
 						<tr>
-							<td><button class="smallBtn" style="background: rgb(190, 190, 190);">삭제</button></td>
+							<td><button class="smallBtn replyDeleteBtn" style="background: rgb(190, 190, 190);">삭제</button></td>
 						</tr>
 					</table>
 				</div>
@@ -264,9 +266,9 @@
 			<hr style="width:1340px; margin-left:0px; margin-top:10px; margin-bottom:0px;">
 			<br>
 			<div id="btnArea">
-				<button class="bigBtn" style="background: rgb(26, 188, 156);">목록</button>
-				<button class="bigBtn">수정</button>
-				<button class="bigBtn">삭제</button>
+				<button class="bigBtn listBtn" style="background: rgb(26, 188, 156);">목록</button>
+				<button class="bigBtn updateBtn">수정</button>
+				<button class="bigBtn deleteBtn">삭제</button>
 			</div>
 			<br> <br>
 			<div class="bottomArea">
@@ -274,24 +276,64 @@
 					<span class="material-icons">arrow_drop_up</span>
 				</div>
 				<p style="display: inline;">다음글</p>
-				<p
-					style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
-				<p align="right"
-					style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10
-					| 엘리스</p>
+				<p class="afterBoard" style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
+				<p align="right" style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10 | 엘리스</p>
+				
 				<hr>
+				
 				<div class="roundIcon">
 					<span class="material-icons">arrow_drop_down</span>
 				</div>
 				<p style="display: inline;">이전글</p>
-				<p
-					style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
-				<p align="right"
-					style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10
-					| 잭슨</p>
+				<p class="beforeBoard" style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
+				<p align="right" style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10 | 잭슨</p>
 			</div>
 			<br> <br> <br>
 		</div>
 	</div>
+	
+	<script>
+	$(document).ready(function() { 
+		$(".listBtn").click(function(){
+			var pno=0; // 페이지 번호가 들어갈꺼임 (나중에 돌아올때 현재 페이지로 오기 위해서)
+			location.href="list.bo?pno=" + pno;
+		});
+		
+		$(".updateBtn").click(function(){
+			var bno=0; // 글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			location.href="update.bo?pno=" + bno;
+		});
+		
+		$(".deleteBtn").click(function(){
+			var bno=0; // 글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			location.href="delete.bo?pno=" + bno;
+		});
+	});
+	
+	$(document).ready(function() { 
+		$(".replyUpdateBtn").click(function(){
+			var replyno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			location.href="replyUpdate.bo?replyno=" + replyno;
+		});
+		
+		$(".replyDeleteBtn").click(function(){
+			var replyno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			location.href="replyDelete.bo?replyno=" + replyno;
+		});
+	});
+	
+	$(document).ready(function() { 
+		$(".afterBoard").click(function(){
+			var bno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			location.href="detail.bo?bno=" + bno;
+		});
+		
+		$(".beforeBoard").click(function(){
+			var bno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			location.href="detail.bo?bno=" + bno;
+		});
+	});
+	</script>
+	
 </body>
 </html>

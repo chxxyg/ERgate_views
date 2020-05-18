@@ -82,7 +82,7 @@
 /* 콘텐츠영역 */
 
 /* ==========페이지영역========== */
-#noticeDetail {
+#noticeDetail, #boardDetail {
 	padding-top: 20px;
     padding-left: 30px;
 	background: white;
@@ -160,17 +160,17 @@
 		</div>
 		<div class="contentArea">
 			<h4 style="margin-left: 1180px;">사내게시판 작성</h4>
-			<form name="noticeEnroll" action="#" method="post">
-				<table id="noticeDetail">
+			<form name="boardEnroll" action="enroll.bo" method="get">
+				<table id="boardDetail">
 					<tr>
 						<th colspan="2" style="text-align:left;">글제목</th>
-						<td colsapn="6"><input name="noticeTitle" class="inputs" type="text"></td>
+						<td colsapn="6"><input name="boardTitle" class="inputs" type="text"></td>
 					</tr>
 					<tr>
 						<th colspan="2" style="text-align:left;">첨부파일</th>
 						<td colspan="6"><button type="button" class="bigBtn" onclick="addFile();">추가</button>
 							&nbsp;&nbsp;<a href="#">첨부파일.jpg</a>
-							<input id="addFiles" type="file" name="noticeFile" multiple style="display:none;">
+							<input id="addFiles" type="file" name="boardFile" multiple style="display:none;">
 						</td>
 					</tr>
 					<tr>
@@ -182,7 +182,7 @@
 			</form>
 			<br>
 			<div id="btnArea">
-				<button id="submitNotice" class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
+				<button id="submitBoard" class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
 				<button class="bigBtn">취소</button>
 			</div>
 			<br> <br><br>
@@ -194,8 +194,8 @@
 			$("#addFiles").click();
 		}
 		
-		$("#submitNotice").click(function(){
-			$("form[name=noticeEnroll]").submit();
+		$("#submitBoard").click(function(){
+			$("form[name=boardEnroll]").submit();
 		});
 	</script>
 </body>

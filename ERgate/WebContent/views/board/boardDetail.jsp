@@ -83,7 +83,7 @@
 /* 콘텐츠영역 */
 
 /* ==========페이지영역========== */
-#noticeDetail {
+#noticeDetail, #boardDetail {
 	padding: 20px;
 	background: white;
 	min-height: 400px;
@@ -92,7 +92,7 @@
 	position: relative;
 }
 
-#noticeContent {
+#noticeContent, #boardContent {
 	width: 1300px;
 	min-height: 400px;
 	height: auto;
@@ -183,6 +183,10 @@
 #reContentWrap {
 	height:30px;
 }
+.afterBoard:hover, .beforeBoard:hover {
+	color:orangered;
+	cursor:pointer;
+}
 </style>
 </head>
 <body>
@@ -203,14 +207,14 @@
 		</div>
 		<div class="contentArea">
 			<h4 style="margin-left: 1230px;">사내게시판 상세</h4>
-			<div id="noticeDetail">
+			<div id="boardDetail">
 				<h3>사내게시판 제목</h3>
 				<h4>
 					No.195 | 케빈 | 2020/05/01 | 70
 					</h3>
 					<hr>
 					<br> <br>
-					<div id="noticeContent">사내게시판 내용</div>
+					<div id="boardContent">사내게시판 내용</div>
 					<b style="position: absolute; bottom: 0px; margin-bottom: 20px;">
 						첨부파일 : <a href="#">첨부파일.jpg</a>
 					</b>
@@ -263,13 +267,18 @@
 					</table>
 				</div>
 			</div>
+			
+			
 			<hr style="width:1340px; margin-left:0px; margin-top:10px; margin-bottom:0px;">
+			
+			
 			<br>
 			<div id="btnArea">
 				<button class="bigBtn listBtn" style="background: rgb(26, 188, 156);">목록</button>
 				<button class="bigBtn updateBtn">수정</button>
 				<button class="bigBtn deleteBtn">삭제</button>
 			</div>
+			
 			<br> <br>
 			<div class="bottomArea">
 				<div class="roundIcon">
@@ -278,7 +287,6 @@
 				<p style="display: inline;">다음글</p>
 				<p class="afterBoard" style="display: inline-block; width: 960px; margin: 0px; margin-left: 50px;">제목입니다.</p>
 				<p align="right" style="display: inline-block; width: 200px; margin: 0px; margin-left: 10px; text-align:left;">2020/05/10 | 엘리스</p>
-				
 				<hr>
 				
 				<div class="roundIcon">
@@ -305,7 +313,7 @@
 		});
 		
 		$(".deleteBtn").click(function(){
-			var bno=0; // 글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			var bno=0; // 글번호가 들어갈꺼임 (무엇을 삭제할지 알아야되니까)
 			location.href="delete.bo?pno=" + bno;
 		});
 	});
@@ -317,21 +325,28 @@
 		});
 		
 		$(".replyDeleteBtn").click(function(){
-			var replyno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			var replyno=0; // 댓글번호가 들어갈꺼임 (무엇을 삭제할지 알아야되니까)
 			location.href="replyDelete.bo?replyno=" + replyno;
 		});
 	});
 	
 	$(document).ready(function() { 
 		$(".afterBoard").click(function(){
-			var bno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			var bno=0; // 현재 글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
 			location.href="detail.bo?bno=" + bno;
 		});
 		
 		$(".beforeBoard").click(function(){
-			var bno=0; // 댓글번호가 들어갈꺼임 (무엇을 수정할지 알아야되니까)
+			var bno=0; // 현재 글번호가 들어갈꺼임 (무엇을 삭제할지 알아야되니까)
 			location.href="detail.bo?bno=" + bno;
 		});
+		/*	이전글 다음글 가져오는건 아래의 쿼리문을 참조하도록 하자 (다음글 번호, 이전글 번호 를 가져오기가 복잡하니 현재 글 번호를 통해 다음, 이전글 번호 알아내자)
+			SELECT * FROM BOARD
+				WHERE BOARD_NO IN (
+					( SELECT BOARD_NO FROM BOARD WHERE BOARD_NO < key(현재글번호) ORDER BY BOARD_NO DESC LIMIT 1), // 이전글
+					( SELECT BOARD_NO FROM BOARD WHERE BOARD_NO > key(현재글번호) ORDER BY BOARD_NO LIMIT 1 ), // 다음글
+				);
+		*/
 	});
 	</script>
 	

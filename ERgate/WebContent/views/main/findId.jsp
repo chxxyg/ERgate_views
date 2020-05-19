@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>loginIndex</title>
+<title>findId</title>
 <style>
 /* ==========페이지영역========== */
 
-	#loginOuter{
+	#findIdOuter{
 		border: 1px solid lightgray;
 		width: 550px;
 		height: auto;
@@ -20,21 +20,26 @@
 	}
 	
     /* 로그인폼 테이블 */
-    #loginTable{
+    #findIdTable{
         align: center;
     	margin: auto;
     	margin-top: 50px;
     	margin-bottom: 30px;
     }
-    #loginTable tr td{
+    #findIdTable tr td{
         height: 60px;
         font-size: 16px;
     }
-    .loginTd{
+    .findIdTd{
     	width: 60px;
     	text-align: center;
     }
-
+    #enrollDescript{
+    	color: gray;
+    	font-size: 16px;
+    	height: 70px;
+    	text-align: center;
+    }
     #loginId, #loginPwd{
     	padding: 5px;
 		width: 280px;
@@ -81,32 +86,41 @@
 </style>   
 </head>
 <body>
-	<div id="loginOuter">
+	<div id="findIdOuter">
     <form action="">
-        <table id="loginTable">
+        <table id="findIdTable">
             <tr>
                 <td colspan="2" style="text-align: center;"><img src="../../resources/siteImg/logo.png"></td>
             </tr>
             <tr>
-                <td class="loginTd" style="font-size: 22px;">ID</td>
-                <td><input id="loginId" type="text"></td>
+                <td colspan="2" id="findIdDescript">아이디 찾기</td>
             </tr>
             <tr>
-                <td class="loginTd" style="font-size: 22px;">PW</td>
-                <td><input id="loginPwd" type="text"></td>
+                <td class="findIdTd" style="font-size: 22px;">이름</td>
+                <td><input id="findIdName" type="text"></td>
             </tr>
             <tr>
-            	<td colspan="2" class="loginTd"><input id="loginSaveId" type="checkbox"><label id="loginSaveIdLabel" for="">아이디 저장 &nbsp;</label></td>
+                <td class="findIdTd" style="font-size: 22px;">이메일 주소</td>
+                <td>
+                	<input id="findIdEmail1" type="text">
+                	<input id="findIdEmail2" name="findIdEmailDomain" type="text" list="emailDomain" placeholder="직접입력">
+				        <datalist id="emailDomain">
+				            <option>@naver.com</option>
+				            <option>@gmail.com</option>
+				            <option>@hanmail.net</option>
+				        </datalist>
+                </td>
             </tr>
             <tr>
-                <td colspan="2" class="loginTd"><button id="loginBtn" class="bigBtn">로그인</button></td>
+	        	<td colspan="2"><button id="enrollAddressBtn" class="middleBtn">인증번호 발송</button></td>
+	        </tr>
+	        <tr>
+                <td colspan="2"><input id="findIdName" type="text"></td>
             </tr>
             <tr>
-                <td colspan="2" class="loginTd"><button id="loginEnrollBtn" class="bigBtn">계정등록</button></td>
+                <td colspan="2" class="loginTd"><button id="loginBtn" class="bigBtn">아이디 찾기</button></td>
             </tr>
-            <tr>
-            	<td colspan="2" class="loginTd"><a>아이디 찾기</a> | <a>비밀번호 찾기</a></td>
-            </tr>
+
         </table>
     </form>
 	</div>

@@ -180,7 +180,7 @@
 	                <td class="enrollLabel">이메일 주소</td>
 	                <td>
 	                	<input id="enrollEmail1" type="text">
-	                	<input id="enrollEmail2" name="enrollEmailDomain" type="text" list="emailDomain" placeholder="직접입력">
+	                	<input id="enrollEmail2" name="emailDomain" type="text" list="emailDomain" placeholder="직접입력">
 					        <datalist id="emailDomain">
 					            <option>@naver.com</option>
 					            <option>@gmail.com</option>

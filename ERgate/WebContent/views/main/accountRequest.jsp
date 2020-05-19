@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>accountRequest</title>
 <style>
 /* ==========페이지영역========== */
 
@@ -121,6 +121,15 @@
 	/* 등록/취소 버튼 */
 	
     /* 계정등록폼 테이블 */
+    
+    body{
+	    background-image: url('../../resources/siteImg/backgroundImage.png');
+	    background-repeat: no-repeat; 
+	    background-size: 100% 70%;
+	    background-position: center; 
+	    background-attachment: fixed; 
+    }
+    
 
 /* ==========페이지영역========== */
 </style>   

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>mypage</title>
 <style>
 /* ==========페이지영역========== */
     .outer{

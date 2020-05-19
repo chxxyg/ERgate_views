@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>loginIndex</title>
 <style>
 /* ==========페이지영역========== */
 
@@ -14,7 +14,7 @@
 		height: auto;
 		margin: auto;
 		background: white;
-    	margin-top: 100px;
+    	margin-top: 170px;
     	margin-bottom: 100px;
     	border-radius: 10px;
 	}
@@ -24,7 +24,7 @@
         align: center;
     	margin: auto;
     	margin-top: 50px;
-    	margin-bottom: 50px;
+    	margin-bottom: 30px;
     }
     #loginTable tr td{
         height: 60px;
@@ -66,6 +66,15 @@
 		background: rgb(190, 190, 190)
 	}
     /* 로그인폼 테이블 */
+    
+    body{
+	    background-image: url('../../resources/siteImg/backgroundImage.png');
+	    background-repeat: no-repeat; 
+	    background-size: 99% 70%;
+	    background-position: center; 
+	    background-attachment: fixed; 
+    }
+    
 
 /* ==========페이지영역========== */
 </style>   
@@ -86,8 +95,7 @@
                 <td><input id="loginPwd" type="text"></td>
             </tr>
             <tr>
-            	<td></td>
-            	<td><input id="loginSaveId" type="checkbox"><label id="loginSaveIdLabel" for="">아이디 저장</label></td>
+            	<td colspan="2" class="loginTd"><input id="loginSaveId" type="checkbox"><label id="loginSaveIdLabel" for="">아이디 저장 &nbsp;</label></td>
             </tr>
             <tr>
                 <td colspan="2" class="loginTd"><button id="loginBtn" class="bigBtn">로그인</button></td>

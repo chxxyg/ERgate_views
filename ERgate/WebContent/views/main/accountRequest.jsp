@@ -127,74 +127,74 @@
 </head>
 <body>
 	<div id="enrollOuter">
-    <form action="">
-        <table id="enrollTable">
-            <tr>
-                <td colspan="2" style="text-align: center;"><img src="../../resources/siteImg/logo.png"></td>
-            </tr>
-            <tr>
-                <td colspan="2" id="enrollDescript">계정 등록을 위해 필요한 정보를 입력해 주세요.</td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">아이디</td>
-                <td><input id="enrollId" type="text"><button id="enrollIdCheckBtn" class="middleBtn">중복검사</button></td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">비밀번호</td>
-                <td>
-                	<input id="enrollPwd" type="text">
-                	<p style="font-size: 14px; color: gray;">8~15자 이내로 영문(대소문자 구분), 숫자, 특수기호 사용 가능</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">비밀번호 확인</td>
-                <td><input id="enrollPwdCheck" type="text"></td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">이름</td>
-                <td><input id="enrollName" type="text"></td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">프로필 사진</td>
-                <td><img id="enrollImg" src="../../resources/siteImg/profile_logo.png" width="150" height="150"></td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">생년월일</td>
-                <td><input id="enrollBirth" type="text"></td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">휴대폰 번호</td>
-                <td><input id="enrollPhone" type="text"></td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">이메일 주소</td>
-                <td>
-                	<input id="enrollEmail1" type="text">
-                	<input id="enrollEmail2" name="enrollEmailDomain" type="text" list="emailDomain" placeholder="직접입력">
-				        <datalist id="emailDomain">
-				            <option>@naver.com</option>
-				            <option>@gmail.com</option>
-				            <option>@hanmail.net</option>
-				        </datalist>
-                </td>
-            </tr>
-            <tr>
-                <td class="enrollLabel">자택 주소</td>
-                <td><button id="enrollAddressBtn" class="middleBtn">우편번호 찾기</button>
-                	<input id="enrollAddress1" type="text" style="width: 100px"><br>
-                    <input id="enrollAddress2" type="text" style="width: 450px"><br>
-                    <input id="enrollAddress3" type="text" style="width: 450px" placeholder="나머지 주소">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                	<button id="enrollSubmit" class="bigBtn">계정등록요청</button> &nbsp;&nbsp;
-                	<button id="enrollReset" class="bigBtn">취소</button>
-                </td>
-            </tr>
-        </table>
-
-    </form>
+	    <form action="">
+	        <table id="enrollTable">
+	            <tr>
+	                <td colspan="2" style="text-align: center;"><img src="../../resources/siteImg/logo.png"></td>
+	            </tr>
+	            <tr>
+	                <td colspan="2" id="enrollDescript">계정 등록을 위해 필요한 정보를 입력해 주세요.</td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">아이디</td>
+	                <td><input id="enrollId" type="text"><button id="enrollIdCheckBtn" class="middleBtn">중복검사</button></td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">비밀번호</td>
+	                <td>
+	                	<input id="enrollPwd" type="text">
+	                	<p style="font-size: 14px; color: gray;">8~15자 이내로 영문(대소문자 구분), 숫자, 특수기호 사용 가능</p>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">비밀번호 확인</td>
+	                <td><input id="enrollPwdCheck" type="text"></td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">이름</td>
+	                <td><input id="enrollName" type="text"></td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">프로필 사진</td>
+	                <td><img id="enrollImg" src="../../resources/siteImg/profile_logo.png" width="150" height="150"></td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">생년월일</td>
+	                <td><input id="enrollBirth" type="text"></td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">휴대폰 번호</td>
+	                <td><input id="enrollPhone" type="text"></td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">이메일 주소</td>
+	                <td>
+	                	<input id="enrollEmail1" type="text">
+	                	<input id="enrollEmail2" name="enrollEmailDomain" type="text" list="emailDomain" placeholder="직접입력">
+					        <datalist id="emailDomain">
+					            <option>@naver.com</option>
+					            <option>@gmail.com</option>
+					            <option>@hanmail.net</option>
+					        </datalist>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="enrollLabel">자택 주소</td>
+	                <td><button id="enrollAddressBtn" class="middleBtn">우편번호 찾기</button>
+	                	<input id="enrollAddress1" type="text" style="width: 100px"><br>
+	                    <input id="enrollAddress2" type="text" style="width: 450px"><br>
+	                    <input id="enrollAddress3" type="text" style="width: 450px" placeholder="나머지 주소">
+	                </td>
+	            </tr>
+	            <tr>
+	                <td colspan="2" align="center">
+	                	<button id="enrollSubmit" class="bigBtn">계정등록요청</button> &nbsp;&nbsp;
+	                	<button id="enrollReset" class="bigBtn">취소</button>
+	                </td>
+	            </tr>
+	        </table>
+	
+	    </form>
     </div>
 
 </body>

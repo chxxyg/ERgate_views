@@ -222,7 +222,6 @@
 							            </div>
 							        </form>
 							        <input type="button" onclick="uploadFile(); return false;" class="btn bg_01" value="파일 업로드">
-							        </div>
 						</td>
 					</tr>
 					<tr>
@@ -479,15 +478,14 @@
  
              if (confirm("등록 하시겠습니까?")) {
                  // 등록할 파일 리스트를 formData로 데이터 입력
-                 var form = $('#uploadForm');
+                 var form = $('#uploadForm'); // 여기에 다 담겨있다 폼 안에 있는 값이
                  var formData = new FormData(form[0]);
                  for (var i = 0; i < uploadFileList.length; i++) {
                      formData.append('files', fileList[uploadFileList[i]]);
                  }
  				
-                 /* location.href="fileList.bo"; */
                  $.ajax({
-                     url : "fileList.bo",
+                     url : "test.bo",
                      data : formData,
                      type : 'POST',
                      enctype : 'multipart/form-data',

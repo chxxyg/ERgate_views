@@ -166,16 +166,9 @@
 }
         
 #fileDragDesc {
-    width: 1000px; 
-    height: 50px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    padding: 5px; 
-    text-align: center; 
-    line-height: 300px; 
+    margin-top:40px;
     vertical-align:middle;
-    color:black;
-    z-index:999;
+    text-align: center; 
     color:lightgray;
 }
 
@@ -209,14 +202,16 @@
 					<tr>
 						<th colspan="2" style="text-align:left;">첨부파일</th>
 						<td colspan="6">
-							<div class="upload-btn-wrapper">
-								<input type="file" id="input_file" multiple="multiple" style="height: 100%;" />
-								<button class="upload-btn">파일선택</button>
-							</div>
+							<button type="button" class="bigBtn fileShow">추가</button>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="8">
+									<div class="fileWrap" style="display:none;">
+									<div class="upload-btn-wrapper">
+										<input type="file" id="input_file" multiple="multiple" style="height: 100%;" />
+										<button class="upload-btn fileShow">파일선택</button>
+									</div>
 							        <form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">
 							            <div id="dropZone" style="width: 1140px; height: 100px; border: 1px solid lightgray;">
 							                <div id="fileDragDesc"> 파일을 드래그 해주세요. </div>
@@ -227,6 +222,7 @@
 							            </div>
 							        </form>
 							        <input type="button" onclick="uploadFile(); return false;" class="btn bg_01" value="파일 업로드">
+							        </div>
 						</td>
 					</tr>
 					<tr>
@@ -246,12 +242,7 @@
 	</div>
 	
 	<script>
-		function addFile(){
-			$("#addFiles").click();
-		}
 
-
-		
 		$("#submitBoard").click(function(){
 			$("form[name=boardEnroll]").submit();
 		});
@@ -264,6 +255,17 @@
              });
          });
      
+	     
+	     $(document).ready(function() {
+				$(".fileShow").click(function(e) {
+					e.preventDefault();
+					if($(".fileWrap").is(":visible")){
+						$(".fileWrap").slideUp(100);
+					}else {
+						$(".fileWrap").slideDown(100);
+					}
+				});
+		 });
          // 파일 리스트 번호
          var fileIndex = 0;
          // 등록할 전체 파일 사이즈
@@ -478,13 +480,14 @@
              if (confirm("등록 하시겠습니까?")) {
                  // 등록할 파일 리스트를 formData로 데이터 입력
                  var form = $('#uploadForm');
-                 var formData = new FormData(form);
+                 var formData = new FormData(form[0]);
                  for (var i = 0; i < uploadFileList.length; i++) {
                      formData.append('files', fileList[uploadFileList[i]]);
                  }
- 
+ 				
+                 /* location.href="fileList.bo"; */
                  $.ajax({
-                     url : "업로드 경로",
+                     url : "fileList.bo",
                      data : formData,
                      type : 'POST',
                      enctype : 'multipart/form-data',

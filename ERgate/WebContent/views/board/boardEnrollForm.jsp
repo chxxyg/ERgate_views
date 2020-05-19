@@ -193,7 +193,8 @@
 		</div>
 		<div class="contentArea">
 			<h4 style="margin-left: 1180px;">사내게시판 작성</h4>
-			<form name="boardEnroll" action="enroll.bo" method="get">
+			<form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">
+			<!-- <form name="boardEnroll" action="enroll.bo" method="get"> -->
 				<table id="boardDetail">
 					<tr>
 						<th colspan="2" style="text-align:left;">글제목</th>
@@ -212,7 +213,6 @@
 										<input type="file" id="input_file" multiple="multiple" style="height: 100%;" />
 										<button class="upload-btn fileShow">파일선택</button>
 									</div>
-							        <form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">
 							            <div id="dropZone" style="width: 1140px; height: 100px; border: 1px solid lightgray;">
 							                <div id="fileDragDesc"> 파일을 드래그 해주세요. </div>
 							                <table id="fileListTable" width="100%" border="0px">
@@ -220,20 +220,18 @@
 							                    </tbody>
 							                </table>
 							            </div>
-							        </form>
-							        <input type="button" onclick="uploadFile(); return false;" class="btn bg_01" value="파일 업로드">
 						</td>
 					</tr>
 					<tr>
 						<td colspan="8" rowspan="20">
-							<textarea class="textArea" cols="160" rows="25"></textarea>
+							<textarea name="boardContent" class="textArea" cols="160" rows="25"></textarea>
 						</td>
 					</tr>
 				</table>
 			</form>
 			<br>
 			<div id="btnArea">
-				<button id="submitBoard" class="bigBtn" style="background: rgb(26, 188, 156);">등록</button>
+				<button id="submitBoard" class="bigBtn" onclick="uploadFile();" style="background: rgb(26, 188, 156);">등록</button>
 				<button class="bigBtn">취소</button>
 			</div>
 			<br> <br><br>
@@ -242,9 +240,9 @@
 	
 	<script>
 
-		$("#submitBoard").click(function(){
+		/* $("#submitBoard").click(function(){
 			$("form[name=boardEnroll]").submit();
-		});
+		}); */
 		
 	     $(document).ready(function() {
              $("#input_file").bind('change', function() {
@@ -334,7 +332,7 @@
                  files = fileObject;
              } else {
                  // 직접 파일 등록시
-                 files = $('#multipaartFileList_' + fileIndex)[0].files;
+                 files = $('#multipartFileList_' + fileIndex)[0].files;
              }
  
              // 다중파일 등록
@@ -464,9 +462,10 @@
  
              // 파일이 있는지 체크
              if (uploadFileList.length == 0) {
-                 // 파일등록 경고창
+                 
+            	 /* // 파일등록 경고창
                  alert("파일이 없습니다.");
-                 return;
+                 return; */
              }
  
              // 용량을 500MB를 넘을 경우 업로드 불가
@@ -479,30 +478,14 @@
              if (confirm("등록 하시겠습니까?")) {
                  // 등록할 파일 리스트를 formData로 데이터 입력
                  var form = $('#uploadForm'); // 여기에 다 담겨있다 폼 안에 있는 값이
-                 var formData = new FormData(form[0]);
+                 var formData = new FormData($('#uploadForm')[0]);
                  for (var i = 0; i < uploadFileList.length; i++) {
                      formData.append('files', fileList[uploadFileList[i]]);
                  }
- 				
-                 $.ajax({
-                     url : "test.bo",
-                     data : formData,
-                     type : 'POST',
-                     enctype : 'multipart/form-data',
-                     processData : false,
-                     contentType : false,
-                     dataType : 'json',
-                     cache : false,
-                     success : function(result) {
-                         if (result.data.length > 0) {
-                             alert("성공");
-                             location.reload();
-                         } else {
-                             alert("실패");
-                             location.reload();
-                         }
-                     }
-                 });
+ 				 
+                 location.href="test.bo";
+                 
+                 
              }
          }
 		

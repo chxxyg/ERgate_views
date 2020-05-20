@@ -45,9 +45,17 @@ html, body {
 
 .reservationContent{
 	border:1px solid black;
+	width:100%;
+	height:400px;
+	margin-top:10px;
 }
 
 /* 예약하기 버튼*/
+.btns{
+	margin-left:30%;
+}
+
+
 .reservationBtn{
 	width:160px;
 	height:50px;
@@ -74,6 +82,36 @@ html, body {
 	border:0px;
 }
 
+/*콘텐트 내용*/
+.reservationContent{
+ 	border-collapse:collapse;
+ 	border-bottom:3px solid #dddd;
+ 	border-top:3px solid #dddd; 
+ 	border-left:none;
+ 	border-right:none;
+}
+
+
+#r1{
+	width:20%;
+	text-align:center;
+	border-bottom:1px ridge #gray; 
+	background-color:#eeee;
+	
+}
+#r2{
+	width:80%;
+	padding:20px;
+	border-bottom:1px solid black;
+} 
+#r3{
+	text-align:center;
+	background-color:#eeee;
+}
+#r4{
+	width:80%;
+	padding:20px;
+}
 </style>
 </head>
 <body>
@@ -84,17 +122,17 @@ html, body {
 		<div class="popup-content">
 			 <table class="reservationContent">
 			 
-				    <tr><td>신청자</td><td>케빈과장</td></tr>
+				    <tr><td id="r1">신청자</td><td id="r2">케빈과장</td></tr>
 				    
 					<tr>
-					<td>사용기간</td>
-					<td><form name="" action="" method="post"><input type="date" value=""></form></td> 
-					<td><form name="" action="" method="post"><input type="date" value=""></form></td>
+					<td id="r1">사용기간</td>
+					<td id="r2"><form name="" action="" method="post"><input type="date" value=""></form></td> 
+					<!-- <td><form name="" action="" method="post"><input type="date" value=""></form></td> -->
 					</tr>
 					
 					<tr>
-					<td>회의실</td>
-					<td>
+					<td id="r1">회의실</td>
+					<td id="r2">
 					<select name="meetingroom">
 						<option selected>회의실 선택</option>
 						<option value="5F 회의실1">5F 회의실1</option>
@@ -104,19 +142,20 @@ html, body {
 					</select></td>
 					</tr>
 					
-					<tr><td>사용목적</td><td><input type="text" placeholder="내용을 입력하세요"></td></tr>
+					<tr><td id="r1">사용목적</td><td id="r2"><input type="text" placeholder="내용을 입력하세요"></td></tr>
 					
-					<tr><td>참석자(내부)</td><td>게시물 글 제목입니다</td></tr>
+					<tr><td id="r1">참석자(내부)</td><td id="r2">게시물 글 제목입니다</td></tr>
 					
-					<tr><td>참석자(외부)</td><td><input type="text"></td></tr>
+					<tr><td id="r3">참석자(외부)</td><td id="r4"><input type="text"></td></tr>
  			 </table>   
 		</div>
 	
 		<br><br>
 	<!-- 예약/취소 버튼 -->
-	<button class="reservationBtn" type="submit">예약하기</button>
-	<button class="resetBtn" type="reset">취소</button>
-	
+		<div class=btns>
+			<button class="reservationBtn" type="submit">예약하기</button>
+			<button class="resetBtn" type="reset">취소</button>
+		</div>
 	</div>
 
 

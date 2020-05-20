@@ -122,6 +122,7 @@
 	
     /* 계정등록폼 테이블 */
     
+    
     /* 배경 이미지 */
     body{
 	    background-image: url('../../resources/siteImg/backgroundImage.png');

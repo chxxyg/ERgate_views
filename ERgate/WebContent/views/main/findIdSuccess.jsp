@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>findId</title>
+<title>findIdSuccess</title>
 <style>
 /* ==========페이지영역========== */
 
@@ -70,36 +70,18 @@
     	height: 60px;
     	width: 100px;
     }
-    #findIdTable input{
-    	padding: 5px;
-		width: 180px;
-		height: 25px;
-		border: 1px solid lightgray;
-		border-radius: 3px;
-		font-size: 16px;
-    }
+
     .findIdTd{
     	height: 100px;
     	text-align: center;
     }
 
-	/* 인증번호 발송 버튼 */
-	.middleBtn {
-		width: 90px;
-		height: 35px;
-		border: 0px;
-		border-radius: 5px;
-		background: rgb(190, 190, 190);
-		color: white;
-		font-size: 15px;
+	#findIdSuccess{
+		height: 230px;
+		font-size: 28px;
+		text-align: center;
+		line-height: 200%;
 	}
-	.middleBtn:hover {
-		cursor: pointer;
-	}
-	#findIdSendNoBtn{
-		width: 120px;
-	}
-	/* 인증번호 발송 버튼 */
 
 	/* 아이디 찾기 버튼 */
     .bigBtn {
@@ -137,10 +119,10 @@
 	    <form action="">
 	        <table id="findIdTable">
 	            <tr>
-	                <td colspan="2" style="text-align: center; height: 60px;"><img src="../../resources/siteImg/logo.png"></td>
+	                <td style="text-align: center; height: 60px;"><img src="../../resources/siteImg/logo.png"></td>
 	            </tr>
 	            <tr>
-	                <td colspan="2" id="findIdDescript">
+	                <td id="findIdDescript">
 						<ul id="subMenuList">
 							<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 							<li><button class="subBtn subActive">아이디 찾기</button></li>
@@ -149,29 +131,13 @@
 					</td>
 	            </tr>
 	            <tr>
-	                <td class="findIdLabel">이름</td>
-	                <td><input id="findIdName" type="text"></td>
+					<td id="findIdSuccess">
+						가나다라마바사님의 아이디는 <br>
+						<span style="color: orange;">useruser01</span>입니다.
+					</td>
 	            </tr>
 	            <tr>
-	                <td class="findIdLabel">이메일 주소</td>
-	                <td>
-	                	<input id="findIdEmail1" type="text">
-	                	<input id="findIdEmail2" name="emailDomain" type="text" list="emailDomain" placeholder="직접입력">
-					        <datalist id="emailDomain">
-					            <option>@naver.com</option>
-					            <option>@gmail.com</option>
-					            <option>@hanmail.net</option>
-					        </datalist>
-	                </td>
-	            </tr>
-	            <tr>
-		        	<td colspan="2" class="findIdTd">
-			        	<button id="findIdSendNoBtn" class="middleBtn">인증번호 발송</button>
-		                <input id="findIdNo" type="text" placeholder="인증번호 입력">
-	                </td>
-	            </tr>
-	            <tr>
-	                <td colspan="2" class="findIdTd"><button id="findIdBtn" class="bigBtn">아이디 찾기</button></td>
+	                <td colspan="2" class="findIdTd"><button id="findIdBtn" class="bigBtn">로그인하기</button></td>
 	            </tr>
 	        </table>
 	    </form>

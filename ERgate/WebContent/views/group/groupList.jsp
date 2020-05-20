@@ -250,7 +250,7 @@
     color: rgb(188, 188, 188);
     width: 40%;
 }
-
+ /* 조직도 div 스타일 */
 </style>
 </head>
 <body>

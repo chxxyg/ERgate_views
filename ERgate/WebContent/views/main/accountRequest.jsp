@@ -89,7 +89,6 @@
 	}
 	#enrollAddressBtn{
 		width: 120px;
-		/* margin-right: 10px; */
 	}
 	#enrollAddress2, #enrollAddress3{
 		margin-top: 10px;
@@ -118,7 +117,7 @@
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
-	/* 등록/취소 버튼 */
+	/* 등록 / 취소 버튼 */
 	
     /* 계정등록폼 테이블 */
     

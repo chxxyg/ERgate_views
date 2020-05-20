@@ -7,6 +7,7 @@
 <title>mypage</title>
 <style>
 /* ==========페이지영역========== */
+
     .outer{
         padding-left: 320px;
         float: left;
@@ -100,24 +101,20 @@
 		margin-bottom: 10px;
 	}
 	
+	/* 프로필 영역 */
 	#mypageProfileArea{
 		width: 250px;
 		text-align: center;
 	}
-	
 	#mypageProfileTable{
 		width: 240px;
 		text-align: center;
 	}
-	
-
-	
 	#mypageProfileImg{
 		border-radius: 50%;
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
-	
 	.smallBtn {
 		width: 60px;
 		height: 25px;
@@ -127,16 +124,15 @@
 		background: white;
 		font-size: 12px;
 	}
-	
 	.smallBtn:hover {
 		cursor: pointer;
 	}
-	
 	#mypageDescript{
 		font-size: 15px;
 		color: darkgray;
 		line-height: 150%;
 	}
+	/* 프로필 영역 */
 	
     /* 구분선 */
     .mypageLine{
@@ -147,7 +143,7 @@
     }
     /* 구분선 */
     
-    
+    /* 우편번호 찾기 버튼 */
     .middleBtn {
 		width: 90px;
 		height: 35px;
@@ -164,8 +160,9 @@
 		width: 120px;
 		margin-right: 5px;
 	}
+	/* 우편번호 찾기 버튼 */
 	
-	
+	/* 수정 / 취소 버튼 */
 	.bigBtn {
 		width: 140px;
 		height: 40px;
@@ -187,7 +184,8 @@
 	#mypageCancelBtn{
 		background: rgb(190, 190, 190);
 	}
-    
+	/* 수정 / 취소 버튼 */
+	
 	/* 마이페이지 */
 
 /* ==========페이지영역========== */

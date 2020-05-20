@@ -69,7 +69,6 @@
     	text-align: center;
     	padding-bottom: 20px;
     }
-    
     .findPwdSuccessLabel{
     	text-align: right;
     	font-size: 16px;
@@ -108,7 +107,7 @@
 	}
 	/* 인증번호 발송 버튼 */
 
-	/* 비밀번호 찾기 버튼 */
+	/* 비밀번호 변경 버튼 */
     .bigBtn {
 		width: 140px;
 		height: 40px;
@@ -121,7 +120,7 @@
 	.bigBtn:hover {
 		cursor: pointer;
 	}
-	/* 비밀번호 찾기 버튼 */
+	/* 비밀번호 변경 버튼 */
 
 	/* 비밀번호 찾기 테이블 */
     

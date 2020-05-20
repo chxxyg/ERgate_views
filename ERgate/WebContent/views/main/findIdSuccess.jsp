@@ -83,7 +83,7 @@
 		line-height: 200%;
 	}
 
-	/* 아이디 찾기 버튼 */
+	/* 로그인 하기 버튼 */
     .bigBtn {
 		width: 140px;
 		height: 40px;
@@ -96,7 +96,7 @@
 	.bigBtn:hover {
 		cursor: pointer;
 	}
-	/* 아이디 찾기 버튼 */
+	/* 로그인 하기 버튼 */
 
 	/* 아이디 찾기 테이블 */
     

@@ -36,7 +36,6 @@
     	width: 60px;
     	text-align: center;
     }
-
     #loginId, #loginPwd{
     	padding: 5px;
 		width: 280px;
@@ -52,7 +51,8 @@
     #loginSaveId, #loginSaveIdLabel{
     	vertical-align: top;
     }
-
+	
+	/* 로그인 / 계정등록 버튼 */
     .bigBtn {
 		width: 140px;
 		height: 40px;
@@ -70,6 +70,8 @@
 	#loginEnrollBtn{
 		background: rgb(190, 190, 190);
 	}
+	/* 로그인 / 계정등록 버튼 */
+	
     /* 로그인폼 테이블 */
     
     

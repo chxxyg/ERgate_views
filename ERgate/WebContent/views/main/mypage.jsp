@@ -7,6 +7,7 @@
 <title>mypage</title>
 <style>
 /* ==========페이지영역========== */
+
     .outer{
         padding-left: 320px;
         float: left;
@@ -69,14 +70,123 @@
     }
     /* 콘텐츠영역 */
 
+
+	/* 마이페이지 */
+	#mypageTable{
+		width: 1100px;
+		margin-bottom: 60px;
+	}
+	
+	.mypageInnerTable th, #mypageAlramTable th{
+		width: 1000px;
+		height: 50px;
+		font-size: 18px;
+		text-align: left;
+		padding-left: 10px;
+		color: rgb(26, 188, 156);
+	}
+	.mypageInnerTable td, #mypageAlramTable td{
+		width: 500px;
+		height: 40px;
+		padding-left: 10px;
+	}
+	.mypageInnerTable input{
+		padding: 5px;
+		width: 300px;
+		height: 25px;
+		border: 1px solid lightgray;
+		border-radius: 3px;
+		margin-right: 5px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	
+	/* 프로필 영역 */
+	#mypageProfileArea{
+		width: 250px;
+		text-align: center;
+	}
+	#mypageProfileTable{
+		width: 240px;
+		text-align: center;
+	}
+	#mypageProfileImg{
+		border-radius: 50%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.smallBtn {
+		width: 60px;
+		height: 25px;
+		border: 1px solid rgb(190, 190, 190);
+		border-radius: 5px;
+		color: rgb(190, 190, 190);
+		background: white;
+		font-size: 12px;
+	}
+	.smallBtn:hover {
+		cursor: pointer;
+	}
+	#mypageDescript{
+		font-size: 15px;
+		color: darkgray;
+		line-height: 150%;
+	}
+	/* 프로필 영역 */
+	
     /* 구분선 */
     .mypageLine{
         border-bottom: 1px solid gray;
         margin-top: 15px;
         margin-bottom: 20px;
-        width: 580px;
+        width: 800px;
     }
     /* 구분선 */
+    
+    /* 우편번호 찾기 버튼 */
+    .middleBtn {
+		width: 90px;
+		height: 35px;
+		border: 0px;
+		border-radius: 5px;
+		color: white;
+		font-size: 15px;
+	}
+	.middleBtn:hover {
+		cursor: pointer;
+	}
+	#mypageAddressBtn{
+		background: rgb(190, 190, 190);
+		width: 120px;
+		margin-right: 5px;
+	}
+	/* 우편번호 찾기 버튼 */
+	
+	/* 수정 / 취소 버튼 */
+	.bigBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		color: white;
+		font-size: 18px;
+	}
+	.bigBtn:hover {
+		cursor: pointer;
+	}
+	#mypageBtnArea{
+		height: 150px;
+		text-align: center;
+	}
+	#mypageSubmitBtn{
+		background: rgb(26, 188, 156);
+	}
+	#mypageCancelBtn{
+		background: rgb(190, 190, 190);
+	}
+	/* 수정 / 취소 버튼 */
+	
+	/* 마이페이지 */
 
 /* ==========페이지영역========== */
 </style>   
@@ -102,28 +212,30 @@
             <!-- 내용 작성 영역 입니다-->
 
             <form action="">
-                <table border="1">
+                <table id="mypageTable">
                     <tr>
-                        <td>
-                            <table style="text-align: center;">
+                        <td rowspan="2" id="mypageProfileArea">
+                            <table id="mypageProfileTable">
                                 <tr>
-                                    <td><div style="width: 250px; height: 205px;" border="1"><input type="image"></div></td>
+                                    <td><img id="mypageProfileImg" src="../../resources/siteImg/profile_logo.png" width="150" height="150"></td>
                                 </tr>
                                 <tr>
-                                    <td><button>편집</button></td>
+                                    <td ><button class="smallBtn">편집</button></td>
                                 </tr>
                                 <tr>
-                                    <td>ID erkevin</td>
+                                    <td style="height:50px; font-size: 18px;">
+                                    	<span style="color:rgb(26, 188, 156); font-weight: 550;">ID </span> erkevin
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>개인정보 수정 후 <br>그룹웨어 정보 반영을 위해 <br>재로그인 해주세요.</bt></td>
+                                    <td id="mypageDescript">개인정보 수정 후 <br>그룹웨어 정보 반영을 위해 <br>재로그인 해주세요.</bt></td>
                                 </tr>
                             </table>
                         </td>
-                        <td colspan="2">
-                            <table>
+                        <td>
+                            <table id="mypageAlramTable">
                                 <tr>
-                                    <td colspan="3">알림설정</td>
+                                    <th colspan="3">알림설정</th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -143,41 +255,50 @@
                                     <td colspan="3"><div class="mypageLine"></div></td>
                                 </tr>
                             </table>
-                            <table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+                            <table class="mypageInnerTable">
                                 <tr>
-                                    <td colspan="2">비밀변호 변경</td>
+                                    <th colspan="2">비밀번호 변경</th>
                                 </tr>
                                 <tr>
                                     <td>새 비밀번호</td>
                                     <td>새 비밀번호 확인</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
-                                    <td><input type="text" name="" id=""></td>
+                                    <td><input type="password" name="" id=""></td>
+                                    <td><input type="password" name="" id=""></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2"><div class="mypageLine"></div></td>
                                 </tr>
                             </table>
-                            <table>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+                            <table class="mypageInnerTable">
                                 <tr>
-                                    <td colspan="2">직장 정보</td>
+                                    <th colspan="2">직장 정보</th>
                                 </tr>
                                 <tr>
                                     <td>사원번호</td>
                                     <td>부서</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
-                                    <td><input type="text" name="" id=""></td>
+                                    <td><input type="text" name="" id="" readonly></td>
+                                    <td><input type="text" name="" id="" readonly></td>
                                 </tr>
                                 <tr>
                                     <td>직급</td>
                                     <td>직책</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
-                                    <td><input type="text" name="" id=""></td>
+                                    <td><input type="text" name="" id="" readonly></td>
+                                    <td><input type="text" name="" id="" readonly></td>
                                 </tr>
                                 <tr>
                                     <td>내선 번호</td>
@@ -199,9 +320,14 @@
                                     <td colspan="2"><div class="mypageLine"></div></td>
                                 </tr>
                             </table>
-                            <table>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+                            <table class="mypageInnerTable">
                                 <tr>
-                                    <td colspan="2">개인 정보</td>
+                                    <th colspan="2">개인 정보</th>
                                 </tr>
                                 <tr>
                                     <td>이름</td>
@@ -217,21 +343,35 @@
                                 </tr>
                                 <tr>
                                     <td><input type="text" name="" id=""></td>
-                                    <td><input type="text" name="" id=""><input type="text"></select></td>
+                                    <td>
+                                    	<input id="mypageEmail1" type="text" style="width: 180px">
+					                	<input id="mypageEmail2" name="emailDomain" type="text" list="emailDomain" placeholder="직접입력" style="width: 180px">
+									        <datalist id="emailDomain">
+									            <option>@naver.com</option>
+									            <option>@gmail.com</option>
+									            <option>@hanmail.net</option>
+					        </datalist>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">자택 주소</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><button>우편번호찾기</button><input type="text" name="" id=""><input type="text"><br><input type="text"></td>
+                                    <td colspan="2">
+                                    	<button id="mypageAddressBtn" class="middleBtn">우편번호찾기</button>
+                                    	<input type="text" style="width: 120px">
+                                    	<input type="text" style="width: 370px"> <br>
+                                    	<input type="text" style="width: 650px">
+                                    </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td><button type="submit">수정</button><button>취소</button></td>
-                        <td></td>
+                        <td colspan="2" id="mypageBtnArea">
+                        	<button id="mypageSubmitBtn" class="bigBtn" type="submit">수정</button>
+                        	<button id="mypageCancelBtn" class="bigBtn">취소</button>
+                        </td>
                     </tr>
                 </table>
             </form>

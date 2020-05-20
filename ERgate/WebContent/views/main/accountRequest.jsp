@@ -114,7 +114,7 @@
 	#enrollReset{
 		background:  rgb(190, 190, 190);
 	}
-	#enrollSubmit, #enrollReset{
+	#enrollSubmit, #enrollCancel{
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
@@ -153,13 +153,13 @@
 	            <tr>
 	                <td class="enrollLabel">비밀번호</td>
 	                <td>
-	                	<input id="enrollPwd" type="text">
+	                	<input id="enrollPwd" type="password">
 	                	<p style="font-size: 14px; color: gray;">8~15자 이내로 영문(대소문자 구분), 숫자, 특수기호 사용 가능</p>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td class="enrollLabel">비밀번호 확인</td>
-	                <td><input id="enrollPwdCheck" type="text"></td>
+	                <td><input id="enrollPwdCheck" type="password"></td>
 	            </tr>
 	            <tr>
 	                <td class="enrollLabel">이름</td>
@@ -200,7 +200,7 @@
 	            <tr>
 	                <td colspan="2" align="center">
 	                	<button id="enrollSubmit" class="bigBtn">계정등록요청</button> &nbsp;&nbsp;
-	                	<button id="enrollReset" class="bigBtn">취소</button>
+	                	<button id="enrollCancel" class="bigBtn">취소</button>
 	                </td>
 	            </tr>
 	        </table>

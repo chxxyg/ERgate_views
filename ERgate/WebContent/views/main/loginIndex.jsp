@@ -99,7 +99,7 @@
 	            </tr>
 	            <tr>
 	                <td class="loginTd" style="font-size: 20px;">PW</td>
-	                <td><input id="loginPwd" type="text"></td>
+	                <td><input id="loginPwd" type="password"></td>
 	            </tr>
 	            <tr>
 	            	<td colspan="2" class="loginTd"><input id="loginSaveId" type="checkbox"><label id="loginSaveIdLabel" for="">아이디 저장 &nbsp;</label></td>

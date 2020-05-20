@@ -161,12 +161,12 @@
 	            <tr>
 	                <td class="findPwdSuccessLabel">비밀번호</td>
 	                <td>
-	                	<input id="findPwdSuccess" type="text">
+	                	<input id="findPwdSuccess" type="password">
 	                </td>
 	            </tr>
 	            <tr>
 	                <td class="findPwdSuccessLabel">비밀번호 확인</td>
-	                <td><input id="findPwdSuccessCheck" type="text"></td>
+	                <td><input id="findPwdSuccessCheck" type="password"></td>
 	            </tr>
 	            <tr><td></td><td></td></tr>
 	            <tr><td></td><td></td></tr>

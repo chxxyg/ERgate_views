@@ -220,10 +220,10 @@
 		<!-- <div class="subMenuArea"></div> -->
 		<div class="contentArea">
 			<!-- 내용 작성 영역 입니다-->
-			<table id="mainTable">
+			<table id="mainTable" border="1">
 				<tr>
 					<td id="mainScheduleArea">
-						<table id="mainScheduleTable">
+						<table id="mainScheduleTable" border="1">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/event.png">
@@ -293,7 +293,7 @@
 						</table>
 					</td>
 					<td id="mainMailArea">
-						<table id="mainMailTable">
+						<table id="mainMailTable" border="1">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/mail.png">
@@ -360,7 +360,7 @@
 				</tr>
 				<tr>
 					<td id="mainNoticeArea">
-						<table id="mainNoticeTable">
+						<table id="mainNoticeTable" border="1">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/notice.png">
@@ -423,7 +423,7 @@
 						</table>
 					</td>
 					<td id="mainSignArea">
-						<table id="mainSignTable">
+						<table id="mainSignTable" border="1">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/sign.png">

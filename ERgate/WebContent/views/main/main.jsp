@@ -83,12 +83,15 @@
     }
     
     #mainScheduleArea, #mainNoticeArea{
-    	width: 900px;
+    	width: 1000px;
     	height: 50%;
     }
     #mainMailArea, #mainSignArea{
-    	width: 500px;
+    	width: 400px;
     	height: 50%;
+    }
+    #mainScheduleArea, #mainMailArea{
+    	padding-bottom: 30px;
     }
     #mainScheduleTable, #mainNoticeTable{
     	width: 95%;
@@ -132,7 +135,7 @@
     #mainDateArea{
     	font-size: 20px;
     	color: rgb(26, 188, 156);
-    	height: 40px;
+    	height: 44px;
     	font-weight: 550;
     }
     
@@ -142,7 +145,7 @@
 		height: 200px;
 	}
 	
-	#mainMailDiv{
+	#mainMailDiv, #mainSignDiv{
 		width: 99%;
 		height: 80px;
 		background: rgb(240,240,240);
@@ -151,23 +154,23 @@
 		margin-top: 15px;
 		margin-bottom: 25px;
 	}
-    #mainMailInnerTable{
+    #mainMailInnerTable, #mainSignInnerTable{
     	width: 100%;
     	height: 100%;
     }
-    #mainMailInnerLabel{
+    #mainMailInnerLabel, #mainSignInnerLabel{
     	height: 35%;
     	font-size: 14px;
     	text-align: center;
     	padding-top: 5px;
     }
-    #mainMailInnerContent{
+    #mainMailInnerContent, #mainSignInnerContent{
     	font-size: 30px;
     	text-align: center;
     	color: black;
     }
     
-    #mainMailBoard{
+    #mainMailBoard, #mainSignBoard{
     	width: 100%;
     }
 
@@ -220,10 +223,10 @@
 		<!-- <div class="subMenuArea"></div> -->
 		<div class="contentArea">
 			<!-- 내용 작성 영역 입니다-->
-			<table id="mainTable" border="1">
+			<table id="mainTable">
 				<tr>
 					<td id="mainScheduleArea">
-						<table id="mainScheduleTable" border="1">
+						<table id="mainScheduleTable">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/event.png">
@@ -293,7 +296,7 @@
 						</table>
 					</td>
 					<td id="mainMailArea">
-						<table id="mainMailTable" border="1">
+						<table id="mainMailTable">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/mail.png">
@@ -360,7 +363,7 @@
 				</tr>
 				<tr>
 					<td id="mainNoticeArea">
-						<table id="mainNoticeTable" border="1">
+						<table id="mainNoticeTable">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/notice.png">
@@ -423,7 +426,7 @@
 						</table>
 					</td>
 					<td id="mainSignArea">
-						<table id="mainSignTable" border="1">
+						<table id="mainSignTable">
 							<tr>
 								<th class="mainLabel">
 									<img src="../../resources/icons/sign.png">
@@ -434,7 +437,54 @@
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2"></td>
+								<td colspan="2">
+									<div id="mainSignDiv">
+										<table id="mainSignInnerTable">
+											<tr id="mainSignInnerLabel">
+												<td style="width: 50%">결재 대기 문서</td>
+												<td style="width: 50%">결재 진행 문서</td>
+											</tr>
+											<tr id="mainSignInnerContent">
+												<td>130</td>
+												<td>120</td>
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<!-- 게시판 -->
+									<table id="mainSignBoard" class="boardTable">
+										<thead>
+											<tr>
+												<th>ㅁㅁㅁ</th>
+												<th>ㅇㅇㅇ</th>
+												<th>ㅅㅅㅅ</th>
+												<th>ㄷㄷㄷ</th>
+											</tr>
+										</thead>
+										<tr>
+											<td>게시판</td>
+											<td>내용</td>
+											<td>입니다~</td>
+											<td>~~~</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</table>
+									<!-- 게시판 -->
+								</td>
 							</tr>
 						</table>
 					</td>

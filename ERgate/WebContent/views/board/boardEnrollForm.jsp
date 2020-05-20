@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+	String contextPath = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -170,6 +173,7 @@
     vertical-align:middle;
     text-align: center; 
     color:lightgray;
+    font-size:16px;
 }
 
 
@@ -193,7 +197,7 @@
 		</div>
 		<div class="contentArea">
 			<h4 style="margin-left: 1180px;">사내게시판 작성</h4>
-			<form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="post">
+			<form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="get">
 			<!-- <form name="boardEnroll" action="enroll.bo" method="get"> -->
 				<table id="boardDetail">
 					<tr>
@@ -214,7 +218,7 @@
 										<button class="upload-btn fileShow">파일선택</button>
 									</div>
 							            <div id="dropZone" style="width: 1140px; height: 100px; border: 1px solid lightgray;">
-							                <div id="fileDragDesc"> 파일을 드래그 해주세요. </div>
+							                <div id="fileDragDesc"> ※파일을 드래그 해주세요. </div>
 							                <table id="fileListTable" width="100%" border="0px">
 							                    <tbody id="fileTableTbody">
 							                    </tbody>
@@ -328,11 +332,8 @@
              var files = null;
  
              if (fileObject != null) {
-                 // 파일 Drag 이용하여 등록시
+                 // 파일  등록시
                  files = fileObject;
-             } else {
-                 // 직접 파일 등록시
-                 files = $('#multipartFileList_' + fileIndex)[0].files;
              }
  
              // 다중파일 등록
@@ -360,8 +361,8 @@
                          return;
                      }
                      
-                     var fileSizeKb = fileSize / 1024; // 파일 사이즈(단위 :kb)
-                     var fileSizeMb = fileSizeKb / 1024;    // 파일 사이즈(단위 :Mb)
+                     var fileSizeKb = fileSize / 1024;
+                     var fileSizeMb = fileSizeKb / 1024;
                      
                      var fileSizeStr = "";
                      if ((1024*1024) <= fileSize) {    // 파일 용량이 1메가 이상인 경우 
@@ -459,34 +460,45 @@
          function uploadFile() {
              // 등록할 파일 리스트
              var uploadFileList = Object.keys(fileList);
- 
-             // 파일이 있는지 체크
-             if (uploadFileList.length == 0) {
-                 
-            	 /* // 파일등록 경고창
-                 alert("파일이 없습니다.");
-                 return; */
-             }
- 
-             // 용량을 500MB를 넘을 경우 업로드 불가
-             if (totalFileSize > maxUploadSize) {
-                 // 파일 사이즈 초과 경고창
-                 alert("총 용량 초과\n총 업로드 가능 용량 : " + maxUploadSize + " MB");
-                 return;
-             }
- 
-             if (confirm("등록 하시겠습니까?")) {
-                 // 등록할 파일 리스트를 formData로 데이터 입력
-                 var form = $('#uploadForm'); // 여기에 다 담겨있다 폼 안에 있는 값이
-                 var formData = new FormData($('#uploadForm')[0]);
-                 for (var i = 0; i < uploadFileList.length; i++) {
-                     formData.append('files', fileList[uploadFileList[i]]);
-                 }
- 				 
-                 location.href="test.bo";
-                 
-                 
-             }
+
+                var form = $('#uploadForm');
+                var formData = new FormData(form[0]);
+                for (var i = 0; i < uploadFileList.length; i++) {
+                    formData.append('files', fileList[uploadFileList[i]]);
+                }
+                // formData 안에 제목 / 내용 / 파일 잘 담겼는지 확인하기
+                for (var key of formData.keys()) {
+                	 console.log(key);
+                }
+                for (var value of formData.values()) {
+                	 console.log(value);
+                }
+                $.ajax({
+                    url : "<%= contextPath %>/testFileload.bo",
+                    data : formData,
+                    type : 'POST',
+                    enctype : 'multipart/form-data',
+                    processData : false,
+                    contentType : false,
+                    dataType : 'json',
+                    cache : false,
+                    success : function(result) {
+                        if (result.data.length > 0) {
+                            alert("성공");
+                            location.reload();
+                        } else {
+                            alert("실패");
+                            location.reload();
+                        }
+                        
+                    },
+                    error:function(){	// error : ajax 통신실패시 처리할 함수 지정
+	 					console.log("ajax 통신 실패!");
+	 				},
+	 				complete:function(){// complete : ajax 통신 성공여부와 상관없이 실행
+	 					console.log("무조건 호출!!");
+	 				}
+                });
          }
 		
 	</script>

@@ -120,7 +120,7 @@
 .groupMap_outer{
     border: 1px solid lightgrey;
     width: 1400px;
-    height: 650px;
+    height: 700px;
     padding-left: 0px;
     color: rgb(77, 77, 77);
     font-size: 17px;
@@ -254,140 +254,141 @@
 </style>
 </head>
 <body>
-<!-- 이곳에 메뉴바 include -->
-
-<!-- 이곳에 메뉴바 include -->
-<jsp:include page="../common/menubar.jsp"/>
-
-<div class="outer">
-	<div class="topBar">
-		<!-- 메뉴명 -->
-		<span>조직도</span>
-	</div>
-	<div class="subMenuArea">
-		<ul id="subMenuList">
-			<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-			<li><button class="subBtn subActive">조직도</button></li>
-		</ul>
-	</div>
-	<div class="contentArea">
-	<!-- 내용 작성 영역 입니다-->
+	<!-- 이곳에 메뉴바 include -->
 	
-	<!-- 버튼과 검색바 같이 들어가는 DIV -->
-	<div btnAndSearch>
-		<table class="bas">
-			<tr>
-				<td id="leftArea">
-					<!-- 화면 구조 맞추기 위해 td 만들고 비워둠 -->
-				</td>
-				<td id="rightArea">
-					<!-- 검색바 -->
-					<div class="searchBar">
-						<select>
-							<option>이름</option>
-							<option>직급</option>
-							<option>직책</option>
-							<option>부서</option>
-						</select> <input type="text" placeholder="이름/직급/직책/부서 검색">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-							fill="black" width="48px" height="48px">
-							<path
-								d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-							<path d="M0 0h24v24H0z" fill="none" /></svg>
-					</div>
-					<!-- 검색바 -->
-				</td>
-			</tr>
-		</table>
-	</div>
-
-	<div style="height:10px;"></div>
-
-	<!-- 조직도 div -->
-    <div class="groupMap_outer">
-        <div class="depList_area">
-            <ul class="group_tree">
-                <li>
-                    <input type="checkbox" id="root">
-                    <label for="root"> ERgate</label>
-                    <ul>
-                        <li><a href="#"> 임원</a></li>
-                        <li><a href="#"> 기술팀</a></li>
-                        <li><a href="#"> 인사팀</a></li>
-                        <li><a href="#"> 회계팀</a></li>
-                        <li><a href="#"> 기술팀</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="empList_area">
-            <ul class="empList">
-                <a href="#"><li><span>앨리스</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
-                <a href="#"><li><span>리차드</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
-                <a href="#"><li><span>케빈</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
-                <a href="#"><li><span>김카카오</span> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></li></a>
-                <a href="#"><li><span>최삼성</span> <span class="rank_code">(기술팀 /</span> <span class="job_code">팀원)</span></li></a>
-                <a href="#"><li><span>박다음</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">대리)</span></li></a>
-                <a href="#"><li><span>문별</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">팀장)</span></li></a>
-            </ul>
-        </div>
-        <div class="profile_area">
-            <div class="profile_up">
-                <div class="profile_img">
-                    <img id="mypageProfileImg" src="../../resources/siteImg/profile_logo.png" width="140" height="140">
-                </div>
-                <div class="profile_name">
-                    <div class="dept_name">앨리스</div>
-                    <div> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></div>
-                    <div class="dept_mail">qwertyadsf@gmail.com</div>
-                </div>
-            </div>
-            <div class="profile_down" align="center">
-                <table id="profile_list" align="center">
-                    <tr>
-                        <th>사원번호</th>
-                        <td>3456789</td>
-                    </tr>
-                    <tr>
-                        <th>입사일</th>
-                        <td>2020-03-03</td>
-                    </tr>
-                    <tr>
-                        <th>아이디</th>
-                        <td>Alice</td>
-                    </tr>
-                    <tr>
-                        <th>생년월일</th>
-                        <td>1990/08/27</td>
-                    </tr>
-                    <tr>
-                        <th>자택주소</th>
-                        <td>서울시 마포구 서교동 홍익로 2길 35</td>
-                    </tr>
-                    <tr>
-                        <th>휴대폰 번호</th>
-                        <td>010-0000-0000</td>
-                    </tr>
-                    <tr>
-                        <th>내선번호</th>
-                        <td>070-0000-0000</td>
-                    </tr>
-                    <tr>
-                        <th>부서명</th>
-                        <td>기술팀</td>
-                    </tr>
-                    <tr>
-                        <th>담당업무</th>
-                        <td>팀장</td>
-                    </tr>
-                
-                </table>
-            </div>
-        </div>
-    </div>
-   		
-
-	</div>
-</div>
+	<!-- 이곳에 메뉴바 include -->
+	<jsp:include page="../common/menubar.jsp"/>
+	
+	<div class="outer">
+		<div class="topBar">
+			<!-- 메뉴명 -->
+			<span>조직도</span>
+		</div>
+		<div class="subMenuArea">
+			<ul id="subMenuList">
+				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
+				<li><button class="subBtn subActive">조직도</button></li>
+			</ul>
+		</div>
+		<div class="contentArea">
+		<!-- 내용 작성 영역 입니다-->
+		
+			<!-- 버튼과 검색바 같이 들어가는 DIV -->
+			<div btnAndSearch>
+				<table class="bas">
+					<tr>
+						<td id="leftArea">
+							<!-- 화면 구조 맞추기 위해 td 만들고 비워둠 -->
+						</td>
+						<td id="rightArea">
+							<!-- 검색바 -->
+							<div class="searchBar">
+								<select>
+									<option>이름</option>
+									<option>직급</option>
+									<option>직책</option>
+									<option>부서</option>
+								</select> <input type="text" placeholder="이름/직급/직책/부서 검색">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+									fill="black" width="48px" height="48px">
+									<path
+										d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+									<path d="M0 0h24v24H0z" fill="none" /></svg>
+							</div>
+							<!-- 검색바 -->
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+			<div style="height:10px;"></div>
+		
+			<!-- 조직도 div -->
+		    <div class="groupMap_outer">
+		        <div class="depList_area">
+		            <ul class="group_tree">
+		                <li>
+		                    <input type="checkbox" id="root">
+		                    <label for="root"> ERgate</label>
+		                    <ul>
+		                        <li><a href="#"> 임원</a></li>
+		                        <li><a href="#"> 기술팀</a></li>
+		                        <li><a href="#"> 인사팀</a></li>
+		                        <li><a href="#"> 회계팀</a></li>
+		                        <li><a href="#"> 기술팀</a></li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </div>
+		        <div class="empList_area">
+		            <ul class="empList">
+		                <a href="#"><li><span>앨리스</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
+		                <a href="#"><li><span>리차드</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
+		                <a href="#"><li><span>케빈</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
+		                <a href="#"><li><span>김카카오</span> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></li></a>
+		                <a href="#"><li><span>최삼성</span> <span class="rank_code">(기술팀 /</span> <span class="job_code">팀원)</span></li></a>
+		                <a href="#"><li><span>박다음</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">대리)</span></li></a>
+		                <a href="#"><li><span>문별</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">팀장)</span></li></a>
+		            </ul>
+		        </div>
+		        <div class="profile_area">
+		            <div class="profile_up">
+		                <div class="profile_img">
+		                    <img id="mypageProfileImg" src="../../resources/siteImg/profile_logo.png" width="140" height="140">
+		                </div>
+		                <div class="profile_name">
+		                    <div class="dept_name">앨리스</div>
+		                    <div> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></div>
+		                    <div class="dept_mail">qwertyadsf@gmail.com</div>
+		                </div>
+		            </div>
+		            <div class="profile_down" align="center">
+		                <table id="profile_list" align="center">
+		                    <tr>
+		                        <th>사원번호</th>
+		                        <td>3456789</td>
+		                    </tr>
+		                    <tr>
+		                        <th>입사일</th>
+		                        <td>2020/03/03</td>
+		                    </tr>
+		                    <tr>
+		                        <th>아이디</th>
+		                        <td>Alice</td>
+		                    </tr>
+		                    <tr>
+		                        <th>생년월일</th>
+		                        <td>1990/08/27</td>
+		                    </tr>
+		                    <tr>
+		                        <th>휴대폰 번호</th>
+		                        <td>010-0000-0000</td>
+		                    </tr>
+		                    <tr>
+		                        <th>내선번호</th>
+		                        <td>070-0000-0000</td>
+		                    </tr>
+							<tr>
+		                        <th>팩스번호</th>
+		                        <td>070-0000-0000</td>
+		                    </tr>	                    
+		                    <tr>
+		                        <th>부서명</th>
+		                        <td>기술팀</td>
+		                    </tr>
+		                    <tr>
+		                        <th>직급/직책</th>
+		                        <td>부장/팀장</td>
+		                    </tr>
+		                	<tr>
+		                        <th>자택주소</th>
+		                        <td>서울시 마포구 서교동 홍익로 2길 35</td>
+		                    </tr>
+		                </table>
+		            </div>
+		        </div> <!-- 오른쪽 영역 끝 -->
+		    </div> <!-- groupMap_outer -->
+		</div> <!-- contentArea -->
+	</div> <!-- outer -->
 </body>
 </html>

@@ -70,6 +70,7 @@
     }
     /* 콘텐츠영역 */
 
+/* ==========페이지영역========== */
 
 	/* 마이페이지 */
 	#mypageTable{
@@ -139,7 +140,7 @@
         border-bottom: 1px solid gray;
         margin-top: 15px;
         margin-bottom: 20px;
-        width: 800px;
+        width: 850px;
     }
     /* 구분선 */
     
@@ -188,7 +189,6 @@
 	
 	/* 마이페이지 */
 
-/* ==========페이지영역========== */
 </style>   
 </head>
 <body>
@@ -359,7 +359,7 @@
                                 <tr>
                                     <td colspan="2">
                                     	<button id="mypageAddressBtn" class="middleBtn">우편번호찾기</button>
-                                    	<input type="text" style="width: 120px">
+                                    	<input type="text" style="width: 100px">
                                     	<input type="text" style="width: 370px"> <br>
                                     	<input type="text" style="width: 650px">
                                     </td>

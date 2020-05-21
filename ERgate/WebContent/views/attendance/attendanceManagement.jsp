@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>attendanceManagement</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
 /* ==========페이지영역========== */
     .outer{
@@ -132,13 +131,21 @@
 	opacity: 70%;
 }
 /* 검색창 스타일 */
-/* 스케줄관련 아이콘스타일 */
-.schedule_icons {
-	fill: rgb(190, 190, 190); /* 검은색 : rgb(94, 94, 94)*/
-	width: 35px;
-	vertical-align: bottom;
+/* 연도 선택 스타일 */
+#year{
+    font-size: 25px;
+    text-align-last: center;
+    width: 120px;
+    border: 0px;
+    background-color: transparent;
+    -webkit-appearance : none;
+    -moz-appearance: none;
+    appearance: none;
 }
-/* 스케줄관련 아이콘스타일 */
+select::-ms-expand {
+    display: none;
+}
+/* 연도 선택 스타일 */
 /* 달력 옆 화살표 스타일 */
 .material-icons {
 	font-size: 40px;
@@ -254,17 +261,13 @@ border-right: 1px solid lightgrey;
 						<td id="leftArea"> 
 							<h2 style="display: inline-block; margin-left: 530px;">
 								<span class="material-icons"> arrow_left </span> 
-									    <select name="" id="">
+									    <select name="year" id="year">
 									        <option value="">2020</option>
 									        <option value="">2019</option>
 									        <option value="">2018</option>
 									        <option value="">2017</option>
 									    </select>								
-
-
-								<svg class="schedule_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px">
-								<path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" />
-								<path d="M0 0h24v24H0z" fill="none" /></svg>
+							
 								<span class="material-icons"> arrow_right </span>
 							</h2>
 							

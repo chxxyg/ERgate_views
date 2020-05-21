@@ -83,22 +83,22 @@
     }
     
     #mainScheduleArea, #mainNoticeArea{
-    	width: 1000px;
+    	width: 950px;
     	height: 50%;
     }
     #mainMailArea, #mainSignArea{
-    	width: 400px;
+    	width: 450px;
     	height: 50%;
     }
     #mainScheduleArea, #mainMailArea{
     	padding-bottom: 30px;
     }
     #mainScheduleTable, #mainNoticeTable{
-    	width: 95%;
+    	width: 90%;
     	height: 100%;
     }
     #mainMailTable, #mainSignTable{
-    	width: 100%;
+    	width: 95%;
     	height: 100%;
     }
     
@@ -172,6 +172,18 @@
     
     #mainMailBoard, #mainSignBoard{
     	width: 100%;
+    }
+    #mainSignThArea, #mainMailThArea{
+    	text-align: center;
+    }
+    #mainSignTh1, #mainSignTh2, #mainSignTh3, #mainMailTh1, #mainMailTh2, #mainMailTh3{
+    	display: inline-block;
+    	font-size: 19px;
+    	border-bottom: 2px solid rgb(26, 188, 156);
+    	width: 32%;
+    	height: 30px;
+    	text-align: center;
+    	margin-left: 2px;
     }
 
     
@@ -253,39 +265,27 @@
 									<table id="mainScheduleBoard" class="boardTable">
 										<thead>
 											<tr>
-												<th>ㅁㅁㅁ</th>
-												<th>ㅇㅇㅇ</th>
-												<th>ㅅㅅㅅ</th>
-												<th>ㄷㄷㄷ</th>
+												<th>시각</th>
+												<th>일정 내용</th>
 											</tr>
 										</thead>
 										<tr>
-											<td>게시판</td>
-											<td>내용</td>
-											<td>입니다~</td>
-											<td>~~~</td>
+											<td>10:00</td>
+											<td>일정있습니다~~~</td>
 										</tr>
 										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td></td>
 											<td></td>
 											<td></td>
 										</tr>
 										<tr>
 											<td></td>
 											<td></td>
-											<td></td>
-											<td></td>
 										</tr>
 										<tr>
 											<td></td>
 											<td></td>
+										</tr>
+										<tr>
 											<td></td>
 											<td></td>
 										</tr>
@@ -325,32 +325,25 @@
 								</td>
 							</tr>
 							<tr>
+								<td colspan="2" id="mainMailThArea">
+									<div id="mainMailTh1">받은 메일함</div>
+									<div id="mainMailTh2">보낸 메일함</div>
+									<div id="mainMailTh3">중요 메일함</div>
+								</td>
+							</tr>
+							<tr>
 								<td colspan="2">
 									<!-- 게시판 -->
 									<table id="mainMailBoard" class="boardTable">
-										<thead>
-											<tr>
-												<th>ㅁㅁㅁ</th>
-												<th>ㅇㅇㅇ</th>
-												<th>ㅅㅅㅅ</th>
-												<th>ㄷㄷㄷ</th>
-											</tr>
-										</thead>
 										<tr>
-											<td>게시판</td>
-											<td>내용</td>
-											<td>입니다~</td>
-											<td>~~~</td>
+											<td>user01</td>
+											<td>메일 보냈습니다. 확인해주세요.</td>
 										</tr>
 										<tr>
 											<td></td>
 											<td></td>
-											<td></td>
-											<td></td>
 										</tr>
 										<tr>
-											<td></td>
-											<td></td>
 											<td></td>
 											<td></td>
 										</tr>
@@ -378,19 +371,11 @@
 									<!-- 게시판 -->
 									<table id="mainNoticeBoard" class="boardTable">
 										<tr>
-											<td>게시판</td>
-											<td>내용</td>
-											<td>입니다~</td>
-											<td>~~~</td>
+											<td>[공지]</td>
+											<td>공지사항 여기에 보일거임~~~</td>
+											<td>2020.05.20 10:00</td>
 										</tr>
 										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										<tr>
-											<td></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -399,22 +384,23 @@
 											<td></td>
 											<td></td>
 											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
 											<td></td>
 										</tr>
 										<tr>
 											<td></td>
 											<td></td>
 											<td></td>
-											<td></td>
 										</tr>
 										<tr>
 											<td></td>
 											<td></td>
 											<td></td>
-											<td></td>
 										</tr>
 										<tr>
-											<td></td>
 											<td></td>
 											<td></td>
 											<td></td>
@@ -453,32 +439,25 @@
 								</td>
 							</tr>
 							<tr>
+								<td colspan="2" id="mainSignThArea">
+									<div id="mainSignTh1">결재 대기 문서</div>
+									<div id="mainSignTh2">결재 진행 문서</div>
+									<div id="mainSignTh3">참조 문서</div>
+								</td>
+							</tr>
+							<tr>
 								<td colspan="2">
 									<!-- 게시판 -->
 									<table id="mainSignBoard" class="boardTable">
-										<thead>
-											<tr>
-												<th>ㅁㅁㅁ</th>
-												<th>ㅇㅇㅇ</th>
-												<th>ㅅㅅㅅ</th>
-												<th>ㄷㄷㄷ</th>
-											</tr>
-										</thead>
 										<tr>
-											<td>게시판</td>
-											<td>내용</td>
-											<td>입니다~</td>
-											<td>~~~</td>
+											<td>user01</td>
+											<td>결제요청합니다.</td>
 										</tr>
 										<tr>
 											<td></td>
 											<td></td>
-											<td></td>
-											<td></td>
 										</tr>
 										<tr>
-											<td></td>
-											<td></td>
 											<td></td>
 											<td></td>
 										</tr>

@@ -176,6 +176,19 @@
     font-size:16px;
 }
 
+#deleteBtn{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	color: rgb(190, 190, 190);
+	display: inline-block;
+	vertical-align: sub;
+}
+
+#deleteBtn:hover{
+	cursor:pointer;
+	color:rgb(243, 156, 18);
+}
 
 </style>
 </head>
@@ -422,8 +435,7 @@
              html += "    <td id='dropZone' class='left' >";
              html += fileName + " (" + fileSizeStr +") " 
                      //+ "<a href='#' onclick='deleteFile(" + fIndex + "); return false;' class='btn small bg_02'> 삭제</a>"
-                     
-                     + "<input value='삭제' type='button' href='#' onclick='deleteFile(" + fIndex + "); return false;'>"
+                     + "<span id='deleteBtn' class='material-icons' onclick='deleteFile(" + fIndex + "); return false;'>highlight_off</span>"
              html += "    </td>"
              html += "</tr>"
  

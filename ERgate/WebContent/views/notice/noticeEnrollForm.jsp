@@ -258,8 +258,6 @@
     $(document).ready(function() {
         $("#input_file").bind('change', function() {
             selectFile(this.files);
-            //this.files[0].size gets the size of your file.
-            //alert(this.files[0].size);
         });
     });
 
@@ -420,18 +418,11 @@
 
     // 업로드 파일 목록 생성
     function addFileList(fIndex, fileName, fileSizeStr) {
-        /* if (fileSize.match("^0")) {
-            alert("start 0");
-        } */
-
         var html = "";
         html += "<tr id='fileTr_" + fIndex + "'>";
         html += "    <td id='dropZone' class='left' >";
         html += fileName + " (" + fileSizeStr +") " 
-                //+ "<a href='#' onclick='deleteFile(" + fIndex + "); return false;' class='btn small bg_02'> 삭제</a>"
-                
                 + "<span id='deleteBtn' class='material-icons' onclick='deleteFile(" + fIndex + "); return false;'>highlight_off</span>"
-               // <input value='삭제' type='button' href='#' onclick='deleteFile(" + fIndex + "); return false;'>"
         html += "    </td>"
         html += "</tr>"
 

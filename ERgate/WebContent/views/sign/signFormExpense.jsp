@@ -90,6 +90,7 @@
 	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
+	margin-right:5px;
 }
 
 .bigBtn:hover {
@@ -97,21 +98,47 @@
 }
 /* 큰버튼 스타일 */
 
+#btnArea{
+	margin-left:910px;
+}
+
 /* 테이블스타일 */
-#signInfo1{
+#signInfo1 {
 	width: 1200px;
-    height: 100px;
-    border-width: 1px 0;
+	height: 100px;
+	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
 }
-#signInfo1 th{
+
+#signInfo1 th {
 	background-color: #EAEAEA;
 	border: 1px solid lightgray;
-	height:35px;
+	height: 35px;
 }
-#signInfo1 td{border: 1px solid lightgray;height:35px;}
+
+#signInfo1 td {
+	border: 1px solid lightgray;
+	height: 35px;
+}
+
+#signInfo2{
+	width: 1200px;
+	border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 16px;
+}
+
+#signInfo2 th{
+	background-color: #EAEAEA;
+	border: 1px solid lightgray;
+	height: 35px;
+}
+
+#signInfo2 td{border: 1px solid lightgray;}
+
 </style>
 </head>
 <body>
@@ -138,7 +165,7 @@
 			<!-- 내용 작성 영역 입니다-->
 			<h1>지출결의서</h1>
 			<div id="btnArea">
-				<button class="bigBtn">임시저장</button>
+				<button class="bigBtn" style="background:rgb(190, 190, 190);">임시저장</button>
 				<button class="bigBtn">기안등록</button>
 			</div>
 			<br>
@@ -160,16 +187,26 @@
 						<th>기안일시</th>
 						<td>2020/05/10</td>
 						<th>지출기간</th>
-						<td>
-							<input type="date">
-							~
-							<input type="date">
-						</td>
+						<td><input name="" type="date"> ~ <input name=""
+							type="date"></td>
 					</tr>
 				</table>
 				<br>
 				<table id="signInfo2">
 					<tr>
+						<th rowspan="2" width="120">결재라인</th>
+						<th>팀장</th>
+						<th>팀장</th>
+						<th>팀장</th>
+						<th>팀장</th>
+						<th>팀장</th>
+					</tr>
+					<tr>
+						<td height="100">팀장</td>
+						<td>팀장</td>
+						<td>팀장</td>
+						<td>팀장</td>
+						<td>팀장</td>
 					</tr>
 				</table>
 			</form>

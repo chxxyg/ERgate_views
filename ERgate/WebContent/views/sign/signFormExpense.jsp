@@ -96,6 +96,22 @@
 	cursor: pointer;
 }
 /* 큰버튼 스타일 */
+
+/* 테이블스타일 */
+#signInfo1{
+	width: 1200px;
+    height: 100px;
+    border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 16px;
+}
+#signInfo1 th{
+	background-color: #EAEAEA;
+	border: 1px solid lightgray;
+	height:35px;
+}
+#signInfo1 td{border: 1px solid lightgray;height:35px;}
 </style>
 </head>
 <body>
@@ -125,14 +141,14 @@
 				<button class="bigBtn">임시저장</button>
 				<button class="bigBtn">기안등록</button>
 			</div>
-
+			<br>
 			<form action="" method="post">
-				<table>
+				<table id="signInfo1">
 					<tr>
 						<th>기안부서</th>
-						<td>인사부</td>
+						<td width="400">인사부</td>
 						<th>문서분류</th>
-						<td>지출결의서</td>
+						<td width="400">지출결의서</td>
 					</tr>
 					<tr>
 						<th>기안자</th>
@@ -145,9 +161,15 @@
 						<td>2020/05/10</td>
 						<th>지출기간</th>
 						<td>
-							<input type=""
+							<input type="date">
 							~
+							<input type="date">
 						</td>
+					</tr>
+				</table>
+				<br>
+				<table id="signInfo2">
+					<tr>
 					</tr>
 				</table>
 			</form>

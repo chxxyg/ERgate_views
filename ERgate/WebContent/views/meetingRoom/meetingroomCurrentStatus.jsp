@@ -280,9 +280,6 @@ html, body {
 
 
 .reservation_list>li {
-
-    display: flex;
-    flex-direction: column;
     width: 400px;
     height: 210px;
     margin-bottom: 15px;
@@ -290,42 +287,46 @@ html, body {
     border: 1px solid #f1f1f1;
     float:left;
 }
+.reservation_list>li .name {
+    margin-left: 180px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: black;
+    width:150px;
+    height: 10px;
+ 
+}
 .reservation_list>li .title {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin-left: 80px;
-    
+
+    margin-left: 160px;
+    margin-top: -10px;
+    width: 150px;
+    height: 10px;
+    color:black;
 
 }
-.reservation_list>li .name {
-    margin-left: 200px;
-    padding-right: 80px;
-    font-size: 16px;
-    color: black;
-    font-weight: bolder;
-    overflow: hidden;
-    white-space: nowrap;
-   
-}
+
 .reservation_list>li .date {
-    margin-left: 150px;
+    margin-left: 200px;
+    margin-top: -10px;
     font-size: 14px;
     color: #999;
+    width:150px;
+    height: 10px;
+    
 }
 .reservation_list>li{
 
-    display: flex;
-    margin-top: auto;
+    display:inline;
    border: 1px solid lightgray;
     text-align: center;
+    
 }
 
 .cancelbtn {
-
     display: flex;
     width:100% ;
-    margin-top: auto;
     text-align: center;
 }
 
@@ -338,8 +339,27 @@ html, body {
     border: 1px solid;
     border-radius: 5px;
     margin-left: 200px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    
 }   
+
+/* 회의실 이미지*/
+.meetingroomImg{
+    width: 130px;
+    height: 130px;
+    float: left;
+   
+}   
+.profile{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 70%;
+    float:left;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 10px;
+}
 /*페이징바*/
 .pagingBar {
 	list-style: none;
@@ -398,9 +418,8 @@ html, body {
 		<div class="contentArea">
 
 			<button class="reservationBtn" onclick="open_modal();">예약하기</button>
-			<a id="reservation" class="open-modal" href="#reservation"
-				style="display: none;">모달열기</a> <br> <a class="open-modal"
-				href="#myReservation_open_modal">나의예약 </a>
+			<a id="reservation" class="open-modal" href="#reservation" style="display: none;">모달</a> <br> 
+			<a class="open-modal" href="#myReservation_open_modal">나의예약 </a>
 
 		</div>
 
@@ -408,7 +427,6 @@ html, body {
 
 
 		<!-- 모달 내용(예약하기 부분) -->
-
 		<div id="reservation" class="modal">
 			<div class="modal-title">회의실 예약</div>
 			<div class="modal-content">
@@ -470,56 +488,71 @@ html, body {
 
 		<!-- 모달(나의 예약 현황) -->
 		<div id="myReservation_open_modal" class="modal">
-			<div class="modal-title">나의 예약</div>
+			<div class="modal-title">나의 예약현황</div>
 			<div class="modal-content">
 
 
-				<div id="modal-form" class="modal">
-					<div class="modal-title">나의 예약 현황</div>
-					<div class="modal-content">
 
-						<ul class="reservation_list room">
-							<li><p class="name">5층 회의실1</p>
-								<p class="title">팀 미팅</p>
-								<p class="date">
-									2020-05-10 10:00 ~ <br> 2020-05-10 12:00
-								</p>
-								<div class="cancelbtn">
-									<button>예약 취소</button>
-								</div></li>
-							<li><p class="name">회의실 장소1</p>
-								<p class="title">내용</p>
-								<p class="date">날짜</p>
-								<div class="cancelbtn">
-									<button>예약 취소</button>
-								</div></li>
-							<li><p class="name">5층 회의실</p>
-								<p class="title">팀 미팅</p>
-								<p class="date">날짜</p>
-								<div class="cancelbtn">
-									<button>예약 취소</button>
-								</div></li>
-							<li><p class="name">회의실 장소</p>
-								<p class="title">내용</p>
-								<p class="date">
-									2020-05-10 10:00 ~ <br> 2020-05-10 12:00
-								</p>
-								<div class="cancelbtn">
-									<button>예약 취소</button>
-								</div></li>
-							<li><p class="name">회의실 장소</p>
-								<p class="title">내용</p>
-								<p class="date">날짜</p>
-								<div class="cancelbtn">
-									<button>예약 취소</button>
-								</div></li>
-							<li><p class="name">회의실 장소</p>
-								<p class="title">내용</p>
-								<p class="date">날짜</p>
-								<div class="cancelbtn">
-									<button>예약 취소</button>
-								</div></li>
-					</div>
+				<ul class="reservation_list room">
+
+					<li>
+						<div class="meetingroomImg">
+							<img class="profile" src="크기변환_KENN4462-1.jpg">
+						</div>
+
+						<p class="name">5층 회의실2</p>
+						<br>
+						<p class="title">팀 미팅</p>
+						<br>
+						<p class="date">
+							2020-05-10 10:00 ~ <br> 2020-05-10 12:00
+						</p>
+						<div class="cancelbtn">
+							<button>예약 취소</button>
+						</div>
+					</li>
+					<li>
+						<div class="meetingroomImg">
+							<img class="profile" src="크기변환_KENN4462-1.jpg">
+						</div>
+						<p class="name">회의실 장소1</p>
+						<p class="title">내용</p>
+						<p class="date">날짜</p>
+						<div class="cancelbtn">
+							<button>예약 취소</button>
+						</div>
+					</li>
+					<li>
+						<div class="meetingroomImg">
+							<img class="profile" src="크기변환_KENN4462-1.jpg">
+						</div>
+						<p class="name">5층 회의실</p>
+						<p class="title">팀 미팅</p>
+						<p class="date">날짜</p>
+						<div class="cancelbtn">
+							<button>예약 취소</button>
+						</div>
+					</li>
+					<li>
+						<div class="meetingroomImg">
+							<img class="profile" src="크기변환_KENN4462-1.jpg">
+						</div>
+						<p class="name">회의실 장소</p>
+						<p class="title">내용</p>
+						<p class="date">
+							2020-05-10 10:00 ~ <br> 2020-05-10 12:00
+						</p>
+						<div class="cancelbtn">
+							<button>예약 취소</button>
+						</div>
+					</li>
+
+
+
+
+				</ul>
+
+			</div>
 
 					<!-- 페이징바 -->
 					<ul class="pagingBar">

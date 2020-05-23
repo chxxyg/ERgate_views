@@ -48,12 +48,13 @@ public class testS extends HttpServlet {
 		//배열에 차곡차곡 안담기고 배열의 [0]번 인덱스에 모든 내용이 다 담겨서 넘어옴, 그래서 title[0] 이런식으로 빼야함니다. 담을 때도 String title[] 이런식으로 변수 만들구요
 		String title[] = multiRequest.getParameterValues("boardTitle");		
 		String content[] = multiRequest.getParameterValues("boardContent");
-		
+		String filename = multiRequest.getOriginalFileName("files");
 		
 		System.out.println("제목값은? : " + title[0]);
 		System.out.println("내용값은? : " + content[0]);
-		
-		//System.out.println("파일이름은? : " + originName);
+		System.out.println("파일이름은? : " + filename);
+		//파일이름은 마지막에 올린것만 나오는데, 이거 구현하려면 jsp script단에서 수정해야댐
+		//근데 어차피 spring에서는 multipartFile이라고 다중파일 담아주는 객체 있으니까 거기서 맞게 고칠겁니다~
 		
 		int result = 1;	// 실제로 기능 구현할땐 여기에 DB에 insert 하고 반환된 int값을 넣어줘야함(ex: int result = new boardService().insertBoard(~~) 이런식으로?)
 		

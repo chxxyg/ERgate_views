@@ -69,7 +69,84 @@
         float:left;
     }
     /* 콘텐츠영역 */
-
+	/* 작은버튼 스타일 */
+	.smallBtn {
+		width: 60px;
+		height: 25px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 12px;
+	}
+	
+	.smallBtn:hover {
+		cursor: pointer;
+	}
+	/* 작은버튼 스타일 */
+	/* 큰버튼 스타일 */
+	.bigBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 18px;
+	}
+	
+	.bigBtn:hover {
+		cursor: pointer;
+	}
+	/* 큰버튼 스타일 */
+	.importantIcon {
+		margin:auto;
+		padding-top:13px;
+		padding-left:10px;
+		float:left;
+	}
+	.attachFileList {
+		margin:auto;
+		padding-top:20px;
+		padding-left:10px;
+		float:left;
+	}
+	.titleZone {
+		margin:auto;
+		padding-top:20px;
+		padding-left:10px;
+		float:left;
+	}
+	.fileZone {
+		margin:auto;
+		padding-top:20px;
+		padding-left:10px;
+		float:left;
+	}
+	.mailTitle, .mailAttachFile {
+		height:60px; 
+		background-color:rgba(211, 211, 211, 0.226);
+		width:80%;
+	}
+	.mailContent {
+		min-height:300px;
+		width:80%;
+	}
+	.wrap {
+		margin-left:-50px;
+	}
+	#btnArea {
+	margin-left: 370px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	
+	#btnArea button {
+		display: inline-block;
+		margin: 5px;
+	}
 /* ==========페이지영역========== */
 </style>   
 </head>
@@ -94,7 +171,43 @@
 		</div>
 		<div class="contentArea">
 			<!-- 내용 작성 영역 입니다-->
-
+			<br>
+			
+			<div class="wrap">
+				<table class="bas">
+					<tr>
+						<td id="leftArea">
+							<button class="smallBtn">답장</button>&nbsp;
+							<button class="smallBtn" style="background:gray;">전달</button>&nbsp;
+							<button class="smallBtn takeManyBtn" style="background:rgb(190, 190, 190);">삭제</button>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<div class="mailTitle">
+					<div>
+						<div class="importantIcon"><img src="../../resources/icons/star_border-black-48dp.svg"></div>
+						<div class="titleZone">안녕하세요, lessMoni팀입니다.</div>
+					</div>
+				</div>
+				<div class="mailContent">
+				
+				</div>
+				<div class="mailAttachFile">
+					<div>
+						<div class="attachFileList">첨부파일 : </div>
+						<div class="fileZone"><a href="">4월 생일자 명단.xlsx</a></div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<div id="btnArea">
+				<button class="bigBtn listBtn">목록으로</button>
+			</div>
+			
+			<br><br><br><br>
+		</div>
+	</div>
 		</div>
 	</div>
 </body>

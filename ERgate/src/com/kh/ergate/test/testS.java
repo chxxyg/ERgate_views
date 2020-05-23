@@ -36,7 +36,7 @@ public class testS extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String resources = request.getSession().getServletContext().getRealPath("/resources");
 		String savePath = resources + "\\testFiles\\";
-		MultipartRequest multiRequest = new MultipartRequest(request, savePath);
+		MultipartRequest multiRequest = new MultipartRequest(request, savePath, "UTF-8");
 			String title[] = multiRequest.getParameterValues("boardTitle");		
 			String content[] = multiRequest.getParameterValues("boardContent");
 			
@@ -44,6 +44,7 @@ public class testS extends HttpServlet {
 			System.out.println("제목값은? : " + title[0]);
 			System.out.println("내용값은? : " + content[0]);
 			// 졸라 힘들다... 일단 이렇게 해야 값을 뽑아오는데 utf-8이 안먹혀서 한글은 깨짐... 이유를 모르겠음.
+			// multiRequest 생성할 때 utf-8 추가해줬음. 한글 잘 나옴
 			
 		// 해당 부분은 GSON이나 JSON을 통해서 꼭 FormData 처리를 해야 함. 그래야 오류가 안난다.
 		RequestDispatcher view = request.getRequestDispatcher("views/board/boardList.jsp");

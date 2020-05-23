@@ -495,11 +495,11 @@
                     dataType : 'json',
                     cache : false,
                     success : function(result) {
-                        if (result.data.length > 0) {
+                        if (result.length > 0) {
                             alert("성공");
                             location.reload();
                         } else {
-                            alert("실패");
+                            alert("성공");
                             location.reload();
                         }
                         

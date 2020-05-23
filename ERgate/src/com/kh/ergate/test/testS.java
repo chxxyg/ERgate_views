@@ -9,6 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.FileRenamePolicy;
+
 /**
  * Servlet implementation class testS
  */
@@ -28,7 +33,18 @@ public class testS extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("넘어왔니?");
+		request.setCharacterEncoding("utf-8");
+		String resources = request.getSession().getServletContext().getRealPath("/resources");
+		String savePath = resources + "\\testFiles\\";
+		MultipartRequest multiRequest = new MultipartRequest(request, savePath);
+			String title[] = multiRequest.getParameterValues("boardTitle");		
+			String content[] = multiRequest.getParameterValues("boardContent");
+			
+			
+			System.out.println("제목값은? : " + title[0]);
+			System.out.println("내용값은? : " + content[0]);
+			// 졸라 힘들다... 일단 이렇게 해야 값을 뽑아오는데 utf-8이 안먹혀서 한글은 깨짐... 이유를 모르겠음.
+			
 		// 해당 부분은 GSON이나 JSON을 통해서 꼭 FormData 처리를 해야 함. 그래야 오류가 안난다.
 		RequestDispatcher view = request.getRequestDispatcher("views/board/boardList.jsp");
 		view.forward(request, response);

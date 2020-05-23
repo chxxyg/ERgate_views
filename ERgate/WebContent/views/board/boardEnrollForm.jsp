@@ -215,7 +215,7 @@
 				<table id="boardDetail">
 					<tr>
 						<th colspan="2" style="text-align:left;">글제목</th>
-						<td colsapn="6"><input name="boardTitle" class="inputs" type="text"></td>
+						<td colsapn="6"><input name="boardTitle" class="inputs" type="text" value=""></td>
 					</tr>
 					<tr>
 						<th colspan="2" style="text-align:left;">첨부파일</th>
@@ -241,7 +241,7 @@
 					</tr>
 					<tr>
 						<td colspan="8" rowspan="20">
-							<textarea name="boardContent" class="textArea" cols="160" rows="25"></textarea>
+							<textarea name="boardContent" class="textArea" cols="160" rows="25" value=""></textarea>
 						</td>
 					</tr>
 				</table>
@@ -472,19 +472,19 @@
          function uploadFile() {
              // 등록할 파일 리스트
              var uploadFileList = Object.keys(fileList);
-
+             	
                 var form = $('#uploadForm');
+                console.log(form[0]);
                 var formData = new FormData(form[0]);
+                formData.append('boardTitle', form[0].boardTitle.innerText);
+                formData.append('boardContent', form[0].boardContent.innerText);
                 for (var i = 0; i < uploadFileList.length; i++) {
                     formData.append('files', fileList[uploadFileList[i]]);
                 }
-                // formData 안에 제목 / 내용 / 파일 잘 담겼는지 확인하기
-                for (var key of formData.keys()) {
-                	 console.log(key);
-                }
-                for (var value of formData.values()) {
-                	 console.log(value);
-                }
+                console.log(formData.getAll('boardTitle'));
+                console.log(formData.getAll('boardContent'));
+                console.log(formData.getAll('files'));
+                
                 $.ajax({
                     url : "<%= contextPath %>/testFileload.bo",
                     data : formData,

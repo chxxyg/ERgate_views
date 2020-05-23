@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <style>
 /* ==========페이지영역========== */
 .outer {
@@ -90,16 +92,15 @@
 	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
-	margin-right:5px;
+	margin-right: 5px;
 }
 
 .bigBtn:hover {
 	cursor: pointer;
 }
 /* 큰버튼 스타일 */
-
-#btnArea{
-	margin-left:910px;
+#btnArea {
+	margin-left: 910px;
 }
 
 /* 테이블스타일 */
@@ -123,22 +124,47 @@
 	height: 35px;
 }
 
-#signInfo2{
+#signInfo2 {
 	width: 1200px;
+	height:160px;
 	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
 }
 
-#signInfo2 th{
+#signInfo2 th {
 	background-color: #EAEAEA;
 	border: 1px solid lightgray;
 	height: 35px;
 }
 
-#signInfo2 td{border: 1px solid lightgray;}
+#signInfo2 td {
+	border: 1px solid lightgray;
+	position: relative;
+}
 
+.circle {
+	color: rgb(231, 76, 60);
+	font-size: 80px;
+	display: inline-block;
+	position: relative;
+	bottom: 120px;
+	opacity: 70%;
+}
+
+h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+#checkArea{
+	width: 1200px;
+	border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 16px;
+}
 </style>
 </head>
 <body>
@@ -165,7 +191,7 @@
 			<!-- 내용 작성 영역 입니다-->
 			<h1>지출결의서</h1>
 			<div id="btnArea">
-				<button class="bigBtn" style="background:rgb(190, 190, 190);">임시저장</button>
+				<button class="bigBtn" style="background: rgb(190, 190, 190);">임시저장</button>
 				<button class="bigBtn">기안등록</button>
 			</div>
 			<br>
@@ -200,15 +226,45 @@
 						<th>팀장</th>
 						<th>팀장</th>
 						<th>팀장</th>
+						<th>팀장</th>
 					</tr>
 					<tr>
-						<td height="100">팀장</td>
-						<td>팀장</td>
-						<td>팀장</td>
-						<td>팀장</td>
-						<td>팀장</td>
+						<td width="150"><h2>1</h2>
+							<h3>전지현</h3></td>
+						<td width="150"><h2>1</h2>
+							<h3>전지현</h3></td>
+						<td width="150"><h2>1</h2>
+							<h3>전지현</h3></td>
+						<td width="150"><h2>1</h2>
+							<h3>전지현</h3></td>
+						<td width="150"><h2>1</h2>
+							<h3>전지현</h3></td>
+						<td width="150"><h2>1</h2>
+							<h3>전지현</h3></td>
+					</tr>
+					<tr>
+						<th>수신참조</th>
+						<td colspan="6"></td>
 					</tr>
 				</table>
+				<table id="checkArea">
+					<tr>
+						<th width="120"></th>
+						<td width="150"><span class="material-icons circle">
+								panorama_fish_eye </span></td>
+						<td width="150"><span class="material-icons circle">
+								panorama_fish_eye </span></td>
+						<td width="150"><span class="material-icons circle">
+								panorama_fish_eye </span></td>
+						<td width="150"><span class="material-icons circle">
+								panorama_fish_eye </span></td>
+						<td width="150"><span class="material-icons circle">
+								panorama_fish_eye </span></td>
+						<td width="150"><span class="material-icons circle">
+								panorama_fish_eye </span></td>
+					</tr>
+				</table>
+
 			</form>
 		</div>
 	</div>

@@ -82,7 +82,21 @@
 /* 콘텐츠영역 */
 
 /* ==========페이지영역========== */
+/* 중간버튼 스타일 */
+.middleBtn {
+	width: 90px;
+	height: 35px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 15px;
+}
 
+.middleBtn:hover {
+	cursor: pointer;
+}
+/* 중간버튼 스타일 */
 /* 큰버튼 스타일 */
 .bigBtn {
 	width: 140px;
@@ -126,11 +140,11 @@
 
 #signInfo2 {
 	width: 1200px;
-	height:160px;
-	border-width: 1px 0;
+	height: 175px; border-width : 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
+	border-width: 1px 0;
 }
 
 #signInfo2 th {
@@ -158,12 +172,115 @@ h2, h3 {
 	padding: 0;
 }
 
-#checkArea{
+#checkArea {
 	width: 1200px;
 	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
+}
+
+/* input창 스타일(가로크기는 자유) */
+.inputs {
+	height: 25px;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}
+/* input창 스타일 */
+
+/* textarea스타일 */
+.textArea {
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	resize: none;
+}
+
+#signInfo3 {
+	width: 1200px;
+	height: 100px;
+	border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 18px;
+}
+
+/* textarea스타일 */
+
+/* 파일 첨부 관련 */
+
+ .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+        
+.upload-btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+        
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+
+#fileDragDesc {
+    margin-top:40px;
+    vertical-align:middle;
+    text-align: center; 
+    color:lightgray;
+    font-size:16px;
+}
+
+#deleteBtn{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	color: rgb(190, 190, 190);
+	display: inline-block;
+	vertical-align: sub;
+}
+
+#deleteBtn:hover{
+	cursor:pointer;
+	color:rgb(243, 156, 18);
+}
+
+
+#contentTable{
+	width:1200px;
+	border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom:50px;
+}
+#contentTable th {
+	background-color: #EAEAEA;
+	border: 1px solid lightgray;
+	height: 35px;
+}
+
+#contentTable td {
+	border: 1px solid lightgray;
+	position: relative;
+}
+
+#contentTable input{
+	width:96%;
+	height:35px;
+	border:1px solid white;
 }
 </style>
 </head>
@@ -220,7 +337,10 @@ h2, h3 {
 				<br>
 				<table id="signInfo2">
 					<tr>
-						<th rowspan="2" width="120">결재라인</th>
+						<th rowspan="2" width="120">결재라인
+							<button type="button" class="middleBtn"
+								style="width: 120px; margin-top: 10px;">결재라인추가</button>
+						</th>
 						<th>팀장</th>
 						<th>팀장</th>
 						<th>팀장</th>
@@ -244,9 +364,13 @@ h2, h3 {
 					</tr>
 					<tr>
 						<th>수신참조</th>
-						<td colspan="6"></td>
+						<td colspan="6" align="left"><span>@앨리스 </span> <span>@레베카
+						</span> <span>@마리아 </span> <span>@존 </span> <span>@올리버 </span> <span>@샬롯
+						</span></td>
 					</tr>
 				</table>
+				
+				<!-- 결재완료시 체크될 부분 -->
 				<table id="checkArea">
 					<tr>
 						<th width="120"></th>
@@ -264,9 +388,319 @@ h2, h3 {
 								panorama_fish_eye </span></td>
 					</tr>
 				</table>
-
+				<table id="signInfo3">
+					<thead>
+						<tr>
+							<th>제목</th>
+							<td><input class="inputs" type="text"></td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td colspan="6"><button type="button"
+									class="bigBtn fileShow">추가</button></td>
+						</tr>
+						<tr>
+							<td colspan="8">
+								<div class="fileWrap" style="display: none;">
+									<div class="upload-btn-wrapper">
+										<input type="file" id="input_file" multiple="multiple"
+											style="height: 100%;" />
+										<button class="upload-btn fileShow">파일선택</button>
+									</div>
+									<div id="dropZone"
+										style="width: 1140px; height: 100px; border: 1px solid lightgray;">
+										<div id="fileDragDesc">※파일을 드래그 해주세요.</div>
+										<table id="fileListTable" width="100%" border="0px">
+											<tbody id="fileTableTbody">
+											</tbody>
+										</table>
+									</div>
+							</td>
+						</tr>
+					</thead>
+				</table>
+				<button id="addTr" type="button" class="middleBtn" style="background:orange;width: 120px; margin-top: 10px;">행 추가</button>
+				<button id="delTr" type="button" class="middleBtn" style="background:rgb(190, 190, 190);width: 120px; margin-top: 10px;">행 삭제</button>
+				<br><br>
+				<table id="contentTable">
+					<thead>
+						<tr>
+							<th width="150">사용일시</th>
+							<th width="280">사용처</th>
+							<th>지출사유</th>
+							<th width="150">사용금액(원)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+						</tr>
+					</tbody>
+				</table>
+				
 			</form>
 		</div>
 	</div>
+
+	<script>
+	//테이블 행추가
+	$("#addTr").click(function(){
+		$("#contentArea tbody:last").append('<tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>');
+	});
+	
+	//테이블 행삭제
+	$("#delTr").click(function(){
+		$('#contentArea tbody tr:last').remove();
+	});
+	
+	//파일첨부관련
+    $(document).ready(function() {
+        $("#input_file").bind('change', function() {
+            selectFile(this.files);
+        });
+    });
+
+    
+    $(document).ready(function() {
+			$(".fileShow").click(function(e) {
+				e.preventDefault();
+				if($(".fileWrap").is(":visible")){
+					$(".fileWrap").slideUp(100);
+				}else {
+					$(".fileWrap").slideDown(100);
+				}
+			});
+	 });
+    // 파일 리스트 번호
+    var fileIndex = 0;
+    // 등록할 전체 파일 사이즈
+    var totalFileSize = 0;
+    // 파일 리스트
+    var fileList = new Array();
+    // 파일 사이즈 리스트
+    var fileSizeList = new Array();
+    // 등록 가능한 파일 사이즈 MB
+    var uploadSize = 50;
+    // 등록 가능한 총 파일 사이즈 MB
+    var maxUploadSize = 500;
+
+    $(function() {
+        // 파일 드롭 다운
+        fileDropDown();
+    });
+
+    // 파일 드롭 다운
+    function fileDropDown() {
+        var dropZone = $("#dropZone");
+        //Drag기능 
+        dropZone.on('dragenter', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            // 드롭다운 영역 css
+            dropZone.css('background-color', '#E3F2FC');
+        });
+        dropZone.on('dragleave', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            // 드롭다운 영역 css
+            dropZone.css('background-color', '#FFFFFF');
+        });
+        dropZone.on('dragover', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            // 드롭다운 영역 css
+            dropZone.css('background-color', '#E3F2FC');
+        });
+        dropZone.on('drop', function(e) {
+            e.preventDefault();
+            // 드롭다운 영역 css
+            dropZone.css('background-color', '#FFFFFF');
+
+            var files = e.originalEvent.dataTransfer.files;
+            if (files != null) {
+                if (files.length < 1) {
+                    /* alert("폴더 업로드 불가"); */
+                    console.log("폴더 업로드 불가");
+                    return;
+                } else {
+                    selectFile(files)
+                }
+            } else {
+                alert("ERROR");
+            }
+        });
+    }
+
+    // 파일 선택시
+    function selectFile(fileObject) {
+        var files = null;
+
+        if (fileObject != null) {
+            // 파일  등록시
+            files = fileObject;
+        }
+
+        // 다중파일 등록
+        if (files != null) {
+            
+            if (files != null && files.length > 0) {
+                $("#fileDragDesc").hide(); 
+                $("fileListTable").show();
+            } else {
+                $("#fileDragDesc").show(); 
+                $("fileListTable").hide();
+            }
+            
+            for (var i = 0; i < files.length; i++) {
+                // 파일 이름
+                var fileName = files[i].name;
+                var fileNameArr = fileName.split("\.");
+                // 확장자
+                var ext = fileNameArr[fileNameArr.length - 1];
+                
+                var fileSize = files[i].size; // 파일 사이즈(단위 :byte)
+                console.log("fileSize="+fileSize);
+                if (fileSize <= 0) {
+                    console.log("0kb file return");
+                    return;
+                }
+                
+                var fileSizeKb = fileSize / 1024;
+                var fileSizeMb = fileSizeKb / 1024;
+                
+                var fileSizeStr = "";
+                if ((1024*1024) <= fileSize) {    // 파일 용량이 1메가 이상인 경우 
+                    console.log("fileSizeMb="+fileSizeMb.toFixed(2));
+                    fileSizeStr = fileSizeMb.toFixed(2) + " Mb";
+                } else if ((1024) <= fileSize) {
+                    console.log("fileSizeKb="+parseInt(fileSizeKb));
+                    fileSizeStr = parseInt(fileSizeKb) + " kb";
+                } else {
+                    console.log("fileSize="+parseInt(fileSize));
+                    fileSizeStr = parseInt(fileSize) + " byte";
+                }
+
+                /* if ($.inArray(ext, [ 'exe', 'bat', 'sh', 'java', 'jsp', 'html', 'js', 'css', 'xml' ]) >= 0) {
+                    // 확장자 체크
+                    alert("등록 불가 확장자");
+                    break; */
+                if ($.inArray(ext, [ 'hwp', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'png', 'pdf', 'jpg', 'jpeg', 'gif', 'zip' ]) <= 0) {
+                    // 확장자 체크
+                    /* alert("등록이 불가능한 파일 입니다.");
+                    break; */
+                    alert("등록이 불가능한 파일 입니다.("+fileName+")");
+                } else if (fileSizeMb > uploadSize) {
+                    // 파일 사이즈 체크
+                    alert("용량 초과\n업로드 가능 용량 : " + uploadSize + " MB");
+                    break;
+                } else {
+                    // 전체 파일 사이즈
+                    totalFileSize += fileSizeMb;
+
+                    // 파일 배열에 넣기
+                    fileList[fileIndex] = files[i];
+
+                    // 파일 사이즈 배열에 넣기
+                    fileSizeList[fileIndex] = fileSizeMb;
+
+                    // 업로드 파일 목록 생성
+                    addFileList(fileIndex, fileName, fileSizeStr);
+
+                    // 파일 번호 증가
+                    fileIndex++;
+                }
+            }
+        } else {
+            alert("ERROR");
+        }
+    }
+
+    // 업로드 파일 목록 생성
+    function addFileList(fIndex, fileName, fileSizeStr) {
+        var html = "";
+        html += "<tr id='fileTr_" + fIndex + "'>";
+        html += "    <td id='dropZone' class='left' >";
+        html += fileName + " (" + fileSizeStr +") " 
+                + "<span id='deleteBtn' class='material-icons' onclick='deleteFile(" + fIndex + "); return false;'>highlight_off</span>"
+        html += "    </td>"
+        html += "</tr>"
+
+        $('#fileTableTbody').append(html);
+    }
+
+    // 업로드 파일 삭제
+    function deleteFile(fIndex) {
+        console.log("deleteFile.fIndex=" + fIndex);
+        // 전체 파일 사이즈 수정
+        totalFileSize -= fileSizeList[fIndex];
+
+        // 파일 배열에서 삭제
+        delete fileList[fIndex];
+
+        // 파일 사이즈 배열 삭제
+        delete fileSizeList[fIndex];
+
+        // 업로드 파일 테이블 목록에서 삭제
+        $("#fileTr_" + fIndex).remove();
+        
+        console.log("totalFileSize="+totalFileSize);
+        
+        if (totalFileSize > 0) {
+            $("#fileDragDesc").hide(); 
+            $("fileListTable").show();
+        } else {
+            $("#fileDragDesc").show(); 
+            $("fileListTable").hide();
+        }
+    }
+
+    // 파일 등록
+    function uploadFile() {
+        // 등록할 파일 리스트
+        var uploadFileList = Object.keys(fileList);
+
+           var form = $('#uploadForm');
+           var formData = new FormData(form[0]);
+           for (var i = 0; i < uploadFileList.length; i++) {
+               formData.append('files', fileList[uploadFileList[i]]);
+           }
+           // formData 안에 제목 / 내용 / 파일 잘 담겼는지 확인하기
+           for (var key of formData.keys()) {
+           	 console.log(key);
+           }
+           for (var value of formData.values()) {
+           	 console.log(value);
+           }
+           $.ajax({
+               url : "testFileload.bo",
+               data : formData,
+               type : 'POST',
+               enctype : 'multipart/form-data',
+               processData : false,
+               contentType : false,
+               dataType : 'json',
+               cache : false,
+               success : function(result) {
+                   if (result.data.length > 0) {
+                       alert("성공");
+                       location.reload();
+                   } else {
+                       alert("실패");
+                       location.reload();
+                   }
+                   
+               },
+               error:function(){	// error : ajax 통신실패시 처리할 함수 지정
+					console.log("ajax 통신 실패!");
+				},
+				complete:function(){// complete : ajax 통신 성공여부와 상관없이 실행
+					console.log("무조건 호출!!");
+				}
+           });
+    }
+	</script>
 </body>
 </html>

@@ -96,7 +96,7 @@
 	margin-top: 10px;
 }
 /* 나의 예약 버튼*/
-.myReservationBtn {
+#myReservationBtn {
 	width: 140px;
 	height: 40px;
 	border: 0px;
@@ -107,9 +107,10 @@
 	margin-left: 900px;
 }
 
-.myReservationBtn:hover {
+#myReservationBtn:hover {
 	cursor: pointer;
 }
+
 
 /* 예약 모달 */
 .modal {
@@ -192,8 +193,8 @@ html, body {
 }
 
 /*나의예약현황*/
-.myReservationBtn {
-	width: 140px;
+#myReservationBtn{
+	width: 200px;
 	height: 40px;
 	border: 0px;
 	border-radius: 5px;
@@ -201,9 +202,11 @@ html, body {
 	color: white;
 	font-size: 18px;
 	margin-top: 0px;
+	margin-left:150px;
 }
 
-.myReservationBtn:hover {
+
+#myReservationBtn:hover {
 	cursor: pointer;
 }
 
@@ -277,88 +280,82 @@ html, body {
 }
 
 /*모달 나의 예약현황 부분*/
-
-
 .reservation_list>li {
-    width: 400px;
-    height: 210px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    border: 1px solid #f1f1f1;
-    float:left;
+	width: 400px;
+	height: 210px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	border: 1px solid #f1f1f1;
+	float: left;
 }
+
 .reservation_list>li .name {
-    margin-left: 180px;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: bolder;
-    color: black;
-    width:150px;
-    height: 10px;
- 
+	margin-left: 180px;
+	margin-top: 30px;
+	font-size: 16px;
+	font-weight: bolder;
+	color: black;
+	width: 150px;
+	height: 10px;
 }
+
 .reservation_list>li .title {
-
-    margin-left: 160px;
-    margin-top: -10px;
-    width: 150px;
-    height: 10px;
-    color:black;
-
+	margin-left: 160px;
+	margin-top: -10px;
+	width: 150px;
+	height: 10px;
+	color: black;
 }
 
 .reservation_list>li .date {
-    margin-left: 200px;
-    margin-top: -10px;
-    font-size: 14px;
-    color: #999;
-    width:150px;
-    height: 10px;
-    
+	margin-left: 200px;
+	margin-top: -10px;
+	font-size: 14px;
+	color: #999;
+	width: 150px;
+	height: 10px;
 }
-.reservation_list>li{
 
-    display:inline;
-   border: 1px solid lightgray;
-    text-align: center;
-    
+.reservation_list>li {
+	display: inline;
+	border: 1px solid lightgray;
+	text-align: center;
 }
 
 .cancelbtn {
-    display: flex;
-    width:100% ;
-    text-align: center;
+	display: flex;
+	width: 100%;
+	text-align: center;
 }
 
 .reservation_list>li .cancelbtn button {
-    width: 140px;
-    height: 30px;
-    font-size: 13px;
-    background-color: white;
-    color:gray;
-    border: 1px solid;
-    border-radius: 5px;
-    margin-left: 200px;
-    margin-top: 30px;
-    
-}   
+	width: 140px;
+	height: 30px;
+	font-size: 13px;
+	background-color: white;
+	color: gray;
+	border: 1px solid;
+	border-radius: 5px;
+	margin-left: 200px;
+	margin-top: 30px;
+}
 
 /* 회의실 이미지*/
-.meetingroomImg{
-    width: 130px;
-    height: 130px;
-    float: left;
-   
-}   
-.profile{
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 70%;
-    float:left;
-    overflow: hidden;
-    margin-top: 30px;
-    margin-left: 10px;
+.meetingroomImg {
+	width: 130px;
+	height: 130px;
+	float: left;
+}
+
+.profile {
+	width: 130px;
+	height: 130px;
+	object-fit: cover;
+	border-radius: 70%;
+	float: left;
+	overflow: hidden;
+	margin-top: 30px;
+	margin-left: 10px;
 }
 /*페이징바*/
 .pagingBar {
@@ -391,11 +388,7 @@ html, body {
 .pagingBar li a:hover {
 	color: rgb(26, 188, 156);
 	border: 1px solid rgb(26, 188, 156);
-
 }
-
-
-
 </style>
 </head>
 <body>
@@ -419,7 +412,7 @@ html, body {
 
 			<button class="reservationBtn" onclick="open_modal();">예약하기</button>
 			<a id="reservation" class="open-modal" href="#reservation" style="display: none;">모달</a> <br> 
-			<a class="open-modal" href="#myReservation_open_modal">나의예약 </a>
+			<a class="open-modal" href="#myReservation_open_modal" id="myReservation">나의예약 </a>
 
 		</div>
 
@@ -500,10 +493,8 @@ html, body {
 							<img class="profile" src="크기변환_KENN4462-1.jpg">
 						</div>
 
-						<p class="name">5층 회의실2</p>
-						<br>
-						<p class="title">팀 미팅</p>
-						<br>
+						<p class="name">5층 회의실2</p> <br>
+						<p class="title">팀 미팅</p> <br>
 						<p class="date">
 							2020-05-10 10:00 ~ <br> 2020-05-10 12:00
 						</p>
@@ -554,30 +545,20 @@ html, body {
 
 			</div>
 
-					<!-- 페이징바 -->
-					<ul class="pagingBar">
-						<li><a href="#">&lt;&lt;</a></li>
-						<li><a href="#">&lt;</a></li>
-						<li><span>1</span></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">&gt;</a></li>
-						<li><a href="#">&gt;&gt;</a></li>
-					</ul>
-					<!-- 페이징바 -->
+			<!-- 페이징바 -->
+			<ul class="pagingBar">
+				<li><a href="#">&lt;&lt;</a></li>
+				<li><a href="#">&lt;</a></li>
+				<li><span>1</span></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&gt;</a></li>
+				<li><a href="#">&gt;&gt;</a></li>
+			</ul>
+			<!-- 페이징바 -->
 
-				</div>
-
-
-
-
-
-
-			</div>
-
-			<br> <br>
 		</div>
 
 
@@ -585,8 +566,19 @@ html, body {
 
 
 
-		<!-- 모달용 스크립트 -->
-		<script>
+	</div>
+
+	<br>
+	<br>
+	</div>
+
+
+
+
+
+
+	<!-- 모달용 스크립트 -->
+	<script>
 			$('.open-modal').click(function() {
 				$(this).modal({
 					fadeDuration : 150

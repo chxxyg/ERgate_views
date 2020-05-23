@@ -97,27 +97,23 @@
 }
 /* 나의 예약 버튼*/
 .myReservationBtn {
-	margin-left: 1050px;
-	width: 160px;
-	height: 50px;
-	background-color: rgb(26, 188, 156);
-	text-align: center;
-	font-size: 25px;
-	color: white;
-	outline: none;
-	border-radius: 10px;
+	width: 140px;
+	height: 40px;
 	border: 0px;
-	margin-top: 10px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 18px;
+	margin-left: 900px;
 }
 
-.myReservationBtn a {
-	text-decoration: none;
-	color: white;
+.myReservationBtn:hover {
+	cursor: pointer;
 }
 
 /* 예약 모달 */
 .modal {
-	max-width:2000px;
+	max-width: 2000px;
 	width: 1000px;
 	height: 700px; /* 모달 크기지정 */
 	padding: 0px;
@@ -188,18 +184,36 @@ html, body {
 	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
+	margin-left: 20px;
 }
 
 .reservationBtn:hover {
 	cursor: pointer;
 }
 
+/*나의예약현황*/
+.myReservationBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 18px;
+	margin-top: 0px;
+}
+
+.myReservationBtn:hover {
+	cursor: pointer;
+}
+
+/* 취소 버튼 */
 .resetBtn {
 	width: 140px;
 	height: 40px;
 	border: 0px;
 	border-radius: 5px;
-	background: rgb(190, 190, 190); /* 회색 : rgb(190, 190, 190) */
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
 }
@@ -261,6 +275,107 @@ html, body {
 	width: 80%;
 	padding: 20px;
 }
+
+/*모달 나의 예약현황 부분*/
+
+
+.reservation_list>li {
+
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 210px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border: 1px solid #f1f1f1;
+    float:left;
+}
+.reservation_list>li .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 80px;
+    
+
+}
+.reservation_list>li .name {
+    margin-left: 200px;
+    padding-right: 80px;
+    font-size: 16px;
+    color: black;
+    font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap;
+   
+}
+.reservation_list>li .date {
+    margin-left: 150px;
+    font-size: 14px;
+    color: #999;
+}
+.reservation_list>li{
+
+    display: flex;
+    margin-top: auto;
+   border: 1px solid lightgray;
+    text-align: center;
+}
+
+.cancelbtn {
+
+    display: flex;
+    width:100% ;
+    margin-top: auto;
+    text-align: center;
+}
+
+.reservation_list>li .cancelbtn button {
+    width: 140px;
+    height: 30px;
+    font-size: 13px;
+    background-color: white;
+    color:gray;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}   
+/*페이징바*/
+.pagingBar {
+	list-style: none;
+	margin-left: 250px;
+}
+
+.pagingBar li {
+	float: left;
+}
+
+.pagingBar li * {
+	float: left;
+	padding: 4px;
+	margin-right: 3px;
+	width: 20px;
+	color: rgb(190, 190, 190);
+	font: bold 12px tahoma;
+	border: 1px solid rgb(190, 190, 190);
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.pagingBar li>span {
+	color: rgb(26, 188, 156);
+	border: 1px solid rgb(26, 188, 156);
+}
+
+.pagingBar li a:hover {
+	color: rgb(26, 188, 156);
+	border: 1px solid rgb(26, 188, 156);
+
+}
+
+
+
 </style>
 </head>
 <body>
@@ -275,17 +390,18 @@ html, body {
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
+				<li><button class="subBtn subActive">회의실 예약</button></li>
 				<li><button class="subBtn subActive">회의실 예약현황</button></li>
+				<li><button class="subBtn subActive">회의실 관리</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">
 
 			<button class="reservationBtn" onclick="open_modal();">예약하기</button>
-			<a class="open-modal" href="#modal-form" style="display: none;">모달열기</a>
-			<br>
-			<button class="myReservationBtn">
-				<a href="">나의 예약</a>
-			</button>
+			<a id="reservation" class="open-modal" href="#reservation"
+				style="display: none;">모달열기</a> <br> <a class="open-modal"
+				href="#myReservation_open_modal">나의예약 </a>
+
 		</div>
 
 		<!-- 캘린더 api 쓸거임 -->
@@ -293,7 +409,7 @@ html, body {
 
 		<!-- 모달 내용(예약하기 부분) -->
 
-		<div id="modal-form" class="modal">
+		<div id="reservation" class="modal">
 			<div class="modal-title">회의실 예약</div>
 			<div class="modal-content">
 				<table class="reservationContent">
@@ -320,9 +436,8 @@ html, body {
 								<option value="5F 회의실">5F 회의실3</option>
 								<option value="6F 회의실">6F회의실</option>
 						</select> <br>
-							<button class="searchBtn">가용회의실 검색</button>
-							<br> <input type="text" id="meetingroomBox" class="inputs">
-						</td>
+							<button class="searchBtn">가용회의실 검색</button> <br> <input
+							type="text" id="meetingroomBox" class="inputs"></td>
 					</tr>
 
 					<tr>
@@ -344,8 +459,7 @@ html, body {
 				</table>
 			</div>
 
-			<br>
-			<br>
+			<br> <br>
 			<!-- 예약/취소 버튼 -->
 			<div class=btns>
 				<button class="reservationBtn" type="submit">예약하기</button>
@@ -355,6 +469,88 @@ html, body {
 
 
 		<!-- 모달(나의 예약 현황) -->
+		<div id="myReservation_open_modal" class="modal">
+			<div class="modal-title">나의 예약</div>
+			<div class="modal-content">
+
+
+				<div id="modal-form" class="modal">
+					<div class="modal-title">나의 예약 현황</div>
+					<div class="modal-content">
+
+						<ul class="reservation_list room">
+							<li><p class="name">5층 회의실1</p>
+								<p class="title">팀 미팅</p>
+								<p class="date">
+									2020-05-10 10:00 ~ <br> 2020-05-10 12:00
+								</p>
+								<div class="cancelbtn">
+									<button>예약 취소</button>
+								</div></li>
+							<li><p class="name">회의실 장소1</p>
+								<p class="title">내용</p>
+								<p class="date">날짜</p>
+								<div class="cancelbtn">
+									<button>예약 취소</button>
+								</div></li>
+							<li><p class="name">5층 회의실</p>
+								<p class="title">팀 미팅</p>
+								<p class="date">날짜</p>
+								<div class="cancelbtn">
+									<button>예약 취소</button>
+								</div></li>
+							<li><p class="name">회의실 장소</p>
+								<p class="title">내용</p>
+								<p class="date">
+									2020-05-10 10:00 ~ <br> 2020-05-10 12:00
+								</p>
+								<div class="cancelbtn">
+									<button>예약 취소</button>
+								</div></li>
+							<li><p class="name">회의실 장소</p>
+								<p class="title">내용</p>
+								<p class="date">날짜</p>
+								<div class="cancelbtn">
+									<button>예약 취소</button>
+								</div></li>
+							<li><p class="name">회의실 장소</p>
+								<p class="title">내용</p>
+								<p class="date">날짜</p>
+								<div class="cancelbtn">
+									<button>예약 취소</button>
+								</div></li>
+					</div>
+
+					<!-- 페이징바 -->
+					<ul class="pagingBar">
+						<li><a href="#">&lt;&lt;</a></li>
+						<li><a href="#">&lt;</a></li>
+						<li><span>1</span></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">&gt;</a></li>
+						<li><a href="#">&gt;&gt;</a></li>
+					</ul>
+					<!-- 페이징바 -->
+
+				</div>
+
+
+
+
+
+
+			</div>
+
+			<br> <br>
+		</div>
+
+
+
+
+
 
 		<!-- 모달용 스크립트 -->
 		<script>
@@ -365,9 +561,19 @@ html, body {
 
 			});
 
+			
+			/* 예약하기 모달 여는 function */
 			function open_modal() {
-				$(".open-modal").click();
+				$("#reservation").click();
 			};
+			
+			
+		
+			
+		
+	
+			
+			
 		</script>
 
 

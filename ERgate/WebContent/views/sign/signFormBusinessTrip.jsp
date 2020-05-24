@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SignForm AnnualVacation</title>
+<title>SignForm BusinessTrip</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <style>
@@ -198,7 +198,7 @@ h2, h3 {
 }
 
 #signInfo3 {
-	width: 750px;
+	width: 700px;
 	height: 100px;
 	border-width: 1px 0;
 	border-collapse: collapse;
@@ -259,7 +259,7 @@ h2, h3 {
 
 #contentTable {
 	width: 1200px;
-	height: 400px;
+	height: 500px;
 	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
@@ -282,6 +282,13 @@ h2, h3 {
 	resize:none;
 	padding: 0;
     height: 100%;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.textareaStyle{
+	resize:none;
+	padding: 0;
+    height: 98%;
     border: 1px solid rgba(0,0,0,0);
 }
 </style>
@@ -308,7 +315,7 @@ h2, h3 {
 		</div>
 		<div class="contentArea">
 			<!-- 내용 작성 영역 입니다-->
-			<h1>휴가계</h1>
+			<h1>외근신청서</h1>
 			<div id="btnArea">
 				<button class="bigBtn" style="background: rgb(190, 190, 190);">임시저장</button>
 				<button class="bigBtn" id="signSubmit">기안등록</button>
@@ -320,7 +327,7 @@ h2, h3 {
 						<th>기안부서</th>
 						<td width="400">인사부</td>
 						<th>문서분류</th>
-						<td width="400">휴가계</td>
+						<td width="400">외근신청서</td>
 					</tr>
 					<tr>
 						<th>기안자</th>
@@ -391,32 +398,6 @@ h2, h3 {
 				<table id="signInfo3">
 					<thead>
 						<tr>
-							<th>휴가구분</th>
-							<td><select class="inputs" name="" style="height:35px;margin-right:220px;">
-									<option>연차</option>
-									<option>오전반차</option>
-									<option>오후반차</option>
-									<option>경조사</option>
-									<option>공가</option>
-									<option>병가</option>
-									<option>휴직</option>
-								</select></td>
-							<th width="103">잔여연차</th>
-							<td align="left"> 15 일</td>
-						</tr>
-						<tr>
-							<th>기간</th>
-							<td>
-								<input class="inputs" name="" type="date">
-								~
-								<input class="inputs" name="" type="date">
-							</td>
-							<th>사용일수</th>
-							<td>
-								<input type="text" class="inputs" value="1" readonly> 일
-							</td>
-						</tr>
-						<tr>
 							<th width="120">제목</th>
 							<td colspan="4"><input class="inputs" type="text" style="width: 100%;margin-left: 7px;"></td>
 						</tr>
@@ -424,7 +405,7 @@ h2, h3 {
 							<th>첨부파일</th>
 							<td colspan="6"><button type="button"
 									class="bigBtn fileShow" align="left"
-									style="margin-right: 470px; background: rgb(190, 190, 190);">추가</button></td>
+									style="margin-right: 420px; background: rgb(190, 190, 190);">추가</button></td>
 						</tr>
 						<tr>
 							<td colspan="8">
@@ -453,14 +434,29 @@ h2, h3 {
 				<input type="hidden" name="contentTable">
 				<table id="contentTable">
 						<tr>
-							<th>휴가사유</th>
+							<th width="160">출장기간</th>
+							<td><textarea cols="145" class="textareaStyle"></textarea></td>
 						</tr>
 						<tr>
-							<td rowspan="8" colspan="8">
-								<textarea id="signContent" cols="168" rows="24"></textarea>
-							</td>								
+							<th>출장지</th>
+							<td><textarea cols="145" class="textareaStyle"></textarea></td>	
 						</tr>
-					</tbody>
+						<tr>
+							<th rowspan="2">출장목적</th>
+							<td rowspan="2"><textarea cols="145" class="textareaStyle"></textarea></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th rowspan="2">출장자 정보<br>
+								(부서명/직급/사원명)
+							</th>
+							<td rowspan="2"><textarea cols="145" class="textareaStyle"></textarea></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th rowspan="3">비고</th>
+							<td rowspan="3"><textarea cols="145" class="textareaStyle"></textarea></td>
+						</tr>
 				</table>
 
 			</form>
@@ -470,9 +466,11 @@ h2, h3 {
 
 	
 	//테이블input 값 입력시 input value에 값 입력
-	$(document).on("keyup","#signContent",function(){
-		var inputVal = $("#signContent").val();		
-		$("#signContent").text(inputVal);
+	$(document).on("keyup",".textareaStyle",function(){
+		var index = $(".textareaStyle").index(this);
+		var inputVal = $(".textareaStyle:eq("+index+")").val();		
+		//$(".textareaStyle:eq("+index+")").attr("value",inputVal);
+		$(".textareaStyle:eq("+index+")").text(inputVal);
 	});
 
 	//기안등록 눌렀을 시 처리되는 스크립트 

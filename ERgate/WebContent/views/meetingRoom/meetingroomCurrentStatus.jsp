@@ -211,11 +211,10 @@ html, body {
 	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
-	margin-top: -35px;
+	margin-top: -33px;
 	margin-left:1000px;
 	float:left;
 	text-decoration:none;
-	text-align:center;
 	
 }
 
@@ -225,7 +224,6 @@ html, body {
 }
 a#myReservation{
 	text-align:center;
-	margin-top:5px;
 }
 
 /* 취소 버튼 */
@@ -378,7 +376,8 @@ a#myReservation{
 /*페이징바*/
 .pagingBar {
 	list-style: none;
-	margin-left: 250px;
+	margin-left: 300px;
+    margin-top: 500px;
 }
 
 .pagingBar li {
@@ -406,6 +405,7 @@ a#myReservation{
 .pagingBar li a:hover {
 	color: rgb(26, 188, 156);
 	border: 1px solid rgb(26, 188, 156);
+
 }
 </style>
 </head>
@@ -422,8 +422,6 @@ a#myReservation{
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn subActive">회의실 예약</button></li>
-				<li><button class="subBtn subActive">회의실 예약현황</button></li>
-				<li><button class="subBtn subActive">회의실 관리</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">

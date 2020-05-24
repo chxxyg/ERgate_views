@@ -250,10 +250,10 @@
 		<!-- 내용 작성 영역 입니다-->
 	
 			<!-- 마이페이지 - 메인페이지에서 가져온 것. -->
-			<form action="">
+			 <form action="">
                 <table id="mypageTable">
                     <tr>
-                        <td id="mypageProfileArea"> <!-- rowspan="2" 지웠음 -->
+                        <td rowspan="3" id="mypageProfileArea">
                             <table id="mypageProfileTable">
                                 <tr>
                                     <td><img id="mypageProfileImg" src="../../resources/siteImg/profile_logo.png" width="150" height="150"></td>
@@ -271,55 +271,13 @@
                                 </tr>
                             </table>
                         </td>
-                       <!--  <td>
-                            <table id="mypageAlramTable">
-                                <tr>
-                                    <th colspan="3">알림설정</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox">
-                                        <label for="">받은 메일</label>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="" id="">
-                                        <label for="">결재 대기</label>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox">
-                                        <label for="">결재 완료</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3"><div class="mypageLine"></div></td>
-                                </tr>
-                            </table>
-						</td>
-					</tr>
+                    </tr>
+                    
+
 					<tr>
+						
 						<td>
-                            <table class="mypageInnerTable">
-                                <tr>
-                                    <th colspan="2">비밀번호 변경</th>
-                                </tr>
-                                <tr>
-                                    <td>새 비밀번호</td>
-                                    <td>새 비밀번호 확인</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="password" name="" id=""></td>
-                                    <td><input type="password" name="" id=""></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><div class="mypageLine"></div></td>
-                                </tr>
-                            </table>
-						</td> -->
-					</tr>
-					<tr>
-						<td></td>
-						<td>
-                            <table class="mypageInnerTable">
+                            <table class="mypageInnerTable jobInfo">
                                 <tr>
                                     <th colspan="2">직장 정보</th>
                                 </tr>
@@ -362,9 +320,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td></td>
+						
 						<td>
-                            <table class="mypageInnerTable">
+                            <table class="mypageInnerTable personalInfo">
                                 <tr>
                                     <th colspan="2">개인 정보</th>
                                 </tr>
@@ -373,18 +331,18 @@
                                     <td>생년월일</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
-                                    <td><input type="text"></td>
+                                    <td><input type="text" name="" id="" readonly></td>
+                                    <td><input type="text" readonly></td>
                                 </tr>
                                 <tr>
                                     <td>휴대폰번호</td>
                                     <td>이메일</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
+                                    <td><input type="text" name="" id="" readonly></td>
                                     <td>
-                                    	<input id="mypageEmail1" type="text" style="width: 180px">
-					                	<input id="mypageEmail2" name="emailDomain" type="text" list="emailDomain" placeholder="직접입력" style="width: 180px">
+                                    	<input id="mypageEmail1" type="text" style="width: 180px" readonly>
+					                	<input id="mypageEmail2" name="emailDomain" type="text" list="emailDomain" style="width: 180px" readonly>
 									        <datalist id="emailDomain">
 									            <option>@naver.com</option>
 									            <option>@gmail.com</option>
@@ -397,10 +355,10 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                    	<button id="mypageAddressBtn" class="middleBtn">우편번호찾기</button>
-                                    	<input type="text" style="width: 100px">
-                                    	<input type="text" style="width: 370px"> <br>
-                                    	<input type="text" style="width: 650px">
+                                    	<button id="mypageAddressBtn" class="middleBtn" type="button" readonly >우편번호찾기</button>
+                                    	<input type="text" style="width: 100px" readonly>
+                                    	<input type="text" style="width: 370px" readonly> <br>
+                                    	<input type="text" style="width: 650px" readonly>
                                     </td>
                                 </tr>
                             </table>
@@ -412,8 +370,8 @@
                         	<button id="mypageCancelBtn" class="bigBtn">취소</button>
                         </td>
                     </tr>
-        		</table>
-	      	</form>
+                </table>
+            </form>
 
 		</div><!-- contentArea -->
 	</div><!-- outer -->

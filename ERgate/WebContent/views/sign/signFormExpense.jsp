@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -182,7 +183,7 @@ h2, h3 {
 
 /* input창 스타일(가로크기는 자유) */
 .inputs {
-	height: 25px;
+	height: 30px;
 	border: 1px solid lightgray;
 	border-radius: 3px;
 }
@@ -196,12 +197,14 @@ h2, h3 {
 }
 
 #signInfo3 {
-	width: 1200px;
+	width: 700px;
 	height: 100px;
 	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 18px;
+	border-collapse: separate;
+    border-spacing: 0 10px;
 }
 
 /* textarea스타일 */
@@ -264,8 +267,9 @@ h2, h3 {
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
-	margin-bottom:50px;
+	margin-bottom:100px;
 }
+
 #contentTable th {
 	background-color: #EAEAEA;
 	border: 1px solid lightgray;
@@ -309,10 +313,10 @@ h2, h3 {
 			<h1>지출결의서</h1>
 			<div id="btnArea">
 				<button class="bigBtn" style="background: rgb(190, 190, 190);">임시저장</button>
-				<button class="bigBtn">기안등록</button>
+				<button class="bigBtn" id="signSubmit">기안등록</button>
 			</div>
 			<br>
-			<form action="" method="post">
+			<form id="signForm" action="#" method="get">
 				<table id="signInfo1">
 					<tr>
 						<th>기안부서</th>
@@ -330,7 +334,7 @@ h2, h3 {
 						<th>기안일시</th>
 						<td>2020/05/10</td>
 						<th>지출기간</th>
-						<td><input name="" type="date"> ~ <input name=""
+						<td><input class="inputs" name="" type="date"> ~ <input name="" class="inputs"
 							type="date"></td>
 					</tr>
 				</table>
@@ -391,13 +395,13 @@ h2, h3 {
 				<table id="signInfo3">
 					<thead>
 						<tr>
-							<th>제목</th>
-							<td><input class="inputs" type="text"></td>
+							<th width="120">제목</th>
+							<td><input class="inputs" type="text" style="width:100%;"></td>
 						</tr>
 						<tr>
 							<th>첨부파일</th>
 							<td colspan="6"><button type="button"
-									class="bigBtn fileShow">추가</button></td>
+									class="bigBtn fileShow" align="left" style="margin-right:440px;background:rgb(190, 190, 190);">추가</button></td>
 						</tr>
 						<tr>
 							<td colspan="8">
@@ -405,10 +409,10 @@ h2, h3 {
 									<div class="upload-btn-wrapper">
 										<input type="file" id="input_file" multiple="multiple"
 											style="height: 100%;" />
-										<button class="upload-btn fileShow">파일선택</button>
+										<button class="upload-btn fileShow" style="margin-right:570px;">파일선택</button>
 									</div>
 									<div id="dropZone"
-										style="width: 1140px; height: 100px; border: 1px solid lightgray;">
+										style="width: 700px; height: 100px; border: 1px solid lightgray;text-align: left;">
 										<div id="fileDragDesc">※파일을 드래그 해주세요.</div>
 										<table id="fileListTable" width="100%" border="0px">
 											<tbody id="fileTableTbody">
@@ -416,6 +420,9 @@ h2, h3 {
 										</table>
 									</div>
 							</td>
+						</tr>
+						<tr>
+							<td colspan="8"></td>
 						</tr>
 					</thead>
 				</table>
@@ -433,10 +440,10 @@ h2, h3 {
 					</thead>
 					<tbody>
 						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
+							<td><textarea></textarea></td>
+							<td><input class="inputVal" type="text"></td>
+							<td><input class="inputVal" type="text"></td>
+							<td><input class="inputVal" type="text"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -448,13 +455,51 @@ h2, h3 {
 	<script>
 	//테이블 행추가
 	$("#addTr").click(function(){
-		$("#contentArea tbody:last").append('<tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>');
+		$("#contentTable tbody:last").append('<tr><td><input class="inputVal" type="text"></td><td><input class="inputVal" type="text"></td><td><input class="inputVal" type="text"></td><td><input class="inputVal" type="text"></td></tr>');
 	});
 	
 	//테이블 행삭제
 	$("#delTr").click(function(){
-		$('#contentArea tbody tr:last').remove();
+		$('#contentTable tbody tr:last').remove();
 	});
+	//서브밋
+	
+		$(document).on("click","#signSubmit",function(){
+			//console.log("입력값:"+$(".inputVal:eq(1)").val());
+			var contentTable = $("#contentTable").html();
+			console.log(contentTable);
+			//$('#signForm').submit();
+			
+		});
+	/* $(function(){
+		
+/* 			$("text").on("propertychange change keyup paste input", function() {
+			    var currentVal = $(this).val();
+			    if(currentVal == oldVal) {
+			        return;
+			    }
+			 
+			    oldVal = currentVal;
+			    $(this).val(currentVal);
+			}); */
+
+		/* 	$(".inputVal").on("onKeyup", function() {  
+				var index = $(this).index();
+				var inputVal = $(".inputVal:eq("+index+")").val();
+				//console.log(inputVal);
+				$(".inputVal:eq("+index+")").attr("value",inputVal);
+			    
+			
+			}); */
+		$(document).on("click","#signSubmit",function(){
+			//console.log("입력값:"+$(".inputVal:eq(1)").val());
+			var contentTable = $("#contentTable").html();
+			console.log(contentTable);
+			//$('#signForm').submit();
+			
+		})	
+	}); */
+	
 	
 	//파일첨부관련
     $(document).ready(function() {

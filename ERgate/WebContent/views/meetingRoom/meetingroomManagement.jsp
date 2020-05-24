@@ -27,6 +27,13 @@
 	padding-left: 30px;
 	font-weight: 500;
 }
+.contentArea {
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 1600px;
+	height: auto;
+	float: left;
+}
 
 .subMenuArea {
 	background-color: white;
@@ -65,7 +72,72 @@
 .subActive {
 	border: 4px solid rgb(26, 188, 156);
 }
+/* 게시판 스타일 */
+.boardTable {
+	width: 1400px;
+	height: 400px;
+}
 
+.boardTable, .boardTable th, .boardTable td {
+	border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 16px;
+}
+
+.boardTable th {
+	background-color: #999;
+	color: #fff;
+	height: 35px;
+}
+
+.boardTable td {
+	border-color: lightgray;
+	border-style: solid;
+	height: 35px;
+}
+
+.boardTable tr:hover td {
+	background-color: rgb(224, 224, 224);
+	cursor: pointer;
+}
+
+/* 게시판 스타일 */
+
+/* 페이징바 스타일 */
+.pagingBar {
+	list-style: none;
+	margin-left: 400px;
+}
+
+.pagingBar li {
+	float: left;
+}
+
+.pagingBar li * {
+	float: left;
+	padding: 4px;
+	margin-right: 3px;
+	width: 20px;
+	color: rgb(190, 190, 190);
+	font: bold 12px tahoma;
+	border: 1px solid rgb(190, 190, 190);
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.pagingBar li>span {
+	color: rgb(26, 188, 156);
+	border: 1px solid rgb(26, 188, 156);
+}
+
+.pagingBar li a:hover {
+	color: rgb(26, 188, 156);
+	border: 1px solid rgb(26, 188, 156);
+}
+
+/* 페이징바 스타일 */
 </style>
 </head>
 <body>
@@ -82,7 +154,91 @@
 				<li><button class="subBtn subActive">회의실 관리</button></li>
 			</ul>
 		</div>
+		
+		<div class="contentArea">
+		<!-- 게시판 -->
+		<table class="boardTable">
+			<thead>
+				<tr>
+					<th>부서명</th>
+					<th>예약자</th>
+					<th>회의실</th>
+					<th>사용목적</th>
+					<th>사용기간</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
+			<tr>
+				<td>인사팀</td>
+				<td>앨리스</td>
+				<td>5층 회의실1</td>
+				<td>팀미팅</td>
+				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
+			</tr>
 
+		</table>
+
+		<!-- 페이징바 -->
+		<ul class="pagingBar">
+			<li><a href="#">&lt;&lt;</a></li>
+			<li><a href="#">&lt;</a></li>
+			<li><span>1</span></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+			<li><a href="#">7</a></li>
+			<li><a href="#">8</a></li>
+			<li><a href="#">9</a></li>
+			<li><a href="#">10</a></li>
+			<li><a href="#">&gt;</a></li>
+			<li><a href="#">&gt;&gt;</a></li>
+		</ul>
+		<!-- 페이징바 -->
+
+	</div>
 	</div>
 
 

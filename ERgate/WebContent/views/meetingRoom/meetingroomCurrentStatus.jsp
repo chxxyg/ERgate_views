@@ -506,7 +506,7 @@ a#myReservation{
 
 					<li>
 						<div class="meetingroomImg">
-							<img class="profile" src="크기변환_KENN4462-1.jpg">
+							<img class="profile" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</div>
 
 						<p class="name">5층 회의실2</p> <br>
@@ -520,7 +520,7 @@ a#myReservation{
 					</li>
 					<li>
 						<div class="meetingroomImg">
-							<img class="profile" src="크기변환_KENN4462-1.jpg">
+							<img class="profile" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</div>
 						<p class="name">회의실 장소1</p>
 						<p class="title">내용</p>
@@ -531,7 +531,7 @@ a#myReservation{
 					</li>
 					<li>
 						<div class="meetingroomImg">
-							<img class="profile" src="크기변환_KENN4462-1.jpg">
+							<img class="profile" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</div>
 						<p class="name">5층 회의실</p>
 						<p class="title">팀 미팅</p>
@@ -542,7 +542,7 @@ a#myReservation{
 					</li>
 					<li>
 						<div class="meetingroomImg">
-							<img class="profile" src="크기변환_KENN4462-1.jpg">
+							<img class="profile" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</div>
 						<p class="name">회의실 장소</p>
 						<p class="title">내용</p>

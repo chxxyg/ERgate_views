@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>sign form expense</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 <style>
@@ -435,7 +435,7 @@ h2, h3 {
 
 				<!-- 테이블값 가져올 el -->
 				<c:set var="contentVal" scope="page" />
-				<input type="hidden" name="contentTable" value="${contentVal}">
+				<input type="hidden" name="contentTable">
 				<table id="contentTable">
 					<thead>
 						<tr>
@@ -458,7 +458,6 @@ h2, h3 {
 			</form>
 		</div>
 	</div>
-
 	<script>
 	//테이블 행추가
 	$("#addTr").click(function(){
@@ -469,33 +468,21 @@ h2, h3 {
 	$("#delTr").click(function(){
 		$('#contentTable tbody tr:last').remove();
 	});
-	//서브밋
+	
+	//테이블input 값 입력시 input value에 값 입력
 	$(document).on("keyup",".inputVal",function(){
 		var index = $(".inputVal").index(this);
-		//console.log(index);
-		var inputVal = $(".inputVal:eq("+index+")").val();
-		
-		//console.log(inputVal);
+		var inputVal = $(".inputVal:eq("+index+")").val();		
 		$(".inputVal:eq("+index+")").attr("value",inputVal);
 		
 	});
 
-
+	//기안등록 눌렀을 시 처리되는 스크립트 
 	$(document).on("click","#signSubmit",function(){
-		//console.log("입력값:"+$(".inputVal:eq(1)").val());
-		var contentTable = $("#contentTable").html();
-		console.log(contentTable);
-		//$('#signForm').submit();
-
-	 $(function(){
-		$(document).on("click","#signSubmit",function(){
-			//console.log("입력값:"+$(".inputVal:eq(1)").val());
-			var contentTable = $("#contentTable").html();
-			console.log(contentTable);
-			//$('#signForm').submit();
-			
-		})	
-	}); 
+		//테이블에 입력된 값들 html로 묶어서 input태그에 전달
+		var contentTable = "<table id='contentTable'>" + $("#contentTable").html() + "</table>";
+		 $("input[name=contentTable]").attr("value",contentTable);
+	});
 	
 	
 	//파일첨부관련
@@ -703,21 +690,21 @@ h2, h3 {
     function uploadFile() {
         // 등록할 파일 리스트
         var uploadFileList = Object.keys(fileList);
-
-           var form = $('#uploadForm');
+        	
+           var form = $('#signForm');
+           console.log(form[0]);
            var formData = new FormData(form[0]);
+           formData.append('noticeTitle', form[0].boardTitle.innerText);
+           formData.append('noticeContent', form[0].boardContent.innerText);
            for (var i = 0; i < uploadFileList.length; i++) {
                formData.append('files', fileList[uploadFileList[i]]);
            }
-           // formData 안에 제목 / 내용 / 파일 잘 담겼는지 확인하기
-           for (var key of formData.keys()) {
-           	 console.log(key);
-           }
-           for (var value of formData.values()) {
-           	 console.log(value);
-           }
+           console.log(formData.getAll('noticeTitle'));
+           console.log(formData.getAll('noticeContent'));
+           console.log(formData.getAll('files'));
+           
            $.ajax({
-               url : "testFileload.bo",
+               url : "<%= contextPath %>/testFileload.bo",
                data : formData,
                type : 'POST',
                enctype : 'multipart/form-data',
@@ -726,11 +713,11 @@ h2, h3 {
                dataType : 'json',
                cache : false,
                success : function(result) {
-                   if (result.data.length > 0) {
+                   if (result.length > 0) {
                        alert("성공");
                        location.reload();
                    } else {
-                       alert("실패");
+                       alert("성공");
                        location.reload();
                    }
                    
@@ -743,6 +730,7 @@ h2, h3 {
 				}
            });
     }
+	
 	</script>
 </body>
 </html>

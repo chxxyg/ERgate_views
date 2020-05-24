@@ -268,6 +268,7 @@
                                 </tr>
                                 <tr>
                                     <td id="mypageDescript">개인정보 수정 후 <br>그룹웨어 정보 반영을 위해 <br>재로그인 해주세요.</bt></td>
+                               		<tr><td><div style="height:503px;"></div></td></tr>
                                 </tr>
                             </table>
                         </td>

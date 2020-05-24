@@ -265,6 +265,11 @@
     color: rgb(188, 188, 188);
     width: 40%;
 }
+#mypageProfileImg{
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
  /* 조직도 div 스타일 */
  
   /* 작은버튼 스타일 */

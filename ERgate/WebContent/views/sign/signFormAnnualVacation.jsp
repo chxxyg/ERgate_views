@@ -259,6 +259,7 @@ h2, h3 {
 
 #contentTable {
 	width: 1200px;
+	height: 400px;
 	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
@@ -277,10 +278,11 @@ h2, h3 {
 	position: relative;
 }
 
-#contentTable input {
-	width: 96%;
-	height: 35px;
-	border: 1px solid white;
+#signContent{
+	resize:none;
+	padding: 0;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0);
 }
 </style>
 </head>
@@ -318,7 +320,7 @@ h2, h3 {
 						<th>기안부서</th>
 						<td width="400">인사부</td>
 						<th>문서분류</th>
-						<td width="400">지출결의서</td>
+						<td width="400">휴가계</td>
 					</tr>
 					<tr>
 						<th>기안자</th>
@@ -448,19 +450,14 @@ h2, h3 {
 						</tr>
 					</thead>
 				</table>
-				<br>
-				<br>
-
-				<!-- 테이블값 가져올 el -->
-				<c:set var="contentVal" scope="page" />
 				<input type="hidden" name="contentTable">
 				<table id="contentTable">
 						<tr>
 							<th>휴가사유</th>
 						</tr>
 						<tr>
-							<td>
-								<textarea cols="" rows=""></textarea>
+							<td rowspan="8" colspan="8">
+								<textarea id="signContent" cols="168" rows="24"></textarea>
 							</td>								
 						</tr>
 					</tbody>

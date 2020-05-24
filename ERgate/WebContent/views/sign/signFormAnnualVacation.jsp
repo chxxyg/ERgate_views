@@ -351,15 +351,15 @@ h2, h3 {
 					<tr>
 						<td width="150"><h2>1</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>2</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>3</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>4</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>5</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>6</h2>
 							<h3>전지현</h3></td>
 					</tr>
 					<tr>

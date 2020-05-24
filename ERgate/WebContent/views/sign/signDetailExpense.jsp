@@ -206,8 +206,7 @@ h2, h3 {
 		<div class="popup-content">
 			<h1>지출결의서</h1>
 			<div id="btnArea">
-				<button class="bigBtn" style="background: rgb(190, 190, 190);">임시저장</button>
-				<button class="bigBtn" id="signSubmit">기안등록</button>
+				<button class="bigBtn" id="signSubmit" style="margin-left:150px;">기안등록</button>
 			</div>
 			<br>
 			<form id="signForm" action="#" method="get">
@@ -236,8 +235,6 @@ h2, h3 {
 				<table id="signInfo2">
 					<tr>
 						<th rowspan="2" width="120">결재라인
-							<button type="button" class="middleBtn"
-								style="width: 120px; margin-top: 10px;">결재라인추가</button>
 						</th>
 						<th>팀장</th>
 						<th>팀장</th>
@@ -249,15 +246,15 @@ h2, h3 {
 					<tr>
 						<td width="150"><h2>1</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>2</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>3</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>4</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>5</h2>
 							<h3>전지현</h3></td>
-						<td width="150"><h2>1</h2>
+						<td width="150"><h2>6</h2>
 							<h3>전지현</h3></td>
 					</tr>
 					<tr>

@@ -33,6 +33,7 @@
 	padding-left: 30px;
 	font-weight: 500;
 }
+
 .contentArea {
 	margin-top: 50px;
 	margin-left: 100px;
@@ -78,86 +79,6 @@
 .subActive {
 	border: 4px solid rgb(26, 188, 156);
 }
-#calendarArea{
-	border:1px solid lightgray;
-	width:1400px;
-	height:50px;
-	background-color:lightgray;
-	
-}
-
-#calendarArea p{
-	text-align:center;
-}
-
-
-/* 게시판 스타일 */
-.boardTable {
-	width: 1400px;
-	height: 400px;
-	margin-top:10px;
-}
-
-.boardTable, .boardTable th, .boardTable td {
-	border-width: 1px 0;
-	border-collapse: collapse;
-	text-align: center;
-	font-size: 16px;
-}
-
-.boardTable th {
-	background-color: #999;
-	color: #fff;
-	height: 35px;
-}
-
-.boardTable td {
-	border-color: lightgray;
-	border-style: solid;
-	height: 35px;
-}
-
-.boardTable tr:hover td {
-	background-color: rgb(224, 224, 224);
-	cursor: pointer;
-}
-
-/* 게시판 스타일 */
-
-/* 페이징바 스타일 */
-.pagingBar {
-	list-style: none;
-	margin-left: 400px;
-}
-
-.pagingBar li {
-	float: left;
-}
-
-.pagingBar li * {
-	float: left;
-	padding: 4px;
-	margin-right: 3px;
-	width: 20px;
-	color: rgb(190, 190, 190);
-	font: bold 12px tahoma;
-	border: 1px solid rgb(190, 190, 190);
-	text-align: center;
-	text-decoration: none;
-	font-size: 15px;
-}
-
-.pagingBar li>span {
-	color: rgb(26, 188, 156);
-	border: 1px solid rgb(26, 188, 156);
-}
-
-.pagingBar li a:hover {
-	color: rgb(26, 188, 156);
-	border: 1px solid rgb(26, 188, 156);
-}
-
-/* 페이징바 스타일 */
 
 /* 모달팝업 스타일 */
 .modal {
@@ -186,6 +107,103 @@
 /* 모달팝업 스타일 */
 
 
+
+
+.reservation_list>li {
+    width: 400px;
+    height: 210px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border: 1px solid #f1f1f1;
+    float:left;
+}
+.reservation_list>li .name {
+    margin-left: 85px;
+    margin-top: 30px;
+    font-size: 13px;
+    font-weight: bolder;
+    color: black;
+    width:200px;
+    height: 10px;
+ 
+}
+.reservation_list>li .location {
+
+    margin-left: 100px;
+    margin-top: -10px;
+    width: 200px;
+    height: 10px;
+    color:black;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.reservation_list>li .personnel{
+
+margin-left: 85px;
+margin-top: -10px;
+width: 200px;
+height: 10px;
+color:black;
+font-size: 13px;
+font-weight: bolder;
+}
+
+.reservation_list>li .date {
+    margin-left: 75px;
+    margin-top: -10px;
+    font-size: 13px;
+    color: black;
+    width:200px;
+    height: 10px;
+    font-weight: bolder;
+}
+.reservation_list>li{
+
+    display:inline;
+   border: 1px solid lightgray;
+    text-align: center;
+    
+}
+
+.correctbtn {
+    display: flex;
+    width:100% ;
+    text-align: center;
+}
+
+.reservation_list>li .correctbtn button {
+    width: 140px;
+    height: 30px;
+    font-size: 13px;
+    background-color: white;
+    color:gray;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 200px;
+    margin-top: 20px;
+    
+}   
+
+/* 회의실 이미지*/
+.meetingroomImg{
+    width: 130px;
+    height: 130px;
+    float: left;
+   
+}   
+.profile{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 70%;
+    float:left;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+
 </style>
 </head>
 <body>
@@ -197,137 +215,99 @@
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn subActive">회의실 예약</button></li>
-				<li><button class="subBtn subActive" onclick="">회의실 예약현황</button></li>
-				<li><button class="subBtn subActive" onclick="open_modal();">회의실 관리</button></li>
+				<li><button class="subBtn">회의실 예약</button></li>
+				<li><button class="subBtn" onclick="">회의실 예약현황</button></li>
+				<li><button class="subBtn subActive" onclick="open_modal();">회의실
+						관리</button></li>
 				<a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a>
 			</ul>
 		</div>
-		
-		<div class="contentArea">
-		<!-- 달력 설정 부분 -->
-		<div id="calendarArea">
-			<p>캘린더 넣을거임</p>
-		</div>
-		
-		
-		<!-- 게시판 -->
-		<table class="boardTable">
-			<thead>
-				<tr>
-					<th>부서명</th>
-					<th>예약자</th>
-					<th>회의실</th>
-					<th>사용목적</th>
-					<th>사용기간</th>
-				</tr>
-			</thead>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
-			<tr>
-				<td>인사팀</td>
-				<td>앨리스</td>
-				<td>5층 회의실1</td>
-				<td>팀미팅</td>
-				<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
-			</tr>
 
-		</table>
+		<div class="contentArea"></div>
+		<ul class="reservation_list room">
 
-		<!-- 페이징바 -->
-		<ul class="pagingBar">
-			<li><a href="#">&lt;&lt;</a></li>
-			<li><a href="#">&lt;</a></li>
-			<li><span>1</span></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">6</a></li>
-			<li><a href="#">7</a></li>
-			<li><a href="#">8</a></li>
-			<li><a href="#">9</a></li>
-			<li><a href="#">10</a></li>
-			<li><a href="#">&gt;</a></li>
-			<li><a href="#">&gt;&gt;</a></li>
-		</ul>
-		<!-- 페이징바 -->
+                <li>
+                    <div class="meetingroomImg">
+                        <img class="profile" src="크기변환_KENN4462-1.jpg">
+                    </div>
+                    
+                    <p class="name">회의실 명</p><br>
+                    <p class="location">회의실 위치</p><br>
+                    <p class="personnel">수용인원</p><br>
+                    <p class="date">등록일</p> 
+                    <div class="correctbtn"><button>수정</button></div>
+                </li>
+                <li>
+                    <div class="meetingroomImg">
+                        <img class="profile" src="크기변환_KENN4462-1.jpg">
+                    </div>
+                    
+                    <p class="name">회의실 명</p><br>
+                    <p class="location">회의실 위치</p><br>
+                    <p class="personnel">수용인원</p><br>
+                    <p class="date">등록일</p> 
+                    <div class="correctbtn"><button>수정</button></div>
+                </li>
+                <li>
+                    <div class="meetingroomImg">
+                        <img class="profile" src="크기변환_KENN4462-1.jpg">
+                    </div>
+                    
+                    <p class="name">회의실 명</p><br>
+                    <p class="location">회의실 위치</p><br>
+                    <p class="personnel">수용인원</p><br>
+                    <p class="date">등록일</p> 
+                    <div class="correctbtn"><button>수정</button></div>
+                </li>
+                <li>
+                    <div class="meetingroomImg">
+                        <img class="profile" src="크기변환_KENN4462-1.jpg">
+                    </div>
+                    
+                    <p class="name">회의실 명</p><br>
+                    <p class="location">회의실 위치</p><br>
+                    <p class="personnel">수용인원</p><br>
+                    <p class="date">등록일</p> 
+                    <div class="correctbtn"><button>수정</button></div>
+                </li>
+               
+     
 
-	</div>
-	
-	
-	<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
+
+
+                        </ul>
+           
+
+		<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
 	 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
 -->
 
-<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
+		<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
      용도에 따라 href와 id는 변경해주세요.(여러개 가능)
      모달타겟으로 쓸 요소에 class와 href 복사해주세요.
 -->
-<a class="open-modal" href="#modal-form">모달열기</a>
-
-<br>
+		<a class="open-modal" href="#modal-form">모달열기</a> <br>
 
 
-<div id="meetingroomManage" class="modal">
-	<div class="modal-title">모달타이틀</div>
-	<div class="modal-content">모달내용작성해주세요</div>
-</div>
+		<div id="meetingroomManage" class="modal">
+			<div class="modal-title">모달타이틀</div>
+			<div class="modal-content">모달내용작성해주세요</div>
+		</div>
 
-<!-- 모달용 스크립트 -->
-<script>
-	$('.open-modal').click(function() {
-		$(this).modal({
-			fadeDuration : 150
-		});
+		<!-- 모달용 스크립트 -->
+		<script>
+			$('.open-modal').click(function() {
+				$(this).modal({
+					fadeDuration : 150
+				});
 
-	});
-</script>
-	
-	
+			});
+		</script>
+
+
 	</div>
 
-	
+
 
 
 </body>

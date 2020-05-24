@@ -266,6 +266,30 @@
     width: 40%;
 }
  /* 조직도 div 스타일 */
+ 
+  /* 작은버튼 스타일 */
+.smallBtn {
+	width: 60px;
+	height: 25px;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.smallBtn:hover {
+	cursor: pointer;
+}
+
+#emp_status{
+	border: 1px solid rgb(26, 188, 156);
+	background: white; /* 회색 : rgb(190, 190, 190) */
+	color: rgb(26, 188, 156);
+}
+#profile_update{
+	border: 1px solid rgb(190, 190, 190);
+	background: rgb(190, 190, 190);
+	color: white;
+}
+/* 작은버튼 스타일 */
 </style>
 </head>
 <body>
@@ -295,7 +319,6 @@
 						<td id="leftArea"> 
 							<!-- 인사팀만 보이는 버튼 -->
 							<button class="bigBtn">승인대기</button>&nbsp;
-							<button class="bigBtn" style="background:gray;">수정하기</button>&nbsp;
 						</td>
 						<td id="rightArea">
 							<!-- 검색바 -->
@@ -358,6 +381,8 @@
 		                </div>
 		                <div class="profile_name">
 		                    <div class="dept_name">앨리스</div>
+		                    <button id="emp_status" class="smallBtn">회의중</button>
+		                    <button id="profile_update" class="smallBtn">수정하기</button><br><br>
 		                    <div> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></div>
 		                    <div class="dept_mail">qwertyadsf@gmail.com</div>
 		                </div>

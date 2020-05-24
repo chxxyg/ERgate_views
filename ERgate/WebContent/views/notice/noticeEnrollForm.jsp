@@ -236,10 +236,11 @@
 										</tbody>
 									</table>
 								</div>
+							</div>	
 						</td>
 					</tr>
 					<tr>
-						<td colspan="8" rowspan="20"><textarea class="textArea"
+						<td colspan="8" rowspan="20"><textarea class="textArea" name="noticeContent"
 								cols="160" rows="25"></textarea></td>
 					</tr>
 				</table>
@@ -459,21 +460,21 @@
     function uploadFile() {
         // 등록할 파일 리스트
         var uploadFileList = Object.keys(fileList);
-
+        	
            var form = $('#uploadForm');
+           console.log(form[0]);
            var formData = new FormData(form[0]);
+           formData.append('noticeTitle', form[0].boardTitle.innerText);
+           formData.append('noticeContent', form[0].boardContent.innerText);
            for (var i = 0; i < uploadFileList.length; i++) {
                formData.append('files', fileList[uploadFileList[i]]);
            }
-           // formData 안에 제목 / 내용 / 파일 잘 담겼는지 확인하기
-           for (var key of formData.keys()) {
-           	 console.log(key);
-           }
-           for (var value of formData.values()) {
-           	 console.log(value);
-           }
+           console.log(formData.getAll('noticeTitle'));
+           console.log(formData.getAll('noticeContent'));
+           console.log(formData.getAll('files'));
+           
            $.ajax({
-               url : "testFileload.bo",
+               url : "<%= contextPath %>/testFileload.bo",
                data : formData,
                type : 'POST',
                enctype : 'multipart/form-data',
@@ -482,11 +483,11 @@
                dataType : 'json',
                cache : false,
                success : function(result) {
-                   if (result.data.length > 0) {
+                   if (result.length > 0) {
                        alert("성공");
                        location.reload();
                    } else {
-                       alert("실패");
+                       alert("성공");
                        location.reload();
                    }
                    
@@ -499,6 +500,7 @@
 				}
            });
     }
+	
 	</script>
 </body>
 </html>

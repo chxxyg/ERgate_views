@@ -96,7 +96,7 @@
 	margin-top: 10px;
 }
 /* 나의 예약 버튼*/
-#myReservationBtn {
+ #myReservationBtn {
 	width: 140px;
 	height: 40px;
 	border: 0px;
@@ -106,8 +106,18 @@
 	font-size: 18px;
 	margin-left: 900px;
 }
-
-#myReservationBtn:hover {
+/* #myReservation {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 18px;
+	margin-left: 900px;
+}
+ */
+ #myReservationBtn:hover {
 	cursor: pointer;
 }
 
@@ -185,7 +195,7 @@ html, body {
 	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
-	margin-left: 20px;
+	margin-left: 50px;
 }
 
 .reservationBtn:hover {
@@ -193,21 +203,29 @@ html, body {
 }
 
 /*나의예약현황*/
-#myReservationBtn{
-	width: 200px;
+#myReservation{
+	width:140px;
 	height: 40px;
 	border: 0px;
 	border-radius: 5px;
 	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
 	color: white;
 	font-size: 18px;
-	margin-top: 0px;
-	margin-left:150px;
+	margin-top: -35px;
+	margin-left:1000px;
+	float:left;
+	text-decoration:none;
+	text-align:center;
+	
 }
 
 
 #myReservationBtn:hover {
 	cursor: pointer;
+}
+a#myReservation{
+	text-align:center;
+	margin-top:5px;
 }
 
 /* 취소 버튼 */

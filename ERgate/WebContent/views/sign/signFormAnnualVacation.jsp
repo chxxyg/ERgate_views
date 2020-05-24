@@ -198,7 +198,7 @@ h2, h3 {
 }
 
 #signInfo3 {
-	width: 700px;
+	width: 750px;
 	height: 100px;
 	border-width: 1px 0;
 	border-collapse: collapse;
@@ -331,7 +331,7 @@ h2, h3 {
 					<tr>
 						<th>기안일시</th>
 						<td>2020/05/10</td>
-						<td colspan="2"></td>
+						<td colspan="2" style="display:none;"></td>
 					</tr>
 				</table>
 				<br>
@@ -392,7 +392,7 @@ h2, h3 {
 					<thead>
 						<tr>
 							<th>휴가구분</th>
-							<td><select name="">
+							<td><select class="inputs" name="" style="height:35px;margin-right:220px;">
 									<option>연차</option>
 									<option>오전반차</option>
 									<option>오후반차</option>
@@ -401,8 +401,8 @@ h2, h3 {
 									<option>병가</option>
 									<option>휴직</option>
 								</select></td>
-							<th>잔여연차</th>
-							<td>15 일</td>
+							<th width="103">잔여연차</th>
+							<td align="left"> 15 일</td>
 						</tr>
 						<tr>
 							<th>기간</th>
@@ -418,13 +418,13 @@ h2, h3 {
 						</tr>
 						<tr>
 							<th width="120">제목</th>
-							<td><input class="inputs" type="text" style="width: 100%;"></td>
+							<td colspan="4"><input class="inputs" type="text" style="width: 100%;margin-left: 7px;"></td>
 						</tr>
 						<tr>
 							<th>첨부파일</th>
 							<td colspan="6"><button type="button"
 									class="bigBtn fileShow" align="left"
-									style="margin-right: 440px; background: rgb(190, 190, 190);">추가</button></td>
+									style="margin-right: 470px; background: rgb(190, 190, 190);">추가</button></td>
 						</tr>
 						<tr>
 							<td colspan="8">
@@ -470,11 +470,9 @@ h2, h3 {
 
 	
 	//테이블input 값 입력시 input value에 값 입력
-	$(document).on("keyup",".inputVal",function(){
-		var index = $(".inputVal").index(this);
-		var inputVal = $(".inputVal:eq("+index+")").val();		
-		$(".inputVal:eq("+index+")").attr("value",inputVal);
-		
+	$(document).on("keyup","#signContent",function(){
+		var inputVal = $("#signContent").val();		
+		$("#signContent").attr("value",inputVal);
 	});
 
 	//기안등록 눌렀을 시 처리되는 스크립트 
@@ -482,6 +480,7 @@ h2, h3 {
 		//테이블에 입력된 값들 html로 묶어서 input태그에 전달
 		var contentTable = "<table id='contentTable'>" + $("#contentTable").html() + "</table>";
 		 $("input[name=contentTable]").attr("value",contentTable);
+		 console.log($("input[name=contentTable]").val());
 	});
 	
 	

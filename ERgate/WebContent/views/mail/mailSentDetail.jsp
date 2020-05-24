@@ -180,8 +180,8 @@
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn subActive">받은메일함</button></li>
-				<li><button class="subBtn">보낸메일함</button></li>
+				<li><button class="subBtn">받은메일함</button></li>
+				<li><button class="subBtn subActive">보낸메일함</button></li>
 				<li><button class="subBtn">중요메일함</button></li>
 				<li><button class="subBtn">메일작성</button></li>
 			</ul>
@@ -194,8 +194,8 @@
 				<table class="bas">
 					<tr>
 						<td id="leftArea">
-							<button class="smallBtn">답장</button>&nbsp;
-							<button class="smallBtn" style="background:gray;">전달</button>&nbsp;
+							<button class="smallBtn">전달</button>&nbsp;
+							<button class="smallBtn" style="background:gray;">메일수거</button>&nbsp;
 							<button class="smallBtn takeManyBtn" style="background:rgb(190, 190, 190);">삭제</button>
 						</td>
 					</tr>
@@ -204,7 +204,7 @@
 				<div class="mailTitleZone">
 					<div>
 						<div class="importantIcon"><img src="../../resources/icons/star_border-black-48dp.svg"></div>
-						<div class="titleZone" name="mailTitle">안녕하세요, lessMoni팀입니다.</div>
+						<div class="titleZone" name="mailTitle">안녕하세요, 개발팀 케빈입니다.</div>
 					</div>
 				</div>
 				
@@ -212,11 +212,11 @@
 				<table class="infoBar">
 					<tr>
 						<td>보낸사람</td>
-						<td>lessmoni@ergate.com</td>
+						<td>kevin166@ergate.com</td>
 					</tr>
 					<tr>
 						<td>받는사람</td>
-						<td>kevin166@ergate.com</td>
+						<td>lessmoni@ergate.com</td>
 					</tr>
 					<tr>
 						<td>보낸날짜</td>

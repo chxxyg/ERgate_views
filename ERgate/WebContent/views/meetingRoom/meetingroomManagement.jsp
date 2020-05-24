@@ -6,6 +6,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <jsp:include page="../common/menubar.jsp" />
+<!-- 모달 사용페이지에 복사해주세요 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- 모달 사용페이지에 복사해주세요 -->
 
 <style>
 .outer {
@@ -72,10 +78,24 @@
 .subActive {
 	border: 4px solid rgb(26, 188, 156);
 }
+#calendarArea{
+	border:1px solid lightgray;
+	width:1400px;
+	height:50px;
+	background-color:lightgray;
+	
+}
+
+#calendarArea p{
+	text-align:center;
+}
+
+
 /* 게시판 스타일 */
 .boardTable {
 	width: 1400px;
 	height: 400px;
+	margin-top:10px;
 }
 
 .boardTable, .boardTable th, .boardTable td {
@@ -138,6 +158,34 @@
 }
 
 /* 페이징바 스타일 */
+
+/* 모달팝업 스타일 */
+.modal {
+	width: 1000px;
+	max-width: 2000px;
+	height: 800px; /* 모달 크기지정 */
+	padding: 0px;
+	border-radius: 0px;
+}
+
+.modal-title {
+	margin: 0;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(22, 160, 133, 0.68);
+	font-size: 25px;
+	padding: 10px;
+	color: white;
+	box-sizing: border-box;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+/* 모달팝업 스타일 */
+
+
 </style>
 </head>
 <body>
@@ -150,12 +198,19 @@
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn subActive">회의실 예약</button></li>
-				<li><button class="subBtn subActive">회의실 예약현황</button></li>
-				<li><button class="subBtn subActive">회의실 관리</button></li>
+				<li><button class="subBtn subActive" onclick="">회의실 예약현황</button></li>
+				<li><button class="subBtn subActive" onclick="open_modal();">회의실 관리</button></li>
+				<a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a>
 			</ul>
 		</div>
 		
 		<div class="contentArea">
+		<!-- 달력 설정 부분 -->
+		<div id="calendarArea">
+			<p>캘린더 넣을거임</p>
+		</div>
+		
+		
 		<!-- 게시판 -->
 		<table class="boardTable">
 			<thead>
@@ -239,9 +294,40 @@
 		<!-- 페이징바 -->
 
 	</div>
+	
+	
+	<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
+	 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
+-->
+
+<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
+     용도에 따라 href와 id는 변경해주세요.(여러개 가능)
+     모달타겟으로 쓸 요소에 class와 href 복사해주세요.
+-->
+<a class="open-modal" href="#modal-form">모달열기</a>
+
+<br>
+
+
+<div id="meetingroomManage" class="modal">
+	<div class="modal-title">모달타이틀</div>
+	<div class="modal-content">모달내용작성해주세요</div>
+</div>
+
+<!-- 모달용 스크립트 -->
+<script>
+	$('.open-modal').click(function() {
+		$(this).modal({
+			fadeDuration : 150
+		});
+
+	});
+</script>
+	
+	
 	</div>
 
-
+	
 
 
 </body>

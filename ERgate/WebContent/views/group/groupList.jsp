@@ -250,7 +250,25 @@
     color: rgb(188, 188, 188);
     width: 40%;
 }
+
+
  /* 조직도 div 스타일 */
+ 
+ /* 작은버튼 스타일 */
+.smallBtn {
+	width: 60px;
+	height: 25px;
+	border: 1px solid rgb(26, 188, 156);
+	border-radius: 5px;
+	background: white; /* 회색 : rgb(190, 190, 190) */
+	color: rgb(26, 188, 156);
+	font-size: 12px;
+}
+
+.smallBtn:hover {
+	cursor: pointer;
+}
+/* 작은버튼 스타일 */
 </style>
 </head>
 <body>
@@ -338,6 +356,7 @@
 		                </div>
 		                <div class="profile_name">
 		                    <div class="dept_name">앨리스</div>
+		                    <button class="smallBtn">회의중</button><br><br>
 		                    <div> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></div>
 		                    <div class="dept_mail">qwertyadsf@gmail.com</div>
 		                </div>

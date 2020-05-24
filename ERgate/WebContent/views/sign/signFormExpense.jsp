@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -141,7 +141,8 @@
 
 #signInfo2 {
 	width: 1200px;
-	height: 175px; border-width : 1px 0;
+	height: 175px;
+	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
@@ -204,49 +205,45 @@ h2, h3 {
 	text-align: center;
 	font-size: 18px;
 	border-collapse: separate;
-    border-spacing: 0 10px;
+	border-spacing: 0 10px;
 }
 
 /* textarea스타일 */
 
 /* 파일 첨부 관련 */
-
- .upload-btn-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
+.upload-btn-wrapper {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
 }
-        
+
 .upload-btn {
-    border: 2px solid gray;
-    color: gray;
-    background-color: white;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
+	border: 2px solid gray;
+	color: gray;
+	background-color: white;
+	padding: 8px 20px;
+	border-radius: 8px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
-
-        
 .upload-btn-wrapper input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
+	font-size: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
 }
-
 
 #fileDragDesc {
-    margin-top:40px;
-    vertical-align:middle;
-    text-align: center; 
-    color:lightgray;
-    font-size:16px;
+	margin-top: 40px;
+	vertical-align: middle;
+	text-align: center;
+	color: lightgray;
+	font-size: 16px;
 }
 
-#deleteBtn{
+#deleteBtn {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
@@ -255,19 +252,18 @@ h2, h3 {
 	vertical-align: sub;
 }
 
-#deleteBtn:hover{
-	cursor:pointer;
-	color:rgb(243, 156, 18);
+#deleteBtn:hover {
+	cursor: pointer;
+	color: rgb(243, 156, 18);
 }
 
-
-#contentTable{
-	width:1200px;
+#contentTable {
+	width: 1200px;
 	border-width: 1px 0;
 	border-collapse: collapse;
 	text-align: center;
 	font-size: 16px;
-	margin-bottom:100px;
+	margin-bottom: 100px;
 }
 
 #contentTable th {
@@ -281,10 +277,10 @@ h2, h3 {
 	position: relative;
 }
 
-#contentTable input{
-	width:96%;
-	height:35px;
-	border:1px solid white;
+#contentTable input {
+	width: 96%;
+	height: 35px;
+	border: 1px solid white;
 }
 </style>
 </head>
@@ -334,8 +330,8 @@ h2, h3 {
 						<th>기안일시</th>
 						<td>2020/05/10</td>
 						<th>지출기간</th>
-						<td><input class="inputs" name="" type="date"> ~ <input name="" class="inputs"
-							type="date"></td>
+						<td><input class="inputs" name="" type="date"> ~ <input
+							name="" class="inputs" type="date"></td>
 					</tr>
 				</table>
 				<br>
@@ -373,7 +369,7 @@ h2, h3 {
 						</span></td>
 					</tr>
 				</table>
-				
+
 				<!-- 결재완료시 체크될 부분 -->
 				<table id="checkArea">
 					<tr>
@@ -396,12 +392,13 @@ h2, h3 {
 					<thead>
 						<tr>
 							<th width="120">제목</th>
-							<td><input class="inputs" type="text" style="width:100%;"></td>
+							<td><input class="inputs" type="text" style="width: 100%;"></td>
 						</tr>
 						<tr>
 							<th>첨부파일</th>
 							<td colspan="6"><button type="button"
-									class="bigBtn fileShow" align="left" style="margin-right:440px;background:rgb(190, 190, 190);">추가</button></td>
+									class="bigBtn fileShow" align="left"
+									style="margin-right: 440px; background: rgb(190, 190, 190);">추가</button></td>
 						</tr>
 						<tr>
 							<td colspan="8">
@@ -409,10 +406,11 @@ h2, h3 {
 									<div class="upload-btn-wrapper">
 										<input type="file" id="input_file" multiple="multiple"
 											style="height: 100%;" />
-										<button class="upload-btn fileShow" style="margin-right:570px;">파일선택</button>
+										<button class="upload-btn fileShow"
+											style="margin-right: 570px;">파일선택</button>
 									</div>
 									<div id="dropZone"
-										style="width: 700px; height: 100px; border: 1px solid lightgray;text-align: left;">
+										style="width: 700px; height: 100px; border: 1px solid lightgray; text-align: left;">
 										<div id="fileDragDesc">※파일을 드래그 해주세요.</div>
 										<table id="fileListTable" width="100%" border="0px">
 											<tbody id="fileTableTbody">
@@ -426,9 +424,18 @@ h2, h3 {
 						</tr>
 					</thead>
 				</table>
-				<button id="addTr" type="button" class="middleBtn" style="background:orange;width: 120px; margin-top: 10px;">행 추가</button>
-				<button id="delTr" type="button" class="middleBtn" style="background:rgb(190, 190, 190);width: 120px; margin-top: 10px;">행 삭제</button>
-				<br><br>
+				<button id="addTr" type="button" class="middleBtn"
+					style="background: orange; width: 120px; margin-top: 10px;">행
+					추가</button>
+				<button id="delTr" type="button" class="middleBtn"
+					style="background: rgb(190, 190, 190); width: 120px; margin-top: 10px;">행
+					삭제</button>
+				<br>
+				<br>
+
+				<!-- 테이블값 가져올 el -->
+				<c:set var="contentVal" scope="page" />
+				<input type="hidden" name="contentTable" value="${contentVal}">
 				<table id="contentTable">
 					<thead>
 						<tr>
@@ -440,14 +447,14 @@ h2, h3 {
 					</thead>
 					<tbody>
 						<tr>
-							<td><textarea></textarea></td>
+							<td><input class="inputVal" type="text"></td>
 							<td><input class="inputVal" type="text"></td>
 							<td><input class="inputVal" type="text"></td>
 							<td><input class="inputVal" type="text"></td>
 						</tr>
 					</tbody>
 				</table>
-				
+
 			</form>
 		</div>
 	</div>
@@ -463,34 +470,24 @@ h2, h3 {
 		$('#contentTable tbody tr:last').remove();
 	});
 	//서브밋
-	
-		$(document).on("click","#signSubmit",function(){
-			//console.log("입력값:"+$(".inputVal:eq(1)").val());
-			var contentTable = $("#contentTable").html();
-			console.log(contentTable);
-			//$('#signForm').submit();
-			
-		});
-	/* $(function(){
+	$(document).on("keyup",".inputVal",function(){
+		var index = $(".inputVal").index(this);
+		//console.log(index);
+		var inputVal = $(".inputVal:eq("+index+")").val();
 		
-/* 			$("text").on("propertychange change keyup paste input", function() {
-			    var currentVal = $(this).val();
-			    if(currentVal == oldVal) {
-			        return;
-			    }
-			 
-			    oldVal = currentVal;
-			    $(this).val(currentVal);
-			}); */
+		//console.log(inputVal);
+		$(".inputVal:eq("+index+")").attr("value",inputVal);
+		
+	});
 
-		/* 	$(".inputVal").on("onKeyup", function() {  
-				var index = $(this).index();
-				var inputVal = $(".inputVal:eq("+index+")").val();
-				//console.log(inputVal);
-				$(".inputVal:eq("+index+")").attr("value",inputVal);
-			    
-			
-			}); */
+
+	$(document).on("click","#signSubmit",function(){
+		//console.log("입력값:"+$(".inputVal:eq(1)").val());
+		var contentTable = $("#contentTable").html();
+		console.log(contentTable);
+		//$('#signForm').submit();
+
+	 $(function(){
 		$(document).on("click","#signSubmit",function(){
 			//console.log("입력값:"+$(".inputVal:eq(1)").val());
 			var contentTable = $("#contentTable").html();
@@ -498,7 +495,7 @@ h2, h3 {
 			//$('#signForm').submit();
 			
 		})	
-	}); */
+	}); 
 	
 	
 	//파일첨부관련

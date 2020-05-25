@@ -214,7 +214,7 @@ h2, h3 {
 		<div class="popup-content">
 			<h1>지출결의서</h1>
 			<div id="btnArea">
-				<button class="bigBtn" id="signSubmit" style="margin-left:150px;">기안등록</button>
+				<button class="bigBtn" id="signSubmit" style="margin-left:150px;">결재</button>
 			</div>
 			<br>
 			<form id="signForm" action="#" method="get">

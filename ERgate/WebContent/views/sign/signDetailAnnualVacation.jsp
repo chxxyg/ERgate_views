@@ -160,7 +160,7 @@ h2, h3 {
 }
 
 #signInfo3 {
-	width: 700px;
+	width: 750px;
 	height: 100px;
 	border-width: 1px 0;
 	border-collapse: collapse;
@@ -197,12 +197,18 @@ h2, h3 {
 	border: 1px solid white;
 }
 
-#fileArea{
-	width:1000px;
-	height:200px;
-	padding:5px;
-	border:1px solid lightgray;
-	text-align:left;
+#fileArea {
+	width: 1000px;
+	height: 200px;
+	padding: 5px;
+	border: 1px solid lightgray;
+	text-align: left;
+}
+#signContent{
+	resize:none;
+	padding: 0;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0);
 }
 </style>
 </head>
@@ -214,7 +220,7 @@ h2, h3 {
 		<div class="popup-content">
 			<h1>휴가계</h1>
 			<div id="btnArea">
-				<button class="bigBtn" id="signSubmit" style="margin-left:150px;">기안등록</button>
+				<button class="bigBtn" id="signSubmit" style="margin-left: 150px;">결재</button>
 			</div>
 			<br>
 			<form id="signForm" action="#" method="get">
@@ -223,7 +229,7 @@ h2, h3 {
 						<th>기안부서</th>
 						<td width="400">인사부</td>
 						<th>문서분류</th>
-						<td width="400">지출결의서</td>
+						<td width="400">휴가계</td>
 					</tr>
 					<tr>
 						<th>기안자</th>
@@ -233,17 +239,14 @@ h2, h3 {
 					</tr>
 					<tr>
 						<th>기안일시</th>
-						<td>2020/05/10</td>
-						<th>지출기간</th>
-						<td><input class="inputs" name="" type="date" value="2020-05-01"> ~ <input
-							name="" class="inputs" type="date" value="2020-05-15"></td>
+						<td>2020/04/28</td>
+						<td colspan="2" style="display:none;"></td>
 					</tr>
 				</table>
 				<br>
 				<table id="signInfo2">
 					<tr>
-						<th rowspan="2" width="120">결재라인
-						</th>
+						<th rowspan="2" width="120">결재라인</th>
 						<th>팀장</th>
 						<th>팀장</th>
 						<th>팀장</th>
@@ -294,28 +297,45 @@ h2, h3 {
 				<table id="signInfo3">
 					<thead>
 						<tr>
-							<th width="120">제목</th>
-							<td><input class="inputs" type="text" style="width: 100%;" value="인사부 05/01~05/15 지출결의서"></td>
+							<th>휴가구분</th>
+							<td align="left"><select class="inputs" name=""
+								style="height: 35px;">
+									<option selected>연차</option>
+									<option>오전반차</option>
+									<option>오후반차</option>
+									<option>경조사</option>
+									<option>공가</option>
+									<option>병가</option>
+									<option>휴직</option>
+							</select></td>
+							<th >잔여연차</th>
+							<td align="left">15 일</td>
+						</tr>
+						<tr>
+							<th>기간</th>
+							<td align="left"><input class="inputs" name="" type="date" value="2020-05-01"> ~ <input
+								class="inputs" name="" type="date" value="2020-05-02"></td>
+							<th>사용일수</th>
+							<td align="left"><input type="text" class="inputs" value="1">
+								일</td>
+						</tr>
+						<tr>
+							<th>제목</th>
+							<td colspan="3"><input class="inputs" type="text" style="width: 100%;"
+								value="김기철 05/01~05/02 연차"></td>
 						</tr>
 						<tr>
 							<th>첨부파일</th>
-							<td colspan="6"></td>
+							<td colspan="3"></td>
 						</tr>
 						<tr>
-							<td colspan="2" rowspan="2">
+							<td colspan="4" rowspan="2">
 								<div id="fileArea">
 									<a href="#">첨부파일1.jpg</a><br>
-									<a href="#">첨부파일2.pdf</a><br>
 								</div>
 							</td>
 						</tr>
 						<tr></tr>
-						<tr>
-
-						</tr>
-						<tr>
-							<td colspan="8"></td>
-						</tr>
 					</thead>
 				</table>
 
@@ -323,38 +343,13 @@ h2, h3 {
 				<c:set var="contentVal" scope="page" />
 				<input type="hidden" name="contentTable">
 				<table id="contentTable">
-					<thead>
 						<tr>
-							<th width="150">사용일시</th>
-							<th width="280">사용처</th>
-							<th>지출사유</th>
-							<th width="150">사용금액(원)</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><input class="inputVal" type="text" value="2020/05/01"></td>
-							<td><input class="inputVal" type="text" value="내동생고기"></td>
-							<td><input class="inputVal" type="text" value="인사부 5월 회식"></td>
-							<td><input class="inputVal" type="text" value="650000"></td>
+							<th>휴가사유</th>
 						</tr>
 						<tr>
-							<td><input class="inputVal" type="text" value="2020/05/04"></td>
-							<td><input class="inputVal" type="text" value="드럼오피스"></td>
-							<td><input class="inputVal" type="text" value="복사용지 구매"></td>
-							<td><input class="inputVal" type="text" value="25000"></td>
-						</tr>
-						<tr>
-							<td><input class="inputVal" type="text" value="2020/05/10"></td>
-							<td><input class="inputVal" type="text" value="사부웨이"></td>
-							<td><input class="inputVal" type="text" value="인사부 야근식비"></td>
-							<td><input class="inputVal" type="text" value="60000"></td>
-						</tr>
-						<tr>
-							<td><input class="inputVal" type="text" value="2020/05/15"></td>
-							<td><input class="inputVal" type="text" value="사부웨이"></td>
-							<td><input class="inputVal" type="text" value="인사부 야근식비"></td>
-							<td><input class="inputVal" type="text" value="35000"></td>
+							<td rowspan="8" colspan="8">
+								<textarea id="signContent" cols="168" rows="24">연차사용</textarea>
+							</td>								
 						</tr>
 					</tbody>
 				</table>
@@ -368,9 +363,12 @@ h2, h3 {
 
 	<!-- 팝업창 자동 사이즈맞춤용 스크립트 -->
 	<script>
-	//모든 input요소 readonly처리
-	$('input').prop('readonly', true);
+		//모든 input요소 readonly처리
+		$('input').prop('readonly', true);
+		$('textarea').attr('readonly',true);
+		$('option').attr('disabled', true);
 
+		
 		$(document)
 				.ready(
 						function() {

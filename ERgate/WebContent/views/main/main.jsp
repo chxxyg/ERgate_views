@@ -501,7 +501,6 @@
 	<script>
 	$(function(){
 		
-		
 		$('.mainMailInnerContent').click(function(){
 			$(this).css("color", "rgb(26, 188, 156)");
 		})
@@ -517,12 +516,9 @@
 		
 		$('.thDiv').click(function(){
 			$(this).css("border-bottom", "2px solid rgb(26, 188, 156)");
-			
 		})
 		
 	});
-	
-	
 	
 	
 	</script>

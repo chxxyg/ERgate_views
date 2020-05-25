@@ -196,6 +196,14 @@ h2, h3 {
 	height: 35px;
 	border: 1px solid white;
 }
+
+#fileArea{
+	width:1000px;
+	height:200px;
+	padding:5px;
+	border:1px solid lightgray;
+	text-align:left;
+}
 </style>
 </head>
 <body>
@@ -227,8 +235,8 @@ h2, h3 {
 						<th>기안일시</th>
 						<td>2020/05/10</td>
 						<th>지출기간</th>
-						<td><input class="inputs" name="" type="date" value="2020-05-01" readonly> ~ <input
-							name="" class="inputs" type="date" value="2020-05-15" readonly></td>
+						<td><input class="inputs" name="" type="date" value="2020-05-01"> ~ <input
+							name="" class="inputs" type="date" value="2020-05-15"></td>
 					</tr>
 				</table>
 				<br>
@@ -287,12 +295,21 @@ h2, h3 {
 					<thead>
 						<tr>
 							<th width="120">제목</th>
-							<td><input class="inputs" type="text" style="width: 100%;" value="인사부 05/01~05/15 지출결의서" readonly></td>
+							<td><input class="inputs" type="text" style="width: 100%;" value="인사부 05/01~05/15 지출결의서"></td>
 						</tr>
 						<tr>
 							<th>첨부파일</th>
 							<td colspan="6"></td>
 						</tr>
+						<tr>
+							<td colspan="2" rowspan="2">
+								<div id="fileArea">
+									<a href="#">첨부파일1.jpg</a><br>
+									<a href="#">첨부파일2.pdf</a><br>
+								</div>
+							</td>
+						</tr>
+						<tr></tr>
 						<tr>
 
 						</tr>
@@ -351,6 +368,9 @@ h2, h3 {
 
 	<!-- 팝업창 자동 사이즈맞춤용 스크립트 -->
 	<script>
+	//모든 input요소 readonly처리
+	$('input').prop('readonly', true);
+
 		$(document)
 				.ready(
 						function() {

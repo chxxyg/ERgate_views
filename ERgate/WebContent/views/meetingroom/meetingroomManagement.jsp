@@ -102,8 +102,25 @@
 .modal-content {
 	padding: 20px;
 }
-
 /* 모달팝업 스타일 */
+
+/*등록하기 버튼*/
+#enrollBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 18px;
+	margin-left:730px;
+}
+
+#enrollBtn:hover {
+	cursor: pointer;
+}
+
+
 .reservation_list>li {
 	width: 400px;
 	height: 210px;
@@ -198,7 +215,7 @@
 .pagingBar {
 	list-style: none;
 	margin-left: 300px;
-	margin-top: 600px;
+	margin-top: 500px;
 }
 
 .pagingBar li {
@@ -242,14 +259,13 @@
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn">회의실 예약</button></li>
 				<li><button class="subBtn" onclick="">회의실 예약현황</button></li>
-				<li><button class="subBtn subActive" onclick="open_modal();">회의실
-						관리</button></li>
-				<a id="meetingroomManage" class="open-modal"
-					href="#meetingroomManage" style="display: none;">모달</a>
+				<li><button class="subBtn subActive" onclick="open_modal();">회의실관리</button></li>
+				<a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a>
 			</ul>
 		</div>
 
 		<div class="contentArea">
+			<button id="enrollBtn">등록하기</button>
 			<ul class="reservation_list room">
 
 				<li>

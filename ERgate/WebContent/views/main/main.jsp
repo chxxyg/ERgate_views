@@ -186,6 +186,7 @@
     .mainMailInnerContent:hover, .mainSignInnerContent:hover{
     	color: rgb(26, 188, 156);
     	font-weight: 550;
+    	cursor: pointer;
     }
     #mainMailBoard, #mainSignBoard{
     	width: 100%;
@@ -205,6 +206,7 @@
     }
     .thDiv:hover{
     	border-bottom: 2px solid rgb(26, 188, 156);
+    	cursor: pointer;
     }
 	/* 메일, 결재 영역 */
 

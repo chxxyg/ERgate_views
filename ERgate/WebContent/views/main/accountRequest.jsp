@@ -110,7 +110,7 @@
 	#enrollSubmit{
 		background: rgb(26, 188, 156);
 	}
-	#enrollReset{
+	#enrollCancel{
 		background:  rgb(190, 190, 190);
 	}
 	#enrollSubmit, #enrollCancel{

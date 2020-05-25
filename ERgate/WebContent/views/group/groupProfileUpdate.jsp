@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>groupRequestDetail</title>
+<title>groupProfileUpdate</title>
 <style>
 /* ==========페이지영역========== */
 .outer {
@@ -380,8 +380,8 @@
                     </tr>
                     <tr>
                         <td colspan="2" id="mypageBtnArea">
-                        	<button id="mypageSubmitBtn" class="bigBtn" type="submit">승인</button>
-                        	<button id="mypageCancelBtn" class="bigBtn">반려</button>
+                        	<button id="mypageSubmitBtn" class="bigBtn" type="submit">수정</button>
+                        	<button id="mypageCancelBtn" class="bigBtn">취소</button>
                         </td>
                     </tr>
                 </table>

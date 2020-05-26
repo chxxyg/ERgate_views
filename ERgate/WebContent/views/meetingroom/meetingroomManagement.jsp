@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>meetingroomManagement</title>
 <jsp:include page="../common/menubar.jsp" />
 <!-- 모달 사용페이지에 복사해주세요 -->
 <script
@@ -118,13 +118,14 @@
 	}
 	/*등록하기 버튼*/
 	
-	#mtrmReservOuter{
+	/* 회의실 목록 */
+	#mtrmManageOuter{
 		width: 1400px;
 		height: 500px;
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	.mtrmReservInner{
+	.mtrmManageInner{
 		width: 520px;
 		height: 230px;
 		margin-left: 30px;
@@ -136,25 +137,25 @@
 		border-radius: 5px;
 		padding-top: 10px;
 	}
-	.mrTdImg{
+	.mmTdImg{
 		width: 250px;
 		height: 220px;
 		text-align: center;
 	}
-	.mrImg{
+	.mmImg{
 		width: 180px;
 		height: 180px;
 		border-radius: 50%;
 		margin-bottom: 30px;
 	}
-	.mrTdContent{
+	.mmTdContent{
 		width: 270px;
 		padding-left: 20px;
 	}
-	.mrLabel{
+	.mmLabel{
 		font-weight: 550;
 	}
-	.mrBtn{
+	.mmBtn{
 		width: 180px;
 		height: 35px;
 		border: 1px solid rgb(160, 160, 160);
@@ -163,8 +164,7 @@
 		border-radius: 5px;
 		font-size: 16px;
 	}
-	
-	
+	/* 회의실 목록 */
 
 	/* 페이징바 스타일 */
 	.pagingBar {
@@ -217,89 +217,89 @@
 		<div class="contentArea">
 			<button id="enrollBtn" style="align: right">등록하기</button>
 			
-			<div id="mtrmReservOuter">
+			<div id="mtrmManageOuter">
 			
-				<table class="mtrmReservInner">
+				<table class="mtrmManageInner">
 					<tr>
-						<td rowspan="5" class="mrTdImg">
-							<img class="mrImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="mmTdImg">
+							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mrTdContent"><span class="mrLabel">회의실명</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">회의실 위치</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">수용인원</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">등록일</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><button class="mrBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
 					</tr>
 				</table>
 				
-				<table class="mtrmReservInner">
+				<table class="mtrmManageInner">
 					<tr>
-						<td rowspan="5" class="mrTdImg">
-							<img class="mrImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="mmTdImg">
+							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mrTdContent"><span class="mrLabel">회의실명</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">회의실 위치</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">수용인원</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">등록일</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><button class="mrBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
 					</tr>
 				</table>
 				
-				<table class="mtrmReservInner">
+				<table class="mtrmManageInner">
 					<tr>
-						<td rowspan="5" class="mrTdImg">
-							<img class="mrImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="mmTdImg">
+							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mrTdContent"><span class="mrLabel">회의실명</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">회의실 위치</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">수용인원</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">등록일</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><button class="mrBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
 					</tr>
 				</table>
 				
-				<table class="mtrmReservInner">
+				<table class="mtrmManageInner">
 					<tr>
-						<td rowspan="5" class="mrTdImg">
-							<img class="mrImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="mmTdImg">
+							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mrTdContent"><span class="mrLabel">회의실명</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">회의실 위치</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">수용인원</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><span class="mrLabel">등록일</span class="mrContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mrTdContent"><button class="mrBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
 					</tr>
 				</table>
 				

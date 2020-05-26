@@ -173,12 +173,18 @@
 /* 작은버튼 스타일 */
 
 /* 댓글 영역 스타일 */
+.replyContent{
+	width:100%;
+	min-height:50px;
+}
+
 .replyContent tr td:nth-child(1n) {
 	color:gray;
 	font-weight:700;
 }
 #reContent {
 	color:black;
+	font-weight:100;
 }
 #reContentWrap {
 	height:30px;
@@ -187,6 +193,33 @@
 	color:orangered;
 	cursor:pointer;
 }
+
+
+/* 댓글창 */
+.replyShow{
+	width:1300px;
+	height:auto;
+	min-height:110px;
+	background:white;
+	padding:15px;
+}
+#replyBtnArea{
+	width:160px;
+	height:20px;
+	margin-left:1020px;
+	margin-top:20px;
+}
+
+#replyBtnArea *{
+	float:left;
+	margin-right:5px;
+}
+
+/*대댓글*/
+.rereply{
+	padding-left:50px;
+}
+
 </style>
 </head>
 <body>
@@ -220,6 +253,13 @@
 					</b>
 			</div>
 			<br>
+			<div id="btnArea">
+				<button class="bigBtn listBtn" style="background: rgb(26, 188, 156);">목록</button>
+				<button class="bigBtn updateBtn">수정</button>
+				<button class="bigBtn deleteBtn">삭제</button>
+			</div>
+			<br><br>
+			<p style="margin-bottom:5px;font-weight:bold;">댓글작성</p>
 			
 			<!-- 답글 입력 영역 -->
 			<div class="replyWrap" style="width:100%;">
@@ -238,6 +278,106 @@
 			</div>
 			
 			<!-- 답글 표시 영역 -->
+			<br><br><br><br><br>
+			
+			<div class="replyShow">
+				<!-- 댓글1개 영역 -->
+				<div style="width:1300px;height:110px;">
+					<table class="replyContent">
+						<tr>
+							<td>개발 1팀 케빈 </td>
+						</tr>
+						<tr>
+							<td id="reContentWrap"><span id="reContent">댓글 내용</span> </td>
+						</tr>
+						<tr>
+							<td id="reDate" style="font-size:14px; color:lightgray;">2020.05.10 13:11</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="smallBtn replyUpdateBtn">수정</button>
+								<button class="smallBtn replyDeleteBtn" style="background: rgb(190, 190, 190);">삭제</button>							
+							</td>
+						</tr>
+					</table>
+					<hr>
+				</div>
+				<br>
+				<!-- 댓글 1개영역 -->
+				<div style="width:1300px;height:110px;">
+					<table class="replyContent rereply">
+						<tr>
+							<td>└ 개발 1팀 케빈 </td>
+						</tr>
+						<tr>
+							<td id="reContentWrap"><span id="reContent">댓글 내용</span> </td>
+						</tr>
+						<tr>
+							<td id="reDate" style="font-size:14px; color:lightgray;">2020.05.10 13:11</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="smallBtn replyUpdateBtn">답글</button>						
+							</td>
+						</tr>
+					</table>
+					<hr>
+				</div>
+				<br>
+				<div style="width:1300px;height:110px;">
+					<table class="replyContent">
+						<tr>
+							<td>개발 1팀 케빈 </td>
+						</tr>
+						<tr>
+							<td id="reContentWrap"><span id="reContent">댓글 내용</span> </td>
+						</tr>
+						<tr>
+							<td id="reDate" style="font-size:14px; color:lightgray;">2020.05.10 13:11</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="smallBtn replyUpdateBtn">답글</button>						
+							</td>
+						</tr>
+					</table>
+					<hr>
+				</div>
+			</div>
+			
+			
+<!-- 			<br style="clear:both;">
+			<div style="height:10px;"></div>
+			<hr style="width:1340px; margin-left:0px;">
+			<div class="replyShow">
+				<div style="width:1200px; float:left;">
+					<table class="replyContent">
+						<tr>
+							<td>개발 1팀 케빈 </td>
+						</tr>
+						<tr>
+							<td id="reContentWrap"><span id="reContent">댓글 내용</span> </td>
+						</tr>
+						<tr>
+							<td id="reDate" style="font-size:14px; color:lightgray;">2020.05.10 13:11</td>
+						</tr>
+					</table>
+				</div>
+				<div class="userControl" style="width:100px; float:left; padding-bottom:10px;">
+					해당 table의 경우 작성자가 현재 로그인한 사용자와 일치할 경우에만 보이도록 if문 쓰게 될 것임
+					<table style="height:81px;">
+						<tr>
+							<td><button class="smallBtn replyUpdateBtn">수정</button></td>
+							<td><button class="smallBtn replyDeleteBtn" style="background: rgb(190, 190, 190);">삭제</button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			
+			<hr style="width:1340px; margin-left:0px; margin-top:10px; margin-bottom:0px;">
+			
+			
 			<br style="clear:both;">
 			<div style="height:10px;"></div>
 			<hr style="width:1340px; margin-left:0px;">
@@ -256,13 +396,10 @@
 					</table>
 				</div>
 				<div class="userControl" style="width:100px; float:left; padding-bottom:10px;">
-					<!-- 해당 table의 경우 작성자가 현재 로그인한 사용자와 일치할 경우에만 보이도록 if문 쓰게 될 것임 -->
+					해당 table의 경우 작성자가 현재 로그인한 사용자와 일치할 경우에만 보이도록 if문 쓰게 될 것임
 					<table style="height:81px;">
 						<tr>
-							<td><button class="smallBtn replyUpdateBtn">수정</button></td>
-						</tr>
-						<tr>
-							<td><button class="smallBtn replyDeleteBtn" style="background: rgb(190, 190, 190);">삭제</button></td>
+							<td><button class="smallBtn replyUpdateBtn">답글</button></td>
 						</tr>
 					</table>
 				</div>
@@ -270,14 +407,10 @@
 			
 			
 			<hr style="width:1340px; margin-left:0px; margin-top:10px; margin-bottom:0px;">
-			
+			 -->
 			
 			<br>
-			<div id="btnArea">
-				<button class="bigBtn listBtn" style="background: rgb(26, 188, 156);">목록</button>
-				<button class="bigBtn updateBtn">수정</button>
-				<button class="bigBtn deleteBtn">삭제</button>
-			</div>
+
 			
 			<br> <br>
 			<div class="bottomArea">

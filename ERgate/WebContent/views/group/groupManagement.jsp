@@ -274,7 +274,7 @@
  
   /* 작은버튼 스타일 */
 .smallBtn {
-	width: 60px;
+	width: 70px;
 	height: 25px;
 	border-radius: 5px;
 	font-size: 12px;

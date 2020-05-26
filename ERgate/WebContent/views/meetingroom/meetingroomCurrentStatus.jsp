@@ -203,6 +203,9 @@ html, body {
 	cursor: pointer;
 }
 
+
+
+
 /*나의예약현황*/
 #myReservation{
 	width:140px;

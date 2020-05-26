@@ -210,12 +210,13 @@
 				<li><button class="subBtn">회의실 예약</button></li>
 				<li><button class="subBtn" onclick="" style="width: 170px">회의실 예약현황</button></li>
 				<li><button class="subBtn subActive" onclick="open_modal();">회의실관리</button></li>
-				<a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a>
+				<!-- <a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a> -->
 			</ul>
 		</div>
 
 		<div class="contentArea">
-			<button id="enrollBtn" style="align: right">등록하기</button>
+			<button id="enrollBtn" style="align: right" onclick="open_modal();">등록하기</button>
+			<a id="open_enroll" class="open-modal" href="#enroll" style="display: none;">모달</a> <br> 
 			
 			<div id="mtrmManageOuter">
 			
@@ -334,9 +335,16 @@
 		<a class="open-modal" href="#modal-form">모달열기</a> <br>
 
 
-		<div id="meetingroomManage" class="modal">
+		<div id="enroll" class="modal">
 			<div class="modal-title">모달타이틀</div>
-			<div class="modal-content">모달내용작성해주세요</div>
+			<div class="modal-content">
+				<div>
+					모달모달모달
+				</div>
+			
+			
+			
+			</div>
 		</div>
 
 		<!-- 모달용 스크립트 -->
@@ -347,6 +355,14 @@
 				});
 
 			});
+			
+			/* 등록하기 모달 여는 function */
+			function open_modal() {
+				$("#open_enroll").click();
+			};
+			
+			
+			
 		</script>
 
 

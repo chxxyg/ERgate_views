@@ -7,6 +7,8 @@
 <title>signApprovalPath</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">	
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
@@ -233,6 +235,10 @@ div {
 	cursor: pointer;
 }
 /* 중간버튼 스타일 */
+
+.btnDel{
+	color:rgb(190, 190, 190);
+}
 </style>
 </head>
 <body>
@@ -285,19 +291,19 @@ div {
 								</tr>
 							</thead>
 							<tr>
-								<td><input class="checkBox" type="checkbox"></td>
+								<td><input name="chk" class="checkBox" type="checkbox"></td>
 								<td>써니</td>
 								<td>인사부</td>
 								<td>팀장/차장</td>
 							</tr>
 							<tr>
-								<td><input class="checkBox" type="checkbox"></td>
+								<td><input name="chk" class="checkBox" type="checkbox"></td>
 								<td>써니</td>
 								<td>인사부</td>
 								<td>팀장/차장</td>
 							</tr>
 							<tr>
-								<td><input class="checkBox" type="checkbox"></td>
+								<td><input name="chk" class="checkBox" type="checkbox"></td>
 								<td>써니</td>
 								<td>인사부</td>
 								<td>팀장/차장</td>
@@ -313,66 +319,31 @@ div {
 						<h2 style="display:inline-block;margin:0;">결재</h2>
 						<br><br>
 						<div style="width:100%;height:280px;overflow:auto;">
-								<table class="boardTable signSel">
+								<table id="signList" class="boardTable signSel">
 								<thead>
 									<tr>
-										<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
-										<th>이름</th>
+										<th width="100">이름</th>
 										<th>부서</th>
 										<th width="120">직책/직급</th>
+										<th width="40"></th>
 									</tr>
 								</thead>
 								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
 									<td>써니</td>
 									<td>인사부</td>
 									<td>팀장/차장</td>
+									<td><span class="material-icons btnDel">remove_circle</span></td>
 								</tr>
 								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
 									<td>써니</td>
 									<td>인사부</td>
 									<td>팀장/차장</td>
-								</tr>
-								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
-									<td>써니</td>
-									<td>인사부</td>
-									<td>팀장/차장</td>
-								</tr>
-								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
-									<td>써니</td>
-									<td>인사부</td>
-									<td>팀장/차장</td>
-								</tr>
-								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
-									<td>써니</td>
-									<td>인사부</td>
-									<td>팀장/차장</td>
-								</tr>
-								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
-									<td>써니</td>
-									<td>인사부</td>
-									<td>팀장/차장</td>
-								</tr>
-								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
-									<td>써니</td>
-									<td>인사부</td>
-									<td>팀장/차장</td>
-								</tr>
-								<tr>
-									<td><input class="checkBox" type="checkbox"></td>
-									<td>써니</td>
-									<td>인사부</td>
-									<td>팀장/차장</td>
+									<td><span class="material-icons btnDel">remove_circle</span></td>
 								</tr>
 							</table>
 						</div>	
 					</div>
+					
 					<div id="refArea">
 						<button class="middleBtn">선택추가</button>
 						<h2 style="display:inline-block;margin:0;">수신/참조</h2>
@@ -380,62 +351,26 @@ div {
 						<div id="signSelDiv">
 							<div style="width:100%;height:280px;overflow:auto;">
 								<table class="boardTable signSel">
-									<thead>
-										<tr>
-											<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
-											<th>이름</th>
-											<th>부서</th>
-											<th width="120">직책/직급</th>
-										</tr>
-									</thead>
+								<thead>
 									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
+										<th width="100">이름</th>
+										<th>부서</th>
+										<th width="120">직책/직급</th>
+										<th width="40"></th>
 									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
-									<tr>
-										<td><input name="chk" class="checkBox" type="checkbox"></td>
-										<td>써니</td>
-										<td>인사부</td>
-										<td>팀장/차장</td>
-									</tr>
+								</thead>
+								<tr>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+									<td><span class="material-icons btnDel">remove_circle</span></td>
+								</tr>
+								<tr>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+									<td><span class="material-icons btnDel">remove_circle</span></td>
+								</tr>
 								</table>
 							</div>	
 						</div>
@@ -460,6 +395,11 @@ div {
 		            $("input[name=chk]").prop("checked",false);
 		     }
 		 });
+		
+		//삭제버튼 클릭시 추가된 행 삭제
+		$(document).on("click",".btnDel",function(){
+			$(this).parent().parent().remove();
+		});
 	</script>
 
 	<!-- 팝업창 자동 사이즈맞춤용 스크립트 -->

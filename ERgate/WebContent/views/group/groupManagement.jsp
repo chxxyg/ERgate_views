@@ -351,7 +351,7 @@
 			<!-- 조직도 div -->
 		    <div class="groupMap_outer">
 		    	<!-- 왼쪽 영역 -->
-		        <div class="depList_area">
+		        <div class="depList_area" style="overflow: auto;">
 		            <ul class="group_tree">
 		                <li>
 		                    <input type="checkbox" id="root">
@@ -367,7 +367,7 @@
 		            </ul>
 		        </div>
 		        <!-- 가운데 영역 -->
-		        <div class="empList_area">
+		        <div class="empList_area" style="overflow: auto;">
 		            <ul class="empList">
 		                <a href="#"><li><span>앨리스</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
 		                <a href="#"><li><span>리차드</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
@@ -379,7 +379,7 @@
 		            </ul>
 		        </div>
 		        <!-- 오른쪽 영역 -->
-		        <div class="profile_area">
+		        <div class="profile_area" style="overflow: auto;">
 		            <div class="profile_up">
 		                <div class="profile_img">
 		                    <img id="mypageProfileImg" src="../../resources/siteImg/profile_logo.png" width="140" height="140">

@@ -135,7 +135,6 @@
     font-size: 16px;
     border: 1px solid lightgray;
     background-color: transparent;
-    -webkit-appearance : none;
     -moz-appearance: none;
     appearance: none;
 }
@@ -300,31 +299,59 @@
                                 </tr>
                                 <tr>
                                     <td><input type="text" name="" id="" readonly></td>
-                                   <!--  <td><input type="text" name="" id="" readonly></td> -->
-                                    <td></td>
+                                    <td>
+                                        <select name="deptTitle" id="deptTitle">
+	                                        <option value="D0">임원</option>
+	                                        <option value="D1">개발팀</option> 
+	                                        <option value="D2">사업팀</option>
+	                                        <option value="D3">기술팀</option>
+	                                        <option value="D4">경영팀</option>
+	                                        <option value="D5">인사팀</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>직급</td>
                                     <td>직책</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" readonly></td>
-                                    <td><input type="text" name="" id="" readonly></td>
+                                   <td>
+                                   		<select name="rankTitle" id="rankTitle">
+                                            <option value="D0">대표</option>
+                                            <option value="R1">부대표</option> 
+                                            <option value="R2">전무</option>
+                                            <option value="R3">상무</option>
+                                            <option value="R4">이사</option>
+                                            <option value="R5">부장</option>
+                                            <option value="R6">차장</option>
+                                            <option value="R7">과장</option>
+                                            <option value="R8">대리</option>
+                                            <option value="R9">주임</option>
+                                            <option value="R10">사원</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                            <select name="jobTitle" id="jobTitle">
+                                            <option value="J0">본부장</option>
+                                            <option value="J1">팀장</option> 
+                                            <option value="J2">팀원</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>내선 번호</td>
                                     <td>팩스 번호</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
-                                    <td><input type="text" name="" id=""></td>
+                                    <td><input type="text" name="" id="" placeholder="- 을 포함하여 입력하세요."></td>
+                                    <td><input type="text" name="" id="" placeholder="- 을 포함하여 입력하세요."></td>
                                 </tr>
                                 <tr>
                                     <td>입사일</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id=""></td>
+                                    <td><input type="text" name="" id="" value="2020/03/03" readonly></td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -345,15 +372,15 @@
                                     <td>생년월일</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" readonly></td>
-                                    <td><input type="text" readonly></td>
+                                    <td><input type="text" name="" id="" value="김카카오" readonly></td>
+                                    <td><input type="text" value="1990/08/27" readonly></td>
                                 </tr>
                                 <tr>
                                     <td>휴대폰번호</td>
                                     <td>이메일</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="" id="" readonly></td>
+                                    <td><input type="text" name="" id="" value="010-7777-7777" readonly></td>
                                     <td>
                                     	<input id="mypageEmail1" type="text" style="width: 180px" readonly>
 					                	<input id="mypageEmail2" name="emailDomain" type="text" list="emailDomain" style="width: 180px" readonly>

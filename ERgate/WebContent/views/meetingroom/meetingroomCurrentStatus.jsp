@@ -435,7 +435,7 @@ a#myReservation{
 
 		<!-- 캘린더 api 쓸거임 -->
 
-
+		<!-- 모달~모달~ 핵어렵 -->
 		<!-- 모달 내용(예약하기 부분) -->
 		<div id="reservation" class="modal">
 			<div class="modal-title">회의실 예약</div>

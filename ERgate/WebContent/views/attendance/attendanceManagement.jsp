@@ -6,9 +6,15 @@
 <meta charset="UTF-8">
 <title>attendanceManagement</title>
 
+
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css">
+
+<!-- 이곳에 메뉴바 include -->
+	
+<!-- 이곳에 메뉴바 include -->
+<jsp:include page="../common/menubar.jsp"/>
+	
 
 <!-- 모달 사용페이지에 복사해주세요 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -313,11 +319,7 @@ border-right: 1px solid lightgrey;
 </style>
 </head>
 <body>
-	<!-- 이곳에 메뉴바 include -->
-	
-	<!-- 이곳에 메뉴바 include -->
-	<jsp:include page="../common/menubar.jsp"/>
-	
+
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->

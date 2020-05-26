@@ -428,7 +428,7 @@ a#myReservation{
 		<div class="contentArea">
 
 			<button class="reservationBtn" onclick="open_modal();">예약하기</button>
-			<a id="reservation" class="open-modal" href="#reservation" style="display: none;">모달</a> <br> 
+			<a id="open_reservation" class="open-modal" href="#reservation" style="display: none;">모달</a> <br> 
 			<a class="open-modal" href="#myReservation_open_modal" id="myReservation">나의예약 </a>
 
 		</div>
@@ -606,7 +606,7 @@ a#myReservation{
 			
 			/* 예약하기 모달 여는 function */
 			function open_modal() {
-				$("#reservation").click();
+				$("#open_reservation").click();
 			};
 			
 			

@@ -120,7 +120,7 @@
 .groupMap_outer{
     border: 1px solid lightgrey;
     width: 1400px;
-    height: 700px;
+    height: 650px;
     padding-left: 0px;
     color: rgb(77, 77, 77);
     font-size: 17px;
@@ -343,7 +343,7 @@
 		                </li>
 		            </ul>
 		        </div>
-		        <div class="empList_area" style="overflow: auto;">
+		        <div class="empList_area" style="overflow-y:scroll;">
 		            <ul class="empList">
 		                <a href="#"><li><span>앨리스</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
 		                <a href="#"><li><span>리차드</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
@@ -389,7 +389,7 @@
 		                    <div> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></div>
 		                    <div class="dept_mail">qwertyadsf@gmail.com</div>
 		                </div>
-		            </div>
+		            </div><br><br>
 		            <div class="profile_down" align="center">
 		                <table id="profile_list" align="center">
 		                    <tr>

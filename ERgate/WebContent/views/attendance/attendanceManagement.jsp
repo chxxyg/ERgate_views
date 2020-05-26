@@ -178,6 +178,7 @@ select::-ms-expand {
     border: 1px solid lightgrey;
     width: 1400px;
     height: 650px;
+    margin-buttom: 50px;
     padding-left: 0px;
     color: rgb(77, 77, 77);
     font-size: 17px;
@@ -249,6 +250,7 @@ border-right: 1px solid lightgrey;
  /* 조직도 div 스타일 */
  /* 모달팝업 스타일 */
 .modal {
+	max-width: 2000px;
 	width: 1400px;
 	height: 600px; /* 모달 크기지정 */
 	padding: 0px;
@@ -280,18 +282,20 @@ border-right: 1px solid lightgrey;
     text-align: center;
     padding-top: 10px;
     font-size: 17px;
+    margin-left:30px;
 }
 .year{
-    margin: auto;
+    margin: auto; 
 }
 .attendanceManagementModalOuter{
-
+	width: 100%;
+	height: 100%;
 }
 /* 모달 내부 스타일 */
  /* 게시판 스타일 */
 .boardTable {
-	width: 1000px;
-	height: 400px;
+	width: 1300px;
+	height: 350px;
 }
 
 .boardTable, .boardTable th, .boardTable td {
@@ -422,9 +426,9 @@ border-right: 1px solid lightgrey;
 					<div class="attendanceManagementModalOuter">
 				        <div class="empInfo">
 				            <div>김카카오 &nbsp;(개발1팀/팀장)</div>&nbsp;
-				        </div><br>
+				        </div>
 				        <div class="year">
-							<h2 style="display: inline-block; margin-left: 530px;">
+							<h2 align="center" style="display: inline-block; margin-left: 530px;">
 								<span class="material-icons"> arrow_left </span> 
 									    <select name="year" id="year">
 									        <option value="">2020</option>
@@ -432,11 +436,10 @@ border-right: 1px solid lightgrey;
 									        <option value="">2018</option>
 									        <option value="">2017</option>
 									    </select>						
-							
 								<span class="material-icons"> arrow_right </span>
 							</h2>
-				        </div><br>
-				       	<div class="boardScroll" style="overflow: auto; width: 1400px; height: 400px;">
+				        </div>
+				       	<div align="center" class="boardScroll" style="overflow: auto; width: 1300px; height: 350px; margin:auto;">
 				           <table class="boardTable">
 				               <thead>
 				                   <tr>
@@ -449,6 +452,103 @@ border-right: 1px solid lightgrey;
 				                   </tr>
 				               </thead>
 				               <tbody>
+				               	   <!-- 리스트 없을시 조건문 처리 -->
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                    <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                    <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                    <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                    <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
+				                   <tr>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                       <td></td>
+				                   </tr>
 				                   <tr>
 				                       <td></td>
 				                       <td></td>

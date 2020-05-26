@@ -383,12 +383,7 @@
                                     <td><input type="text" name="" id="" value="010-7777-7777" readonly></td>
                                     <td>
                                     	<input id="mypageEmail1" type="text" style="width: 180px" readonly>
-					                	<input id="mypageEmail2" name="emailDomain" type="text" list="emailDomain" style="width: 180px" readonly>
-									        <datalist id="emailDomain">
-									            <option>@naver.com</option>
-									            <option>@gmail.com</option>
-									            <option>@hanmail.net</option>
-					        </datalist>
+					                	<input id="mypageEmail2" name="emailDomain" type="text" value="@gmail.com" style="width: 180px" readonly>
                                     </td>
                                 </tr>
                                 <tr>

@@ -157,7 +157,7 @@
 					<tr>
 						<td id="leftArea"> 
 							<!-- 인사팀만 보이는 버튼 -->
-							<button class="bigBtn" style="background:gray;">목록으로</button>&nbsp;
+							<button class="bigBtn" style="background:rgb(26, 188, 156);">목록으로</button>&nbsp;
 						</td>
 						<td id="rightArea">
 							<!-- 화면 구조 맞추기 위해 td 비워둠 -->

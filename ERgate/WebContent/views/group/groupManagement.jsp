@@ -135,7 +135,7 @@
 .groupMap_outer{
     border: 1px solid lightgrey;
     width: 1400px;
-    height: 700px;
+    height: 650px;
     padding-left: 0px;
     color: rgb(77, 77, 77);
     font-size: 17px;
@@ -391,7 +391,7 @@
 		                    <div> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></div>
 		                    <div class="dept_mail">qwertyadsf@gmail.com</div>
 		                </div>
-		            </div>
+		            </div><br><br>
 		            <div class="profile_down" align="center">
 		                <table id="profile_list" align="center"> <tr>
 		                        <th>사원번호</th>

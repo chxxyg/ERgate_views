@@ -383,12 +383,7 @@
                                     <td><input type="text" name="" id="" value="010-7777-7777" readonly></td>
                                     <td>
                                     	<input id="mypageEmail1" type="text" style="width: 180px" readonly>
-					                	<input id="mypageEmail2" name="emailDomain" type="text" list="emailDomain" style="width: 180px" readonly>
-									        <datalist id="emailDomain">
-									            <option>@naver.com</option>
-									            <option>@gmail.com</option>
-									            <option>@hanmail.net</option>
-					        </datalist>
+					                	<input id="mypageEmail2" name="emailDomain" type="text" value="@gmail.com" style="width: 180px" readonly>
                                     </td>
                                 </tr>
                                 <tr>
@@ -408,7 +403,8 @@
                     <tr>
                         <td colspan="2" id="mypageBtnArea">
                         	<button id="mypageSubmitBtn" class="bigBtn" type="submit">승인</button>
-                        	<button id="mypageCancelBtn" class="bigBtn">반려</button>
+                        	<button id="mypageCancelBtn" class="bigBtn">목록</button>
+                        	<button id="mypageCancelBtn" class="bigBtn">승인거절</button>
                         </td>
                     </tr>
                 </table>

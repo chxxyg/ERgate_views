@@ -111,10 +111,12 @@
 	.mailUpload {
 		text-align:left;
 	}
-	
+	.mailUpload tr:nth-child(1) td:nth-child(2), .mailUpload tr:nth-child(2) td:nth-child(2){
+		width:600px;
+	}
 	.mailUpload tr:nth-child(1) td:nth-child(3){
-		text-align:right;
-		width:90px;
+		text-align:left;
+		width:100px;
 		padding:0px;
 	}
 	.mailUpload tr:nth-child(4) th{
@@ -230,12 +232,12 @@
 				<table class="mailUpload" id="boardDetail">
 					<tr>
 						<th>받는사람</th>
-						<td><input type="text" class="inputs" name="mailTo" style="width:750px;"></td>
+						<td><input type="text" class="inputs" name="mailTo" style="width:770px;"></td>
 						<td><button class="middleBtn2">주소록</button></td>
 					</tr>
 					<tr>
 						<th>참조</th>
-						<td><input type="text" class="inputs" name="mailWith" style="width:750px;"></td>
+						<td><input type="text" class="inputs" name="mailWith" style="width:770px;"></td>
 					</tr>
 					<tr>
 						<th>제목</th>

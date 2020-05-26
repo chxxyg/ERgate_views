@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<!-- 사내게시판 리스트 페이지 -->
 <head>
 <meta charset="UTF-8">
 <title>boardList</title>
@@ -221,10 +220,10 @@
 		</div>
 		<div class="contentArea">
 
-			
+			<button class="bigBtn">글쓰기</button>
 
 			<!-- 검색바 -->
-			<form id="searchForm" action="search.bo" method="get">
+			<form id="searchForm" action="" method="get">
 			<div class="searchBar">
 				<select name="condition">
 					<option>제목</option>
@@ -241,10 +240,7 @@
 			</form>
 			<!-- 검색바 -->
 			
-			<div class="wrap">
-			<div class="btnBar" style="width:1400px; text-align:right;"><button class="bigBtn insertBoardBtn">글쓰기</button></div>
-			
-			<div style="height:10px;"></div>
+			<br>
 			<!-- 게시판 -->
 			<table class="boardTable">
 				<thead>
@@ -258,77 +254,79 @@
 				</thead>
 				<tr>
 					<td>100</td>
-					<td>사내게시판제목</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>101</td>
-					<td>사내게시판제목</td>
+					<td>99</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>102</td>
-					<td>사내게시판제목</td>
+					<td>98</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>103</td>
-					<td>사내게시판제목</td>
+					<td>97</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>104</td>
-					<td>사내게시판제목</td>
+					<td>96</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>105</td>
-					<td>사내게시판제목</td>
+					<td>95</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>106</td>
-					<td>사내게시판제목</td>
+					<td>94</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>107</td>
-					<td>사내게시판제목</td>
+					<td>93</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>108</td>
-					<td>사내게시판제목</td>
+					<td>92</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
 				<tr>
-					<td>109</td>
-					<td>사내게시판제목</td>
+					<td>91</td>
+					<td>게시판제목</td>
 					<td>김사원</td>
 					<td>2020/05/10</td>
-					<td>10</td>
+					<td>23</td>
 				</tr>
+				
+				
 			</table>
 			<!-- 게시판 -->
-			</div>
+			
 			<br>
 	
 			<!-- 페이징바 -->

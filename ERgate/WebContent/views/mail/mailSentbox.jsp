@@ -306,18 +306,18 @@
 			<table class="boardTable mailTable">
 				<thead>
 					<tr>
-						<th width="50">
+						<th width="80">
 							<div class="">
 					    		<label><input class="checkbox" type="checkbox" id="checkall" value="" style="vertical-align: middle; transform: scale(1.6);"></label>
 					        </div>
    						</th>
-						<th width="50">
+						<th width="80">
 								<label><input type="checkbox" class="importbox" id="importAll" name="ichk"><img src="../../resources/icons/star_border-black-48dp.svg"></label>
 						</th>
-						<th width="150">계정</th>
-						<th width="50">열람</th>
-						<th width="500">제목</th>
-						<th width="100">보낸날짜</th>
+						<th width="220">계정</th>
+						<th width="80">열람</th>
+						<th>제목</th>
+						<th width="150">보낸날짜</th>
 					</tr>
 				</thead>
 				<tr>

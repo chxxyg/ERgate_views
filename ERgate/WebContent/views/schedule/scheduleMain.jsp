@@ -9,7 +9,9 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 		rel="stylesheet">
-		
+<!-- 이곳에 메뉴바 include -->
+<jsp:include page="../common/menubar.jsp" />
+<!-- 이곳에 메뉴바 include -->		
 <!-- 모달 사용페이지에 복사해주세요 -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -166,9 +168,7 @@
 
 </head>
 <body>
-			<!-- 이곳에 메뉴바 include -->
-		<jsp:include page="../common/menubar.jsp" />
-		<!-- 이곳에 메뉴바 include -->
+
 	
 		<div class="outer">
 			<div class="topBar">

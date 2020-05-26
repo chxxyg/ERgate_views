@@ -105,8 +105,8 @@
 	}
 	
 	.boardTable th {
-		background-color: white;
-		color: lightgray;
+		
+		color: rgb(182, 179, 179);
 		height: 40px;
 	}
 	

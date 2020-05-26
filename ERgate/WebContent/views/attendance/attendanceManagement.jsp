@@ -177,7 +177,7 @@ select::-ms-expand {
 .groupMap_outer{
     border: 1px solid lightgrey;
     width: 1400px;
-    height: 650px;
+    height: 570px;
     margin-buttom: 50px;
     padding-left: 0px;
     color: rgb(77, 77, 77);

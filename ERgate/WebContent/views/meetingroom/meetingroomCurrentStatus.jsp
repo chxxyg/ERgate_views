@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>meetingroomCurrentStatus</title>
 
 <!-- 이 부분  -->
 <jsp:include page="../common/menubar.jsp" />
@@ -282,12 +282,69 @@
 		padding: 20px;
 	}
 	
+
+
+/* ==========예약하기 모달========== */
+
+/* ==========예약하기 모달========== */
+
+
+/* ==========나의 예약 현황 모달========== */
+	
+	.mtrmCurrentInner{
+		width: 420px;
+		height: 210px;
+		margin-left: 30px;
+		margin-right: 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: inline-block;
+		border: 1px solid rgb(160, 160, 160);
+		border-radius: 5px;
+		padding-top: 10px;
+	}
+	.mcTdImg{
+		width: 200px;
+		height: 200px;
+		text-align: center;
+	}
+	.mcImg{
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		margin-bottom: 30px;
+	}
+	.mcTdContent{
+		width: 220px;
+		padding-left: 10px;
+	}
+	.mcContent1{
+		font-weight: 550;
+		font-size: 18px;
+	}
+	.mcContent2{
+		margin-top: 10px;
+	}
+	.mcContent3{
+		line-height: 140%;
+	}
+	.mcBtn{
+		width: 180px;
+		height: 35px;
+		border: 1px solid rgb(160, 160, 160);
+		color: rgb(160, 160, 160);
+		background: none;
+		border-radius: 5px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	
 	
 	/* 페이징바 스타일 */
 	.pagingBar {
 		list-style: none;
 		margin-left: 300px;
-	    margin-top: 500px;
+		margin-top: 40px;
 	}
 	.pagingBar li {
 		float: left;
@@ -314,62 +371,7 @@
 	}
 	/* 페이징바 스타일 */
 	
-
-/* ==========예약하기 모달========== */
-
-/* ==========예약하기 모달========== */
-
-
 /* ==========나의 예약 현황 모달========== */
-	
-	#mtrmCurrentOuter{
-		width: 1400px;
-		height: 500px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	.mtrmCurrentInner{
-		width: 520px;
-		height: 230px;
-		margin-left: 30px;
-		margin-right: 30px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		display: inline-block;
-		border: 1px solid rgb(160, 160, 160);
-		border-radius: 5px;
-		padding-top: 10px;
-	}
-	.mcTdImg{
-		width: 250px;
-		height: 220px;
-		text-align: center;
-	}
-	.mcImg{
-		width: 180px;
-		height: 180px;
-		border-radius: 50%;
-		margin-bottom: 30px;
-	}
-	.mcTdContent{
-		width: 270px;
-		padding-left: 20px;
-	}
-	.mcLabel{
-		font-weight: 550;
-	}
-	.mcBtn{
-		width: 180px;
-		height: 35px;
-		border: 1px solid rgb(160, 160, 160);
-		color: rgb(160, 160, 160);
-		background: none;
-		border-radius: 5px;
-		font-size: 16px;
-	}
-	
-/* ==========나의 예약 현황 모달========== */
-
 </style>
 </head>
 <body>
@@ -403,7 +405,6 @@
 			<div class="modal-title">회의실 예약</div>
 			<div class="modal-content" style="border: 1px solid blue">
 				<table class="reservationContent" border="1">
-
 					<tr>
 						<td id="r1">신청자</td>
 						<td id="r2">케빈과장</td>
@@ -463,30 +464,92 @@
 			<div class="modal-title">나의 예약현황</div>
 			<div class="modal-content">
 
-				<div id="mtrmCurrentOuter">
+			
+				<table class="mtrmCurrentInner">
+					<tr>
+						<td rowspan="5" class="mcTdImg">
+							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						</td>
+						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent">
+							<span class="mcContent3">2020-05-05 09:00 <br>
+							 ~ 2020-05-05 12:00</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+					</tr>
+				</table>
 				
-					<table class="mtrmCurrentInner">
-						<tr>
-							<td rowspan="5" class="mcTdImg">
-								<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
-							</td>
-							<td class="mcTdContent"><span class="mcLabel">회의실명</span class="mcContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
-						</tr>
-						<tr>
-							<td class="mcTdContent"><span class="mcLabel">회의실 위치</span class="mcContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
-						</tr>
-						<tr>
-							<td class="mcTdContent"><span class="mcLabel">수용인원</span class="mcContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
-						</tr>
-						<tr>
-							<td class="mcTdContent"><span class="mcLabel">등록일</span class="mcContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
-						</tr>
-						<tr>
-							<td class="mcTdContent"><button class="mcBtn" type="button">수정하기</button></td>
-						</tr>
-					</table>
+				<table class="mtrmCurrentInner">
+					<tr>
+						<td rowspan="5" class="mcTdImg">
+							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						</td>
+						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent">
+							<span class="mcContent3">2020-05-05 09:00 <br>
+							 ~ 2020-05-05 12:00</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+					</tr>
+				</table>
+				
+				<table class="mtrmCurrentInner">
+					<tr>
+						<td rowspan="5" class="mcTdImg">
+							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						</td>
+						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent">
+							<span class="mcContent3">2020-05-05 09:00 <br>
+							 ~ 2020-05-05 12:00</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+					</tr>
+				</table>
+				
+				<table class="mtrmCurrentInner">
+					<tr>
+						<td rowspan="5" class="mcTdImg">
+							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						</td>
+						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+					</tr>
+					<tr>
+						<td class="mcTdContent">
+							<span class="mcContent3">2020-05-05 09:00 <br>
+							 ~ 2020-05-05 12:00</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+					</tr>
+				</table>
+				
 
-			</div>
 
 			<!-- 페이징바 -->
 			<ul class="pagingBar">

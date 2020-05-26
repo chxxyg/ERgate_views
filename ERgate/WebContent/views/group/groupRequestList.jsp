@@ -168,7 +168,9 @@
 			<div style="height:10px;"></div>
 			<!-- btnAndSearch - 버튼과 검색바 같이 들어가는 DIV 끝-->
 			<!-- 승인 대기 목록 게시판 -->
+			
 			<table class="boardTable">
+			<div style="overflow: auto;">
 				<thead>
 					<tr>
 						<th>신청 일시</th>
@@ -234,9 +236,87 @@
 					<td>010-0000-0000</td>
 					<td>미승인</td>
 				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
+								<tr>
+					<td>2020/03/02</td>
+					<td>Alice</td>
+					<td>앨리스</td>
+					<td>010-0000-0000</td>
+					<td>미승인</td>
+				</tr>
 				
-				
+				</div>
 			</table>
+			
 			<!-- 게시판 -->
 		
 		

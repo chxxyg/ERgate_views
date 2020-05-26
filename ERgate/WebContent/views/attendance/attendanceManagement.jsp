@@ -5,7 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>attendanceManagement</title>
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css">
+
+<!-- 모달 사용페이지에 복사해주세요 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- 모달 사용페이지에 복사해주세요 -->
+
+
 <style>
 /* ==========페이지영역========== */
     .outer{
@@ -231,6 +241,75 @@ border-right: 1px solid lightgrey;
     cursor: pointer;
 }
  /* 조직도 div 스타일 */
+ /* 모달팝업 스타일 */
+.modal {
+	width: 1000px;
+	height: 800px; /* 모달 크기지정 */
+	padding: 0px;
+	border-radius: 0px;
+}
+
+.modal-title {
+	margin: 0;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(22, 160, 133, 0.68);
+	font-size: 25px;
+	padding: 10px;
+	color: white;
+	box-sizing: border-box;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+/* 모달팝업 스타일 */
+/* 모달 내부 스타일 */
+.empInfo{
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    width: 350px;
+    height: 35px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 17px;
+}
+.year{
+    margin: auto;
+}
+/* 모달 내부 스타일 */
+ /* 게시판 스타일 */
+.boardTable {
+	width: 1400px;
+	height: 400px;
+}
+
+.boardTable, .boardTable th, .boardTable td {
+	border-width: 1px 0;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 16px;
+}
+
+.boardTable th {
+	background-color: #999;
+	color: #fff;
+	height: 35px;
+}
+
+.boardTable td {
+	border-color: lightgray;
+	border-style: solid;
+	height: 35px;
+}
+
+.boardTable tr:hover td {
+	background-color: rgb(224, 224, 224);
+	cursor: pointer;
+}
+
+/* 게시판 스타일 */
 </style>
 </head>
 <body>
@@ -298,7 +377,7 @@ border-right: 1px solid lightgrey;
 			<!-- 조직도 div -->
 		    <div class="groupMap_outer">
 		    	<!-- 왼쪽 영역 -->
-		        <div class="depList_area">
+		        <div class="depList_area" style="overflow: auto;">
 		            <ul class="group_tree">
 		                <li>
 		                    <input type="checkbox" id="root">
@@ -314,19 +393,97 @@ border-right: 1px solid lightgrey;
 		            </ul>
 		        </div>
 		        <!-- 가운데 영역 -->
-		        <div class="empList_area">
+		        <div class="empList_area" style="overflow: auto;">
 		            <ul class="empList">
-		                <a href="#"><li><span>앨리스</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
-		                <a href="#"><li><span>리차드</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
-		                <a href="#"><li><span>케빈</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
-		                <a href="#"><li><span>김카카오</span> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></li></a>
-		                <a href="#"><li><span>최삼성</span> <span class="rank_code">(기술팀 /</span> <span class="job_code">팀원)</span></li></a>
-		                <a href="#"><li><span>박다음</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">대리)</span></li></a>
-		                <a href="#"><li><span>문별</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">팀장)</span></li></a>
+		            	<!-- <li><a class="open-modal" href="#modal-form">모달열기</a></li> -->
+		            	
+		              <!--   <a class="open-modal" href="#modal-form"><li><span>앨리스</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
+		                <a class="open-modal" href="#modal-form"><li><span>리차드</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
+		                <a class="open-modal" href="#modal-form"><li><span>케빈</span> <span class="rank_code">(임원 /</span> <span class="job_code">대표이사)</span></li></a>
+		                <a class="open-modal" href="#modal-form"><li><span>김카카오</span> <span class="rank_code">(회계팀 /</span> <span class="job_code">과장)</span></li></a>
+		                <a class="open-modal" href="#modal-form"><li><span>최삼성</span> <span class="rank_code">(기술팀 /</span> <span class="job_code">팀원)</span></li></a>
+		                <a class="open-modal" href="#modal-form"><li><span>박다음</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">대리)</span></li></a>
+		                <a class="open-modal" href="#modal-form"><li><span>문별</span> <span class="rank_code">(인사팀 /</span> <span class="job_code">팀장)</span></li></a> -->
 		            </ul>
 		        </div>
 		    </div><!-- groupMap_outer -->
+		    
+		    <!-- 여기아래로 모달 -->
+		    
+		    
+		    <br><br><br><br><br>
+		    여기 아래로 모달 내부 내용
+		    <br><br><br><br><br>
+			<a class="open-modal" href="#modal-form">모달열기</a>
+			
+			<br>
+			
+			<div id="modal-form" class="modal">
+				<div class="modal-title">모달타이틀</div>
+				<div class="modal-content">모달내용작성해주세요</div>
+			</div>
+
+			<!-- 모달용 스크립트 -->
+			<script>
+				$('.open-modal').click(function() {
+					$(this).modal({
+						fadeDuration : 150
+					});
+			
+				});
+			</script>
+			<!-- 모달팝업 -->
+		    
+		    
+		    <!-- 모달 안에 들어갈 내용 임시로 이곳에 -->
+		    <br><br>
+		<div class="attendanceManagementModalOuter">
+	        <div class="empInfo">
+	            <div>김카카오 &nbsp;(개발1팀/팀장)</div>&nbsp;
+	        </div><br>
+	        <div class="year">
+				<h2 style="display: inline-block; margin-left: 530px;">
+					<span class="material-icons"> arrow_left </span> 
+						    <select name="year" id="year">
+						        <option value="">2020</option>
+						        <option value="">2019</option>
+						        <option value="">2018</option>
+						        <option value="">2017</option>
+						    </select>						
+				
+					<span class="material-icons"> arrow_right </span>
+				</h2>
+	        </div><br>
+	       	<div class="boardScroll" style="overflow: auto; width: 1400px; height: 400px;">
+	           <table class="boardTable">
+	               <thead>
+	                   <tr>
+	                       <th>생성연차</th>
+	                       <th>사용일자</th>
+	                       <th>사용</th>
+	                       <th>구분(연차/반차/병가/훈련)</th>
+	                       <th>외근</th>
+	                       <th>출장</th>
+	                   </tr>
+	               </thead>
+	               <tbody>
+	                   <tr>
+	                       <td></td>
+	                       <td></td>
+	                       <td></td>
+	                       <td></td>
+	                       <td></td>
+	                       <td></td>
+	                   </tr>
+	               </tbody>
+	           </table>
+           </div> <!-- boardScroll -->
+        </div> <!-- attendanceManagementModalOuter -->
+        
+
+        
 		</div><!-- contentArea -->
 	</div> <!-- outer -->
+
 </body>
 </html>

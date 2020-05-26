@@ -198,14 +198,14 @@ div {
 /* 우측 선택영역 */
 #selectArea {
 	height: 100%;
-	width: 380px;
-	border: 1px solid lightgray;
+	width: 380px;	
 }
 
 #selectArea>div {
 	width: 100%;
-	height: 50%;
+	height: 50%;	
 }
+#selectArea>div>div{border: 1px solid lightgray;}
 
 /* 작은버튼 스타일 */
 .smallBtn {
@@ -274,64 +274,36 @@ div {
 
 				<!-- 중앙 리스트영역 -->
 				<div id="listArea">
-					<table class="boardTable">
-						<thead>
+					<div style="width:100%;height:100%;overflow:auto;">
+						<table class="boardTable">
+							<thead>
+								<tr>
+									<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
+									<th>이름</th>
+									<th>부서</th>
+									<th width="120">직책/직급</th>
+								</tr>
+							</thead>
 							<tr>
-								<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
-								<th>이름</th>
-								<th>부서</th>
-								<th width="120">직책/직급</th>
+								<td><input class="checkBox" type="checkbox"></td>
+								<td>써니</td>
+								<td>인사부</td>
+								<td>팀장/차장</td>
 							</tr>
-						</thead>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-					</table>
+							<tr>
+								<td><input class="checkBox" type="checkbox"></td>
+								<td>써니</td>
+								<td>인사부</td>
+								<td>팀장/차장</td>
+							</tr>
+							<tr>
+								<td><input class="checkBox" type="checkbox"></td>
+								<td>써니</td>
+								<td>인사부</td>
+								<td>팀장/차장</td>
+							</tr>
+						</table>
+					</div>	
 				</div>
 
 				<!-- 우측 선택영역 -->
@@ -339,126 +311,135 @@ div {
 					<div id="signArea">
 						<button class="middleBtn">선택추가</button>
 						<h2 style="display:inline-block;margin:0;">결재</h2>
-						<table class="boardTable signSel">
-						<thead>
-							<tr>
-								<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
-								<th>이름</th>
-								<th>부서</th>
-								<th width="120">직책/직급</th>
-							</tr>
-						</thead>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-					</table>
+						<br><br>
+						<div style="width:100%;height:280px;overflow:auto;">
+								<table class="boardTable signSel">
+								<thead>
+									<tr>
+										<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
+										<th>이름</th>
+										<th>부서</th>
+										<th width="120">직책/직급</th>
+									</tr>
+								</thead>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+								<tr>
+									<td><input class="checkBox" type="checkbox"></td>
+									<td>써니</td>
+									<td>인사부</td>
+									<td>팀장/차장</td>
+								</tr>
+							</table>
+						</div>	
 					</div>
 					<div id="refArea">
 						<button class="middleBtn">선택추가</button>
 						<h2 style="display:inline-block;margin:0;">수신/참조</h2>
-						<table class="boardTable signSel">
-						<thead>
-							<tr>
-								<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
-								<th>이름</th>
-								<th>부서</th>
-								<th width="120">직책/직급</th>
-							</tr>
-						</thead>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-						<tr>
-							<td><input class="checkBox" type="checkbox"></td>
-							<td>써니</td>
-							<td>인사부</td>
-							<td>팀장/차장</td>
-						</tr>
-					</table>
+						<br><br>
+						<div id="signSelDiv">
+							<div style="width:100%;height:280px;overflow:auto;">
+								<table class="boardTable signSel">
+									<thead>
+										<tr>
+											<th width="40"><input class="checkBox" type="checkbox" id="checkall"></th>
+											<th>이름</th>
+											<th>부서</th>
+											<th width="120">직책/직급</th>
+										</tr>
+									</thead>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+									<tr>
+										<td><input name="chk" class="checkBox" type="checkbox"></td>
+										<td>써니</td>
+										<td>인사부</td>
+										<td>팀장/차장</td>
+									</tr>
+								</table>
+							</div>	
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -466,7 +447,20 @@ div {
 	</div>
 
 
-
+	<script>
+		//최상단 체크박스 클릭
+		$("#checkall").click(function(){
+		     //클릭되었으면
+		     if($("#checkall").prop("checked")){
+		            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
+		            $("input[name=chk]").prop("checked",true);
+		            //클릭이 안되있으면
+		     }else{
+		            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
+		            $("input[name=chk]").prop("checked",false);
+		     }
+		 });
+	</script>
 
 	<!-- 팝업창 자동 사이즈맞춤용 스크립트 -->
 	<script>

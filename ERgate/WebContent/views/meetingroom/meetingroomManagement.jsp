@@ -117,6 +117,131 @@
 		cursor: pointer;
 	}
 	/*등록하기 버튼*/
+	/*등록하기 클릭 시 나오는 내용*/
+	
+
+.meetingroomEnroll{
+    
+    width: 800px;
+    height: 500px;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+
+}
+
+
+/* 예약하기 버튼*/
+.btns {
+	margin-left: 30%;
+    margin-top:30px;
+}
+
+.reservationBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+	color: white;
+	font-size: 18px;
+	margin-left: 50px;
+}
+
+.reservationBtn:hover {
+	cursor: pointer;
+}
+
+/* 취소 버튼 */
+.resetBtn {
+	width: 140px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	background:  rgb(190, 190, 190);
+	color: white;
+	font-size: 18px;
+}
+
+.resetBtn:hover {
+	cursor: pointer;
+}
+
+.mrName{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+    border-bottom: 1px solid lightgray;
+}
+
+.mrName2{
+    border-bottom: 1px solid lightgray;
+}
+
+.mrLocation{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+    border-style: none;
+}
+
+.mrLocation2{
+    border-bottom: 1px solid lightgray;
+}
+.mrPersonnel{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+}
+.mrPersonnel2{
+    border-bottom: 1px solid lightgray;
+}
+.mrImg{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+}
+
+.meetingroomEnroll input{
+    height: 30px;
+    width: 350px;
+    margin-left: 5px;
+}
+
+
+
+/*회의실 이미지 관련 css*/
+.meetingroomImg{
+    width: 100px;
+    height: 100px;
+    float: left;
+   
+}   
+.profile{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 70%;
+    float:left;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+	
+	/*등록하기 클릭 시 나오는 내용*/
+	
+	
 	
 	/* 회의실 목록 */
 	#mtrmManageOuter{
@@ -332,18 +457,49 @@
 		용도에 따라 href와 id는 변경해주세요.(여러개 가능)
 		모달타겟으로 쓸 요소에 class와 href 복사해주세요.
 	 -->
-		<a class="open-modal" href="#modal-form">모달열기</a> <br>
+		
 
 
 		<div id="enroll" class="modal">
-			<div class="modal-title">모달타이틀</div>
+			<div class="modal-title">회의실 등록</div>
 			<div class="modal-content">
+			<a class="open-modal" href="#modal-form"></a> <br>
 				<div>
-					모달모달모달
+					<table class="meetingroomEnroll">
+						<tr>
+							<td class="mrName">회의실 명</td>
+							<td class="mrName2"><input type="text"></td>
+						</tr>
+
+						<tr>
+							<td class="mrLocation">회의실 위치</td>
+							<td class="mrLocation2"><input type="text"></td>
+						</tr>
+
+						<tr>
+							<td class="mrPersonnel">최대 수용인원</td>
+							<td class="mrPersonnel2"><input type="text"></td>
+						</tr>
+
+						<tr>
+							<td class="mrImg">회의실 이미지</td>
+							<td class="mrImg2">
+								<div class="meetingroomImg">
+									<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+								</div>
+							</td>
+						</tr>
+
+
+					</table>
 				</div>
-			
-			
-			
+				<!-- 예약/취소 버튼 -->
+				<div class=btns>
+					<button class="reservationBtn" type="submit">등록하기</button>
+					<button class="resetBtn" type="reset">삭제하기</button>
+				</div>
+
+
 			</div>
 		</div>
 

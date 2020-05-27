@@ -335,10 +335,11 @@
 		                    <label for="root"> ERgate</label>
 		                    <ul>
 		                        <li><a href="#"> 임원</a></li>
-		                        <li><a href="#"> 기술팀</a></li>
-		                        <li><a href="#"> 인사팀</a></li>
+		                        <li><a href="#"> 개발팀</a></li>
 		                        <li><a href="#"> 회계팀</a></li>
 		                        <li><a href="#"> 기술팀</a></li>
+		                        <li><a href="#"> 총무팀</a></li>
+		                        <li><a href="#"> 인사팀</a></li>
 		                    </ul>
 		                </li>
 		            </ul>

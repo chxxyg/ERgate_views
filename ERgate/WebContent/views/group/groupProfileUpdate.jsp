@@ -303,9 +303,9 @@
                                         <select name="deptTitle" id="deptTitle">
 	                                        <option value="D0">임원</option>
 	                                        <option value="D1">개발팀</option> 
-	                                        <option value="D2">사업팀</option>
+	                                        <option value="D2">회계팀</option>
 	                                        <option value="D3">기술팀</option>
-	                                        <option value="D4">경영팀</option>
+	                                        <option value="D4">총무팀</option>
 	                                        <option value="D5">인사팀</option>
                                         </select>
                                     </td>
@@ -331,10 +331,11 @@
                                         </select>
                                     </td>
                                     <td>
-                                            <select name="jobTitle" id="jobTitle">
-                                            <option value="J0">본부장</option>
-                                            <option value="J1">팀장</option> 
-                                            <option value="J2">팀원</option>
+                                        <select name="jobTitle" id="jobTitle">
+                                            <option value="J0">COO</option>
+                                            <option value="J1">본부장</option> 
+                                            <option value="J2">팀장</option>
+                                            <option value="J3">팀원</option>
                                         </select>
                                     </td>
                                 </tr>

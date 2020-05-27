@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>meetingroomReservationList</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <jsp:include page="../common/menubar.jsp" />
 <!-- 모달 사용페이지에 복사해주세요 -->
 <script
@@ -80,16 +82,27 @@
 	border: 4px solid rgb(26, 188, 156);
 }
 
-#calendarArea {
-	border: 1px solid lightgray;
-	width: 1400px;
-	height: 50px;
-	background-color: lightgray;
+/* 체크박스 스타일 */
+.checkBox {
+	zoom: 1.7;
 }
 
-#calendarArea p {
-	text-align: center;
+/* 스케줄관련 아이콘스타일 */
+.schedule_icons {
+	fill: rgb(190, 190, 190); /* 검은색 : rgb(94, 94, 94)*/
+	width: 35px;
+	vertical-align: bottom;
 }
+/* 스케줄관련 아이콘스타일 */
+
+.material-icons{
+	font-size:40px;
+	vertical-align:middle;
+}
+.material-icons:hover{
+	cursor:pointer;
+}
+
 
 /* 게시판 스타일 */
 .boardTable {
@@ -196,19 +209,23 @@
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn">회의실 예약</button></li>
-				<li><button class="subBtn subActive" onclick="">회의실
-						예약현황</button></li>
-				<li><button class="subBtn" onclick="open_modal();">회의실
-						관리</button></li>
+				<li><button class="subBtn subActive" onclick="">회의실 예약현황</button></li>
+				<li><button class="subBtn" onclick="open_modal();">회의실 관리</button></li>
 			</ul>
 		</div>
 
 		<div class="contentArea">
 			<!-- 달력 설정 부분 -->
-			<div id="calendarArea">
-				<p>캘린더 넣을거임</p>
-			</div>
-
+			
+				<h2 style="display: inline-block; margin-left: 500px;">
+					<span class="material-icons"> arrow_left </span> 2020년 5월
+					<svg class="schedule_icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px">
+					<path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" />
+					<path d="M0 0h24v24H0z" fill="none" /></svg>
+					<span class="material-icons"> arrow_right </span>
+				</h2>
+				<br> <br>
+			
 
 			<!-- 게시판 -->
 			<table class="boardTable">
@@ -217,8 +234,8 @@
 						<th>부서명</th>
 						<th>예약자</th>
 						<th>회의실</th>
-						<th>사용목적</th>
-						<th>사용기간</th>
+						<th style="width:400px">사용목적</th>
+						<th style="width:350px">사용기간</th>
 					</tr>
 				</thead>
 				<tr>
@@ -296,14 +313,14 @@
 
 
 		<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
-	 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
--->
+			 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
+		-->
 
 		<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
-     용도에 따라 href와 id는 변경해주세요.(여러개 가능)
-     모달타겟으로 쓸 요소에 class와 href 복사해주세요.
--->
-		<a class="open-modal" href="#modal-form">모달열기</a> <br>
+		     용도에 따라 href와 id는 변경해주세요.(여러개 가능)
+		     모달타겟으로 쓸 요소에 class와 href 복사해주세요.
+		-->
+		<!-- <a class="open-modal" href="#modal-form">모달열기</a> <br> -->
 
 
 		<div id="meetingroomManage" class="modal">

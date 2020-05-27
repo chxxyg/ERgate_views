@@ -36,6 +36,7 @@
 	font-weight: 500;
 }
 
+
 .contentArea {
 	margin-top: 50px;
 	margin-left: 100px;
@@ -43,6 +44,32 @@
 	height: auto;
 	float: left;
 }
+
+/* 모달팝업 스타일 */
+.modal {
+	width: 1000px;
+	max-width: 2000px;
+	height: 800px; /* 모달 크기지정 */
+	padding: 0px;
+	border-radius: 0px;
+}
+
+.modal-title {
+	margin: 0;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(22, 160, 133, 0.68);
+	font-size: 25px;
+	padding: 10px;
+	color: white;
+	box-sizing: border-box;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+/* 모달팝업 스타일 */
 
 .subMenuArea {
 	background-color: white;
@@ -141,6 +168,7 @@
 .pagingBar {
 	list-style: none;
 	margin-left: 400px;
+	margin-top:50px;
 }
 
 .pagingBar li {
@@ -172,31 +200,7 @@
 
 /* 페이징바 스타일 */
 
-/* 모달팝업 스타일 */
-.modal {
-	width: 1000px;
-	max-width: 2000px;
-	height: 800px; /* 모달 크기지정 */
-	padding: 0px;
-	border-radius: 0px;
-}
 
-.modal-title {
-	margin: 0;
-	width: 100%;
-	height: 50px;
-	background-color: rgba(22, 160, 133, 0.68);
-	font-size: 25px;
-	padding: 10px;
-	color: white;
-	box-sizing: border-box;
-}
-
-.modal-content {
-	padding: 20px;
-}
-
-/* 모달팝업 스타일 */
 </style>
 </head>
 <body>

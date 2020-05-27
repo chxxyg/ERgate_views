@@ -441,8 +441,9 @@
 
 					<tr>
 						<td id="r1">참석자(내부)</td>
-						<td id="r2"><button class="searchBtn">참석자 지정</button> <input
-							type="text" class="BigInput"></td>
+						<td id="r2"><button class="searchBtn" onclick="window.open('meetingroomAddparticipants.jsp','popup_name','_blank')">참석자 지정</button>
+						
+						 <input type="text" class="BigInput"></td>
 					</tr>
 
 					<tr>

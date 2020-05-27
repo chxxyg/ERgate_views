@@ -119,6 +119,7 @@
 	/*등록하기 버튼*/
 	/*등록하기 클릭 시 나오는 내용*/
 	
+	/*회의실 등록 부분 content*/
 
 .meetingroomEnroll{
     
@@ -333,7 +334,7 @@
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn">회의실 예약</button></li>
-				<li><button class="subBtn" onclick="" style="width: 170px">회의실 예약현황</button></li>
+				<li><button class="subBtn" style="width: 170px">회의실 예약현황</button></li>
 				<li><button class="subBtn subActive" onclick="open_modal();">회의실관리</button></li>
 				<!-- <a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a> -->
 			</ul>
@@ -362,7 +363,7 @@
 						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent"><button class="mmBtn" type="button" onclick="open_modal();">수정하기</button></td>
 					</tr>
 				</table>
 				
@@ -425,7 +426,7 @@
 						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent"><button class="mmBtn" type="button" onclick="">수정하기</button></td> <!-- 모달로 수정하기 페이지 열기 -->
 					</tr>
 				</table>
 				
@@ -464,6 +465,7 @@
 			<div class="modal-title">회의실 등록</div>
 			<div class="modal-content">
 			<a class="open-modal" href="#modal-form"></a> <br>
+			
 				<div>
 					<table class="meetingroomEnroll">
 						<tr>
@@ -502,7 +504,35 @@
 
 			</div>
 		</div>
+		
+		
+		
+		<!-- 수정하기 부분 내용 -->
 
+
+
+
+		<div id="edit" class="modal">
+			<div class="modal-title">회의실 수정</div>
+			<div class="modal-content">모달모달!!</div>
+			<a id="open_edit" class="open-modal" href="#endit" style="display: none;">모달</a> <br> 
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<!-- 모달용 스크립트 -->
 		<script>
 			$('.open-modal').click(function() {
@@ -517,6 +547,7 @@
 				$("#open_enroll").click();
 			};
 			
+		
 			
 			
 		</script>

@@ -192,30 +192,25 @@
 		background: rgb(190, 190, 190);
 		color: white;
 		font-size: 14px;
-		float: left;
 	}
 	.searchBtn:hover {
 		cursor: pointer;
 	}
 	#searchBtn1{
 		width: 120px;
-		margin-top: 17px;
-		margin-right: 10px;
 	}
 	#searchBtn2{
 		width: 90px;
 	}
+	#vehicleSelect, #searchBtn1{
+		margin-bottom: 10px;
+	}
 	#partArea{
 		border: 1px solid lightgray;
-		margin-left: 10px;
+		margin-top: 10px;
 		border-radius: 3px;
 		resize: none;
 	}
-	#vehicleBox {
-		float: left;
-		height: 20px;
-	}
-	
 	#r1 {
 		width: 20%;
 		text-align: center;
@@ -371,7 +366,7 @@
 
 		<!-- 모달~모달~ 핵어렵 -->
 		<!-- 모달 내용(예약하기 부분) -->
-		<div id="open_reservation" class="modal" style="height: 730px;">
+		<div id="open_reservation" class="modal" style="height: 600px;">
 			<div class="modal-title">업무차량 예약</div>
 			<div class="modal-content">
 				<table class="reservationContent">
@@ -394,17 +389,19 @@
 					<tr>
 						<td id="r1">업무차량</td>
 						<td id="r2">
-							<select name="vehicle" class="inputs" style="width:120px">
+							<select id="vehicleSelect" name="vehicle" class="inputs" style="width:180px; height:33px;">
 								<option selected>업무차량 선택</option>
-								<option>5F 회의실1</option>
-								<option>5F 회의실2</option>
-								<option>5F 회의실3</option>
-								<option>6F회의실</option>
+								<option>그랜저 33허 3333</option>
+								<option>소나타 33허 3333</option>
+								<option>카니발 33허 3333</option>
+								<option>스타렉스 33허 3333</option>
+								<option>스파크 33허 3333</option>
 							</select>
+							<button id="searchBtn1" class="searchBtn">가용차량 검색</button> 
 							<br>
-							<button id="searchBtn1" class="searchBtn">가용회의실 검색</button> 
+							<span style="color:gray; font-size:14px;">차량을 선택하고 추가 정보를 확인하세요.</span>
 							<br> 
-							<input type="text" id="vehicleBox" class="inputs" style="height:30px" readonly>
+							<textarea cols="60" rows="4" id="partArea" readonly></textarea>
 						</td>
 					</tr>
 					<tr>
@@ -432,12 +429,12 @@
 				<table class="vhclCurrentInner">
 					<tr>
 						<td rowspan="5" class="vcTdImg">
-							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">그랜저 33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">외근</span></td>
 					</tr>
 					<tr>
 						<td class="vcTdContent">
@@ -453,12 +450,12 @@
 				<table class="vhclCurrentInner">
 					<tr>
 						<td rowspan="5" class="vcTdImg">
-							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">그랜저 33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">외근</span></td>
 					</tr>
 					<tr>
 						<td class="vcTdContent">
@@ -474,12 +471,12 @@
 				<table class="vhclCurrentInner">
 					<tr>
 						<td rowspan="5" class="vcTdImg">
-							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">그랜저 33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">외근</span></td>
 					</tr>
 					<tr>
 						<td class="vcTdContent">
@@ -495,12 +492,12 @@
 				<table class="vhclCurrentInner">
 					<tr>
 						<td rowspan="5" class="vcTdImg">
-							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">그랜저 33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">외근</span></td>
 					</tr>
 					<tr>
 						<td class="vcTdContent">

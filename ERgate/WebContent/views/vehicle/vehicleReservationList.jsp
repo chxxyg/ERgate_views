@@ -197,14 +197,14 @@
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
-			<span>회의실</span>
+			<span>업무차량</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn">회의실 예약</button></li>
-				<li><button class="subBtn subActive" onclick="">회의실 예약현황</button></li>
-				<li><button class="subBtn" onclick="open_modal();">회의실 관리</button></li>
+				<li><button class="subBtn">업무차량 예약</button></li>
+				<li><button class="subBtn subActive" onclick="">업무차량 예약현황</button></li>
+				<li><button class="subBtn" onclick="open_modal();">업무차량 관리</button></li>
 			</ul>
 		</div>
 
@@ -228,7 +228,7 @@
 					<tr>
 						<th>부서명</th>
 						<th>예약자</th>
-						<th>회의실</th>
+						<th>업무차량</th>
 						<th style="width:400px">사용목적</th>
 						<th style="width:350px">사용기간</th>
 					</tr>
@@ -236,50 +236,50 @@
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 				<tr>
 					<td>인사팀</td>
 					<td>앨리스</td>
-					<td>5층 회의실1</td>
-					<td>팀미팅</td>
+					<td>그랜저 33허 3333</td>
+					<td>외근</td>
 					<td>2020-05-10 10:00 ~ 2020-05-10 10:00</td>
 				</tr>
 
@@ -306,17 +306,11 @@
 
 		</div>
 
+	</div>
 
-		<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
-			 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
-		-->
-
-		<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
-		     용도에 따라 href와 id는 변경해주세요.(여러개 가능)
-		     모달타겟으로 쓸 요소에 class와 href 복사해주세요.
-		-->
+		<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다) 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다. -->
+		<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.  용도에 따라 href와 id는 변경해주세요.(여러개 가능)  모달타겟으로 쓸 요소에 class와 href 복사해주세요. -->
 		<!-- <a class="open-modal" href="#modal-form">모달열기</a> <br> -->
-
 
 		<div id="meetingroomManage" class="modal">
 			<div class="modal-title">모달타이틀</div>
@@ -333,7 +327,6 @@
 			});
 		</script>
 
-	</div>
 
 </body>
 </html>

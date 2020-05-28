@@ -133,13 +133,13 @@
 	/*등록하기 클릭 시 나오는 내용*/
 
 	/* 회의실 목록 */
-	#mtrmManageOuter {
+	#vhclManageOuter {
 		width: 1400px;
 		height: 500px;
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	.mtrmManageInner {
+	.vhclManageInner {
 		width: 520px;
 		height: 230px;
 		margin-left: 30px;
@@ -151,25 +151,25 @@
 		border-radius: 5px;
 		padding-top: 10px;
 	}
-	.mmTdImg {
+	.vmTdImg {
 		width: 250px;
 		height: 220px;
 		text-align: center;
 	}
-	.mmImg {
+	.vmImg {
 		width: 180px;
 		height: 180px;
 		border-radius: 50%;
 		margin-bottom: 30px;
 	}
-	.mmTdContent {
+	.vmTdContent {
 		width: 270px;
 		padding-left: 20px;
 	}
-	.mmLabel {
+	.vmLabel {
 		font-weight: 550;
 	}
-	.mmBtn {
+	.vmBtn {
 		width: 180px;
 		height: 35px;
 		border: 1px solid rgb(160, 160, 160);
@@ -189,7 +189,7 @@
 /* ==========모달 공통 CSS ========== */
 	
 	/* 공통 */
-	.meetingroomModalTable {
+	.vehicleModalTable {
 		width: 100%;
 		height: auto;
 		margin-top: 10px;
@@ -199,7 +199,7 @@
 		border-left: none;
 		border-right: none;
 	}
-	.mmModalInput{
+	.vmModalInput{
 		margin-left: 20px;
 		margin-top: 10px;
 		margin-bottom: 10px;
@@ -210,10 +210,10 @@
 		padding-left: 10px;
 		font-size: 16px;
 	}
-	.mmName, .mmLocation, .mmPersonnel, .mmImgEnroll{
+	.vmName, .vmLocation, .vmPersonnel, .vmImgEnroll{
 		background-color: #eeee;
 	}
-	.mmName {
+	.vmName {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -221,10 +221,10 @@
 		font-size: 16px;
 		border-bottom: 1px solid rgb(190, 190, 190);
 	}
-	.mmName2 {
+	.vmName2 {
 		border-bottom: 1px solid lightgray;
 	}
-	.mmLocation {
+	.vmLocation {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -233,10 +233,10 @@
 		border-style: none;
 		border-bottom: 1px solid rgb(190, 190, 190);
 	}
-	.mmLocation2 {
+	.vmLocation2 {
 		border-bottom: 1px solid lightgray;
 	}
-	.mmPersonnel {
+	.vmPersonnel {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -244,10 +244,10 @@
 		font-size: 16px;
 		border-bottom: 1px solid rgb(190, 190, 190);
 	}
-	.mmPersonnel2 {
+	.vmPersonnel2 {
 		border-bottom: 1px solid lightgray;
 	}
-	.mmImgEnroll {
+	.vmImgEnroll {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -256,7 +256,7 @@
 	}
 
 	/* 등록, 수정 버튼 */
-	.mmSubmitBtn {
+	.vmSubmitBtn {
 		width: 140px;
 		height: 40px;
 		border: 0px;
@@ -267,7 +267,7 @@
 		margin-left: 30px;
 	}
 	/* 취소 버튼 */
-	.mmResetBtn {
+	.vmResetBtn {
 		width: 140px;
 		height: 40px;
 		border: 0px;
@@ -286,7 +286,7 @@
 	
 /* ==========회의실 등록 모달========== */
 
-	#mmImgEnroll{
+	#vmImgEnroll{
 		width: 200px;
 		height: 200px;
 		border-radius: 50%;
@@ -298,7 +298,7 @@
 	
 /* ==========회의실 수정 모달========== */
 
-	#mmImgEdit{
+	#vmImgEdit{
 		width: 200px;
 		height: 200px;
 		border-radius: 50%;
@@ -347,14 +347,14 @@
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
-			<span>회의실</span>
+			<span>업무차량</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn">회의실 예약</button></li>
-				<li><button class="subBtn" style="width: 170px">회의실 예약현황</button></li>
-				<li><button class="subBtn subActive" onclick="open_modal();">회의실관리</button></li>
+				<li><button class="subBtn">업무차량 예약</button></li>
+				<li><button class="subBtn" style="width: 170px">업무차량 예약현황</button></li>
+				<li><button class="subBtn subActive" onclick="open_modal();">업무차량 관리</button></li>
 				
 			</ul>
 		</div>
@@ -363,99 +363,99 @@
 			<button id="enrollBtn" style="align: right" onclick="open_modal();">등록하기</button>
 			<a id="open_enroll" class="open-modal" href="#enroll" style="display: none;">모달</a> <br> 
 			
-			<div id="mtrmManageOuter">
+			<div id="vhclManageOuter">
 			
-				<table class="mtrmManageInner">
+				<table class="vhclManageInner">
 					<tr>
-						<td rowspan="5" class="mmTdImg">
-							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vmTdImg">
+							<img class="vmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차종</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">그랜저</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차량 번호</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
+						<td class="vmTdContent"><span class="vmLabel">최대 탑승인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">5명</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
+						<td class="vmTdContent"><span class="vmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent">
-							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+						<td class="vmTdContent">
+							<button class="vmBtn" type="button" onclick="open_modal2();">수정하기</button>
 							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
 						</td>
 					</tr>
 				</table>
 				
-				<table class="mtrmManageInner">
+				<table class="vhclManageInner">
 					<tr>
-						<td rowspan="5" class="mmTdImg">
-							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vmTdImg">
+							<img class="vmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차종</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">그랜저</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차량 번호</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
+						<td class="vmTdContent"><span class="vmLabel">최대 탑승인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">5명</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
+						<td class="vmTdContent"><span class="vmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent">
-							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+						<td class="vmTdContent">
+							<button class="vmBtn" type="button" onclick="open_modal2();">수정하기</button>
 							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
 						</td>
 					</tr>
 				</table>
 				
-				<table class="mtrmManageInner">
+				<table class="vhclManageInner">
 					<tr>
-						<td rowspan="5" class="mmTdImg">
-							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vmTdImg">
+							<img class="vmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차종</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">그랜저</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차량 번호</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
+						<td class="vmTdContent"><span class="vmLabel">최대 탑승인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">5명</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
+						<td class="vmTdContent"><span class="vmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent">
-							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+						<td class="vmTdContent">
+							<button class="vmBtn" type="button" onclick="open_modal2();">수정하기</button>
 							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
 						</td>
 					</tr>
 				</table>
 				
-				<table class="mtrmManageInner">
+				<table class="vhclManageInner">
 					<tr>
-						<td rowspan="5" class="mmTdImg">
-							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vmTdImg">
+							<img class="vmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차종</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">그랜저</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
+						<td class="vmTdContent"><span class="vmLabel">차량 번호</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">33허 3333</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
+						<td class="vmTdContent"><span class="vmLabel">최대 탑승인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">5명</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
+						<td class="vmTdContent"><span class="vmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent">
-							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+						<td class="vmTdContent">
+							<button class="vmBtn" type="button" onclick="open_modal2();">수정하기</button>
 							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
 						</td>
 					</tr>
@@ -479,57 +479,41 @@
 			
 		</div>
 
-
-
-	<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
-		모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
-	 -->
-
-	<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
-		용도에 따라 href와 id는 변경해주세요.(여러개 가능)
-		모달타겟으로 쓸 요소에 class와 href 복사해주세요.
-	 -->
-		
-
+	<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다) 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다. -->
+	<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다. 용도에 따라 href와 id는 변경해주세요.(여러개 가능) 모달타겟으로 쓸 요소에 class와 href 복사해주세요. -->
 
 		<div id="enroll" class="modal">
-			<div class="modal-title">회의실 등록</div>
+			<div class="modal-title">업무차량 등록</div>
 			<div class="modal-content">
-			<a class="open-modal" href="#modal-form"></a> <br>
+			<a class="open-modal" href="#modal-form"></a>
 			
 				<div>
-					<table class="meetingroomModalTable">
+					<table class="vehicleModalTable">
 						<tr>
-							<td class="mmName">회의실 명</td>
-							<td class="mmName2"><input class="mmModalInput" type="text"></td>
+							<td class="vmName">차종</td>
+							<td class="vmName2"><input class="vmModalInput" type="text"></td>
 						</tr>
-
 						<tr>
-							<td class="mmLocation">회의실 위치</td>
-							<td class="mmLocation2"><input class="mmModalInput" type="text"></td>
+							<td class="vmLocation">차량 번호</td>
+							<td class="vmLocation2"><input class="vmModalInput" type="text"></td>
 						</tr>
-
 						<tr>
-							<td class="mmPersonnel">최대 수용인원</td>
-							<td class="mmPersonnel2"><input class="mmModalInput" type="text"></td>
+							<td class="vmPersonnel">최대 탑승인원</td>
+							<td class="vmPersonnel2"><input class="vmModalInput" type="text"></td>
 						</tr>
-
 						<tr>
-							<td class="mmImgEnroll">회의실 이미지</td>
-							<td class="mmImgEnroll2">
-								<img id="mmImgEnroll" src="${ pageContext.servletContext.contextPath }/resources/siteImg/mtrmLogo.png">
+							<td class="vmImgEnroll">차량 이미지</td>
+							<td class="vmImgEnroll2">
+								<img id="vmImgEnroll" src="${ pageContext.servletContext.contextPath }/resources/siteImg/vhclLogo.png">
 							</td>
 						</tr>
-
-
 					</table>
 				</div>
 				<!-- 예약/취소 버튼 -->
 				<div class=btns>
-					<button class="mmSubmitBtn" type="submit">등록하기</button>
-					<button class="mmResetBtn" type="reset">삭제하기</button>
+					<button class="vmSubmitBtn" type="submit">등록하기</button>
+					<button class="vmResetBtn" type="reset">삭제하기</button>
 				</div>
-
 
 			</div>
 		</div>
@@ -538,53 +522,46 @@
 		
 		<!-- 수정하기 부분 내용 -->
 		<div id="edit" class="modal">
-			<div class="modal-title">회의실 수정</div>
+			<div class="modal-title">업무차량 수정</div>
 			<div class="modal-content">
-
-			<div>
-                <table class="meetingroomModalTable">
-                    <tr>
-							<td class="mmName">회의실 명</td>
-							<td class="mmName2"><input class="mmModalInput" type="text" value="3층 회의실1"></td>
+	
+				<div>
+	                <table class="vehicleModalTable">
+	                    <tr>
+							<td class="vmName">차종</td>
+							<td class="vmName2"><input class="vmModalInput" type="text" value="그랜저"></td>
 						</tr>
-
 						<tr>
-							<td class="mmLocation">회의실 위치</td>
-							<td class="mmLocation2"><input class="mmModalInput" type="text" value="3층 301호"></td>
+							<td class="vmLocation">차량 번호</td>
+							<td class="vmLocation2"><input class="vmModalInput" type="text" value="33허 3333"></td>
 						</tr>
-
 						<tr>
-							<td class="mmPersonnel">최대 수용인원</td>
-							<td class="mmPersonnel2"><input class="mmModalInput" type="text" value="6명"></td>
+							<td class="vmPersonnel">최대 탑승인원</td>
+							<td class="vmPersonnel2"><input class="vmModalInput" type="text" value="5명"></td>
 						</tr>
-
 						<tr>
-							<td class="mmImgEnroll">회의실 이미지</td>
-							<td class="mmImgEnroll2">
-								<img id="mmImgEdit" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+							<td class="vmImgEnroll">차량 이미지</td>
+							<td class="vmImgEnroll2">
+								<img id="vmImgEdit" src="${ pageContext.servletContext.contextPath }/resources/siteImg/그랜저.jpg">
 							</td>
 						</tr>
-                  
-                    
-                </table>
-            </div>
-                    <!-- 예약/취소 버튼 -->
-			<div class=btns>
-				<button class="mmSubmitBtn" type="submit">수정하기</button>
-				<button class="mmResetBtn" type="reset">삭제하기</button>
+	                </table>
+	            </div>
+                <!-- 예약/취소 버튼 -->
+				<div class=btns>
+					<button class="vmSubmitBtn" type="submit">수정하기</button>
+					<button class="vmResetBtn" type="reset">삭제하기</button>
+				</div>
+
 			</div>
-
-
-
-</div>
 			<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br> 
 		</div>
 
-		
-		
+	</div>
 		
 		<!-- 모달용 스크립트 -->
 		<script>
+		
 			$('.open-modal').click(function() {
 				$(this).modal({
 					fadeDuration : 150
@@ -600,15 +577,8 @@
 			function open_modal2() {
 				$("#open_edit").click();
 			};
-			
-			
 
 		</script>
-
-	</div>
-
-
-
 
 </body>
 </html>

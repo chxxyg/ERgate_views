@@ -354,7 +354,7 @@
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
 				<li><button class="subBtn">회의실 예약</button></li>
 				<li><button class="subBtn" style="width: 170px">회의실 예약현황</button></li>
-				<li><button class="subBtn subActive" onclick="open_modal();">회의실관리</button></li>
+				<li><button class="subBtn subActive" onclick="open_modal();">회의실 관리</button></li>
 				
 			</ul>
 		</div>
@@ -460,7 +460,6 @@
 						</td>
 					</tr>
 				</table>
-				
 			</div>
 			
 			<!-- 페이징바 -->
@@ -480,27 +479,18 @@
 		</div>
 
 
-
-	<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다)
-		모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다.
-	 -->
-
-	<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다.
-		용도에 따라 href와 id는 변경해주세요.(여러개 가능)
-		모달타겟으로 쓸 요소에 class와 href 복사해주세요.
-	 -->
-		
-
+	<!-- 모달팝업 (head부분에 링크들도 복사해주셔야합니다) 모달 사용시엔 메뉴바를 head맨 윗부분에 include해주셔야 합니다. -->
+	<!-- 모달 타겟. href의 #xxx와 모달영역의 id(xxx)가 한셋트입니다. 용도에 따라 href와 id는 변경해주세요.(여러개 가능) 모달타겟으로 쓸 요소에 class와 href 복사해주세요. -->
 
 		<div id="enroll" class="modal">
 			<div class="modal-title">회의실 등록</div>
 			<div class="modal-content">
-			<a class="open-modal" href="#modal-form"></a> <br>
+			<a class="open-modal" href="#modal-form"></a>
 			
 				<div>
 					<table class="meetingroomModalTable">
 						<tr>
-							<td class="mmName">회의실 명</td>
+							<td class="mmName">회의실명</td>
 							<td class="mmName2"><input class="mmModalInput" type="text"></td>
 						</tr>
 
@@ -540,51 +530,46 @@
 		<div id="edit" class="modal">
 			<div class="modal-title">회의실 수정</div>
 			<div class="modal-content">
-
-			<div>
-                <table class="meetingroomModalTable">
-                    <tr>
-							<td class="mmName">회의실 명</td>
-							<td class="mmName2"><input class="mmModalInput" type="text" value="3층 회의실1"></td>
-						</tr>
-
-						<tr>
-							<td class="mmLocation">회의실 위치</td>
-							<td class="mmLocation2"><input class="mmModalInput" type="text" value="3층 301호"></td>
-						</tr>
-
-						<tr>
-							<td class="mmPersonnel">최대 수용인원</td>
-							<td class="mmPersonnel2"><input class="mmModalInput" type="text" value="6명"></td>
-						</tr>
-
-						<tr>
-							<td class="mmImgEnroll">회의실 이미지</td>
-							<td class="mmImgEnroll2">
-								<img id="mmImgEdit" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
-							</td>
-						</tr>
-                  
-                    
-                </table>
-            </div>
-                    <!-- 예약/취소 버튼 -->
-			<div class=btns>
-				<button class="mmSubmitBtn" type="submit">수정하기</button>
-				<button class="mmResetBtn" type="reset">삭제하기</button>
+	
+				<div>
+	                <table class="meetingroomModalTable">
+	                    <tr>
+								<td class="mmName">회의실 명</td>
+								<td class="mmName2"><input class="mmModalInput" type="text" value="3층 회의실1"></td>
+							</tr>
+	
+							<tr>
+								<td class="mmLocation">회의실 위치</td>
+								<td class="mmLocation2"><input class="mmModalInput" type="text" value="3층 301호"></td>
+							</tr>
+	
+							<tr>
+								<td class="mmPersonnel">최대 수용인원</td>
+								<td class="mmPersonnel2"><input class="mmModalInput" type="text" value="6명"></td>
+							</tr>
+	
+							<tr>
+								<td class="mmImgEnroll">회의실 이미지</td>
+								<td class="mmImgEnroll2">
+									<img id="mmImgEdit" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+								</td>
+							</tr>
+	                </table>
+	            </div>
+	                    <!-- 예약/취소 버튼 -->
+				<div class=btns>
+					<button class="mmSubmitBtn" type="submit">수정하기</button>
+					<button class="mmResetBtn" type="reset">삭제하기</button>
+				</div>
 			</div>
-
-
-
-</div>
 			<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br> 
 		</div>
-
 		
-		
+	</div>
 		
 		<!-- 모달용 스크립트 -->
 		<script>
+		
 			$('.open-modal').click(function() {
 				$(this).modal({
 					fadeDuration : 150
@@ -601,14 +586,7 @@
 				$("#open_edit").click();
 			};
 			
-			
-
 		</script>
-
-	</div>
-
-
-
 
 </body>
 </html>

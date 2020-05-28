@@ -379,7 +379,7 @@
 				<table class="reservationContent">
 					<tr>
 						<td id="r1">신청자</td>
-						<td id="r2">케빈과장</td>
+						<td id="r2">케빈</td>
 					</tr>
 
 					<tr>

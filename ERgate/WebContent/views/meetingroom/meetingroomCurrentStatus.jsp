@@ -88,7 +88,6 @@
 		font-family: "Nanum Gothic", serif;
 		overflow-x: hidden;
 	}
-	
 	#reservationBtn {
 		width: 140px;
 		height: 40px;
@@ -103,7 +102,6 @@
 		cursor: pointer;
 	}
 	
-	
 	/* 나의 예약 현황 버튼*/
 	#myReservation{
 		width: 120px;
@@ -116,7 +114,6 @@
 		margin-left:1000px;
 		float:left;
 		text-decoration:none;
-		
 	}
 	#myReservationBtn:hover {
 		cursor: pointer;
@@ -148,12 +145,15 @@
 	.modal-content {
 		padding: 20px;
 	}
-	
 	.reservationContent {
-		border: 1px solid black;
 		width: 100%;
 		height: 400px;
 		margin-top: 10px;
+		border-collapse: collapse;
+		border-bottom: 3px solid lightgray;
+		border-top: 3px solid #dddd;
+		border-left: none;
+		border-right: none;
 	}
 	.reservationContent *{
 		font-size: 15px;
@@ -163,22 +163,21 @@
 	.meetionroom {
 		float: left;
 	}
-	
 	.inputs {
 		width: 300px;
-		height: 25px;
+		height: 30px;
 		border: 1px solid lightgray;
 		border-radius: 3px;
 		padding-left: 5px;
+		font-size: 16px;
 	}
-	
 	.btns {
 		margin-left: 30%;
 	}
 
-	/* 가용회의실 검색 버튼*/
+	/* 가용회의실 검색, 참석자 지정 버튼*/
 	.searchBtn {
-		height: 28px;
+		height: 33px;
 		border: none;
 		border-radius: 5px;
 		background: rgb(190, 190, 190);
@@ -208,15 +207,6 @@
 		height: 20px;
 	}
 	
-	/*콘텐트 내용*/
-	.reservationContent {
-		border-collapse: collapse;
-		border-bottom: 3px solid lightgray;
-		border-top: 3px solid #dddd;
-		border-left: none;
-		border-right: none;
-		font-size: 13px;
-	}
 	#r1 {
 		width: 20%;
 		text-align: center;
@@ -236,7 +226,6 @@
 		width: 80%;
 		padding: 20px;
 	}
-	
 	#reservBtn, #resetBtn{
 		width: 140px;
 		height: 40px;
@@ -403,7 +392,7 @@
 							<br>
 							<button id="searchBtn1" class="searchBtn">가용회의실 검색</button> 
 							<br> 
-							<input type="text" id="meetingroomBox" class="inputs" style="height: 25px" readonly>
+							<input type="text" id="meetingroomBox" class="inputs" style="height: 30px" readonly>
 						</td>
 					</tr>
 
@@ -440,7 +429,6 @@
 		<div id="myReservation_open_modal" class="modal">
 			<div class="modal-title">나의 예약현황</div>
 			<div class="modal-content">
-
 			
 				<table class="mtrmCurrentInner">
 					<tr>
@@ -525,8 +513,6 @@
 						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
 					</tr>
 				</table>
-				
-
 
 			<!-- 페이징바 -->
 			<ul class="pagingBar">
@@ -542,51 +528,26 @@
 			</ul>
 			<!-- 페이징바 -->
 
+			</div>
 		</div>
-
-
-
-
-
-
-	</div>
-
+		
 	<br>
 	<br>
 	</div>
-
-
-
-
-
 
 	<!-- 모달용 스크립트 -->
 	<script>
-			$('.open-modal').click(function() {
-				$(this).modal({
-					fadeDuration : 150
-				});
-
+		$('.open-modal').click(function() {
+			$(this).modal({
+				fadeDuration : 150
 			});
+		});
 
-			
-			/* 예약하기 모달 여는 function */
-			
-
-			$("#reservationBtn").on("click",function(){
-					$("#reservation").click();
-			});
-			
-		
-			
-		
-	
-			
-			
-		</script>
-
-
-
+		/* 예약하기 모달 여는 function */
+		$("#reservationBtn").on("click",function(){
+				$("#reservation").click();
+		});
+	</script>
 
 </body>
 </html>

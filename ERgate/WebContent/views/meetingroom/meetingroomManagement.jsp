@@ -86,14 +86,12 @@
 		float: left;
 	}
 	/* 콘텐츠영역 */
-
-/* ==========페이지영역========== */
 	
 	/* 모달팝업 스타일 */
 	.modal {
 		width: 850px;
 		max-width: 2000px;
-		height: 700px; /* 모달 크기지정 */
+		height: 650px; /* 모달 크기지정 */
 		padding: 0px;
 		border-radius: 0px;
 	}
@@ -114,6 +112,8 @@
 	}
 	/* 모달팝업 스타일 */
 	
+
+/* ==========페이지영역========== */
 	/*등록하기 버튼*/
 	#enrollBtn {
 		width: 140px;
@@ -131,17 +131,7 @@
 	}
 	/*등록하기 버튼*/
 	/*등록하기 클릭 시 나오는 내용*/
-	
-	
-	
-	
-	/*회의실 등록 부분 content*/
-	.meetingroomEnroll {
-		width: 800px;
-		height: 500px;
-		border-top: 2px solid lightgray;
-		border-bottom: 2px solid lightgray;
-	}
+
 	/* 회의실 목록 */
 	#mtrmManageOuter {
 		width: 1400px;
@@ -149,7 +139,6 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	
 	.mtrmManageInner {
 		width: 520px;
 		height: 230px;
@@ -161,30 +150,25 @@
 		border: 1px solid rgb(160, 160, 160);
 		border-radius: 5px;
 		padding-top: 10px;
-		}
-	
+	}
 	.mmTdImg {
 		width: 250px;
 		height: 220px;
 		text-align: center;
 	}
-	
 	.mmImg {
 		width: 180px;
 		height: 180px;
 		border-radius: 50%;
 		margin-bottom: 30px;
 	}
-	
 	.mmTdContent {
 		width: 270px;
 		padding-left: 20px;
 	}
-	
 	.mmLabel {
 		font-weight: 550;
 	}
-	
 	.mmBtn {
 		width: 180px;
 		height: 35px;
@@ -195,46 +179,41 @@
 		font-size: 16px;
 	}
 	/* 회의실 목록 */
-	
-	
-	/* 예약하기 버튼*/
+		
+	/* 수정하기 버튼*/
 	.btns {
 		margin-left: 30%;
 		margin-top: 30px;
 	}
 	
-	.reservationBtn {
-		width: 140px;
-		height: 40px;
-		border: 0px;
-		border-radius: 5px;
-		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
-		color: white;
-		font-size: 18px;
-		margin-left: 50px;
-	}
+/* ==========모달 공통 CSS ========== */
 	
-	.reservationBtn:hover {
-		cursor: pointer;
+	/* 공통 */
+	.meetingroomModalTable {
+		width: 100%;
+		height: auto;
+		margin-top: 10px;
+		border-collapse: collapse;
+		border-bottom: 3px solid lightgray;
+		border-top: 3px solid #dddd;
+		border-left: none;
+		border-right: none;
 	}
-	
-	/* 취소 버튼 */
-	.resetBtn {
-		width: 140px;
-		height: 40px;
-		border: 0px;
-		border-radius: 5px;
-		background: rgb(190, 190, 190);
-		color: white;
-		font-size: 18px;
+	.mmModalInput{
+		margin-left: 20px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 300px;
+		height: 30px;
+		border: 1px solid lightgray;
+		border-radius: 3px;
+		padding-left: 10px;
+		font-size: 16px;
 	}
-	
-	.resetBtn:hover {
-		cursor: pointer;
+	.mmName, .mmLocation, .mmPersonnel, .mmImgEnroll{
+		background-color: #eeee;
 	}
-	
-	.mrName {
-		background-color: lightgray;
+	.mmName {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -242,13 +221,10 @@
 		font-size: 16px;
 		border-bottom: 1px solid rgb(190, 190, 190);
 	}
-	
-	.mrName2 {
+	.mmName2 {
 		border-bottom: 1px solid lightgray;
 	}
-	
-	.mrLocation {
-		background-color: lightgray;
+	.mmLocation {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -257,13 +233,10 @@
 		border-style: none;
 		border-bottom: 1px solid rgb(190, 190, 190);
 	}
-	
-	.mrLocation2 {
+	.mmLocation2 {
 		border-bottom: 1px solid lightgray;
 	}
-	
-	.mrPersonnel {
-		background-color: lightgray;
+	.mmPersonnel {
 		width: 200px;
 		height: 50px;
 		text-align: center;
@@ -271,103 +244,30 @@
 		font-size: 16px;
 		border-bottom: 1px solid rgb(190, 190, 190);
 	}
-	
-	.mrPersonnel2 {
+	.mmPersonnel2 {
 		border-bottom: 1px solid lightgray;
 	}
-	
-	.mrImg {
-		background-color: lightgray;
+	.mmImgEnroll {
 		width: 200px;
 		height: 50px;
 		text-align: center;
 		font-weight: 400px;
 		font-size: 16px;
 	}
-	
-	.meetingroomEnroll input {
-		height: 30px;
-		width: 350px;
-		margin-left: 5px;
-		border-radius: 5px 5px 5px 5px;
-	    border:1px solid lightgray;
-	}
-	
-	.meetingroomEnroll{
-		border-collapse: collapse;
-		border-bottom: 3px solid lightgray;
-		border-top: 3px solid #dddd;
-		border-left: none;
-		border-right: none;
-		font-size: 13px;
-	
-	}
-	
-	/*회의실 이미지 관련 css*/
-	.meetingroomImg {
-		width: 100px;
-		height: 100px;
-		float: left;
-	}
-	
-	.profile {
-		width: 100px;
-		height: 100px;
-		object-fit: cover;
-		border-radius: 70%;
-		float: left;
-		overflow: hidden;
-		margin-top: 10px;
-		margin-left: 20px;
-	}
-	
-	.mcImg{
-		width: 150px;
-		height: 150px;
-		object-fit: cover;
-		border-radius: 70%;
-		float: left;
-		overflow: hidden;
-		margin-top: -20px;
-		margin-left: 20px;
-	
-	}
-	
-	/* 위에까지 등록하기 클릭 시 나오는 내용*/
-	
-	
-	
-	/* 아래부터 회의실 수정 부분 content*/
-	.meetingroomEdit {
-		width: 800px;
-		height: 500px;
-		border-top: 2px solid lightgray;
-		border-bottom: 2px solid lightgray;
-	}
-	
-	/* 수정하기 버튼*/
-	.btns {
-		margin-left: 30%;
-		margin-top: 30px;
-	}
-	
-	.editBtn {
+
+	/* 등록, 수정 버튼 */
+	.mmSubmitBtn {
 		width: 140px;
 		height: 40px;
 		border: 0px;
 		border-radius: 5px;
-		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+		background: rgb(26, 188, 156);
 		color: white;
 		font-size: 18px;
-		margin-left: 50px;
+		margin-left: 30px;
 	}
-	
-	.editBtn:hover {
-		cursor: pointer;
-	}
-	
-	/* 삭제 버튼 */
-	.deleteBtn {
+	/* 취소 버튼 */
+	.mmResetBtn {
 		width: 140px;
 		height: 40px;
 		border: 0px;
@@ -376,92 +276,49 @@
 		color: white;
 		font-size: 18px;
 	}
-	
-	.deleteBtn:hover {
+	button:hover {
 		cursor: pointer;
 	}
 	
-	.mrNameEdit{
-	    background-color: lightgray;
-	    width: 200px;
-	    height: 50px;
-	    text-align: center;
-	    font-weight: 400px;
-	    font-size: 16px;
-	    border-bottom: 1px solid rgb(190, 190, 190);
+	/* 공통 */
+/* ==========모달 공통 CSS ========== */
+
+	
+/* ==========회의실 등록 모달========== */
+
+	#mmImgEnroll{
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		margin-bottom: 20px;	
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+/* ==========회의실 등록 모달========== */
+	
+/* ==========회의실 수정 모달========== */
+
+	#mmImgEdit{
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		margin-bottom: 20px;	
+		margin-top: 20px;
+		margin-left: 20px;
 	}
 	
-	.mrNameEdit2{
-	    border-bottom: 1px solid lightgray;
-	    font-size: 14px;  
-	}
-	
-	.mrLocationEdit{
-	    background-color: lightgray;
-	    width: 200px;
-	    height: 50px;
-	    text-align: center;
-	    font-weight: 400px;
-	    font-size: 16px;
-	    border-style: none;
-	    border-bottom: 1px solid rgb(190, 190, 190);
-	}
-	
-	.mrLocationEdit2{
-	    border-bottom: 1px solid lightgray;
-	    font-size: 14px;
-	}
-	.mrPersonnelEdit{
-	    background-color: lightgray;
-	    width: 200px;
-	    height: 50px;
-	    text-align: center;
-	    font-weight: 400px;
-	    font-size: 16px;
-	    border-bottom: 1px solid rgb(190, 190, 190);
-	}
-	.mrPersonnelEdit2{
-	    border-bottom: 1px solid lightgray;
-	    font-size: 14px;
-	}
-	.mrImgEdit{
-	    background-color: lightgray;
-	    width: 200px;
-	    height: 50px;
-	    text-align: center;
-	    font-weight: 400px;
-	    font-size: 16px;
-	}
-	
-	.meetingroomEdit input{
-	    height: 30px;
-	    width: 350px;
-	    margin-left: 5px;
-	    border-radius: 5px 5px 5px 5px;
-	    border:1px solid lightgray;
-	}
-	.meetingroomEdit{
-	    border-collapse: collapse;
-		border-bottom: 3px solid lightgray;
-		border-top: 3px solid #dddd;
-		border-left: none;
-		border-right: none;
-		font-size: 13px;
-	
-	}
-	
-	
+/* ==========회의실 수정 모달========== */
+
+
 	/* 페이징바 스타일 */
 	.pagingBar {
 		list-style: none;
 		margin-top: 50px;
 		margin-left: 400px;
 	}
-	
 	.pagingBar li {
 		float: left;
 	}
-	
 	.pagingBar li * {
 		float: left;
 		padding: 4px;
@@ -474,12 +331,10 @@
 		text-decoration: none;
 		font-size: 15px;
 	}
-	
 	.pagingBar li>span {
 		color: rgb(26, 188, 156);
 		border: 1px solid rgb(26, 188, 156);
 	}
-	
 	.pagingBar li a:hover {
 		color: rgb(26, 188, 156);
 		border: 1px solid rgb(26, 188, 156);
@@ -643,28 +498,26 @@
 			<a class="open-modal" href="#modal-form"></a> <br>
 			
 				<div>
-					<table class="meetingroomEnroll">
+					<table class="meetingroomModalTable">
 						<tr>
-							<td class="mrName" style="height:50px">회의실 명</td>
-							<td class="mrName2"><input type="text"></td>
+							<td class="mmName">회의실 명</td>
+							<td class="mmName2"><input class="mmModalInput" type="text"></td>
 						</tr>
 
 						<tr>
-							<td class="mrLocation" style="height:50px">회의실 위치</td>
-							<td class="mrLocation2"><input type="text"></td>
+							<td class="mmLocation">회의실 위치</td>
+							<td class="mmLocation2"><input class="mmModalInput" type="text"></td>
 						</tr>
 
 						<tr>
-							<td class="mrPersonnel" style="height:50px">최대 수용인원</td>
-							<td class="mrPersonnel2"><input type="text"></td>
+							<td class="mmPersonnel">최대 수용인원</td>
+							<td class="mmPersonnel2"><input class="mmModalInput" type="text"></td>
 						</tr>
 
 						<tr>
-							<td class="mrImg">회의실 이미지</td>
-							<td class="mrImg2">
-								<div class="meetingroomImg">
-									<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
-								</div>
+							<td class="mmImgEnroll">회의실 이미지</td>
+							<td class="mmImgEnroll2">
+								<img id="mmImgEnroll" src="${ pageContext.servletContext.contextPath }/resources/siteImg/mtrmLogo.png">
 							</td>
 						</tr>
 
@@ -673,8 +526,8 @@
 				</div>
 				<!-- 예약/취소 버튼 -->
 				<div class=btns>
-					<button class="reservationBtn" type="submit">등록하기</button>
-					<button class="resetBtn" type="reset">삭제하기</button>
+					<button class="mmSubmitBtn" type="submit">등록하기</button>
+					<button class="mmResetBtn" type="reset">삭제하기</button>
 				</div>
 
 
@@ -684,47 +537,41 @@
 		
 		
 		<!-- 수정하기 부분 내용 -->
-
-
-
-
 		<div id="edit" class="modal">
 			<div class="modal-title">회의실 수정</div>
 			<div class="modal-content">
 
 			<div>
-                <table class="meetingroomEdit">
+                <table class="meetingroomModalTable">
                     <tr>
-                        <td class="mrNameEdit">회의실 명</td>
-                        <td class="mrNameEdit2"> <input type="text" value="  &nbsp;3층 회의실1"></td>
-                    </tr>
+							<td class="mmName">회의실 명</td>
+							<td class="mmName2"><input class="mmModalInput" type="text" value="3층 회의실1"></td>
+						</tr>
 
-                    <tr>
-                        <td class="mrLocationEdit">회의실 위치</td>
-                        <td class="mrLocationEdit2"><input type="text" value="  &nbsp; 3층"> </td>
-                    </tr>
+						<tr>
+							<td class="mmLocation">회의실 위치</td>
+							<td class="mmLocation2"><input class="mmModalInput" type="text" value="3층 301호"></td>
+						</tr>
 
-                    <tr>
-                        <td class="mrPersonnelEdit">최대 수용인원</td>
-                        <td class="mrPersonnelEdit2"><input type="text" value="  &nbsp; 6명"> </td>
-                    </tr>
+						<tr>
+							<td class="mmPersonnel">최대 수용인원</td>
+							<td class="mmPersonnel2"><input class="mmModalInput" type="text" value="6명"></td>
+						</tr>
 
-                    <tr>
-                        <td class="mrImgEdit">회의실 이미지</td>
-                        <td class="mrImgEdit2"> 
-                            <div class="meetingroomImg">
-                                <img class="profile" src="크기변환_KENN4462-1.jpg">
-                            </div> 
-                    </td>
-                    </tr>
+						<tr>
+							<td class="mmImgEnroll">회의실 이미지</td>
+							<td class="mmImgEnroll2">
+								<img id="mmImgEdit" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+							</td>
+						</tr>
                   
                     
                 </table>
             </div>
                     <!-- 예약/취소 버튼 -->
 			<div class=btns>
-				<button class="editBtn" type="submit">수정하기</button>
-				<button class="deleteBtn" type="reset">삭제하기</button>
+				<button class="mmSubmitBtn" type="submit">수정하기</button>
+				<button class="mmResetBtn" type="reset">삭제하기</button>
 			</div>
 
 

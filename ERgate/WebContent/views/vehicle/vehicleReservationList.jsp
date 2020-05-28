@@ -98,6 +98,7 @@
 	/* 서브메뉴바 메뉴버튼(현재페이지일때) */
 	.subActive {
 		border: 4px solid rgb(26, 188, 156);
+		width: 190px;
 	}
 	
 	/* 체크박스 스타일 */

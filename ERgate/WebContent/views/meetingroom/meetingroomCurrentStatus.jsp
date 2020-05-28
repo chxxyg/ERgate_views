@@ -403,7 +403,7 @@
 							<br>
 							<button id="searchBtn1" class="searchBtn">가용회의실 검색</button> 
 							<br> 
-							<input type="text" id="meetingroomBox" class="inputs" style="height: 25px">
+							<input type="text" id="meetingroomBox" class="inputs" style="height: 25px" readonly>
 						</td>
 					</tr>
 
@@ -417,7 +417,7 @@
 					<tr>
 						<td id="r1">참석자(내부)</td>
 						<td id="r2"><button id="searchBtn2" class="searchBtn" onclick="window.open('meetingroomAddparticipants.jsp','popup_name','_blank')">참석자 지정</button>
-							<textarea cols="60" rows="4" id="partArea"></textarea>
+							<textarea cols="60" rows="4" id="partArea" readonly></textarea>
 						</td>
 					</tr>
 

@@ -332,7 +332,7 @@
                                 </tr>
                                 <tr>
                                     <td><input type="text" name="" id=""></td>
-                                    <td><input type="text"></td>
+                                    <td><input type="date"></td>
                                 </tr>
                                 <tr>
                                     <td>휴대폰번호</td>

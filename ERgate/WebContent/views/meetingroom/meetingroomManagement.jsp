@@ -15,477 +15,477 @@
 
 <style>
 /* ==========페이지영역========== */
-.outer {
-	padding-left: 320px;
-	float: left;
-	width: 100%;
-	min-height: 100%;
-	background-color: rgba(224, 224, 224, 0.12);
-}
-
-.topBar {
-	background-color: rgba(22, 160, 133, 0.39);
-	width: 100%;
-	height: 50px;
-	color: white;
-	font-size: 25px;
-	box-sizing: border-box;
-	padding-top: 10px;
-	padding-left: 30px;
-	font-weight: 500;
-}
-
-/* 서브메뉴바 영역 */
-.subMenuArea {
-	background-color: white;
-	width: 100%;
-	height: 70px;
-}
-
-#subMenuList {
-	margin: 0;
-	list-style: none;
-	padding-left: 0;
-}
-
-#subMenuList li {
-	margin-top: 10px;
-	margin-left: 20px;
-	float: left;
-	text-decoration-style: none;
-}
-/* 서브메뉴바 영역 */
-
-/* 서브메뉴바 메뉴버튼(기본) */
-.subBtn {
-	border: 0;
-	width: 150px;
-	height: 50px;
-	font-size: 19px;
-	color: rgb(127, 127, 127);
-	background-color: white;
-	border-radius: 25px;
-}
-
-.subBtn:hover {
-	cursor: pointer;
-}
-/* 서브메뉴바 메뉴버튼(기본) */
-/* 서브메뉴바 메뉴버튼(현재페이지일때) */
-.subActive {
-	border: 4px solid rgb(26, 188, 156);
-}
-/* 서브메뉴바 메뉴버튼(현재페이지일때) */
-
-/* 콘텐츠영역 */
-.contentArea {
-	margin-top: 50px;
-	margin-left: 100px;
-	width: 1600px;
-	height: auto;
-	float: left;
-}
-/* 콘텐츠영역 */
+	.outer {
+		padding-left: 320px;
+		float: left;
+		width: 100%;
+		min-height: 100%;
+		background-color: rgba(224, 224, 224, 0.12);
+	}
+	
+	.topBar {
+		background-color: rgba(22, 160, 133, 0.39);
+		width: 100%;
+		height: 50px;
+		color: white;
+		font-size: 25px;
+		box-sizing: border-box;
+		padding-top: 10px;
+		padding-left: 30px;
+		font-weight: 500;
+	}
+	
+	/* 서브메뉴바 영역 */
+	.subMenuArea {
+		background-color: white;
+		width: 100%;
+		height: 70px;
+	}
+	
+	#subMenuList {
+		margin: 0;
+		list-style: none;
+		padding-left: 0;
+	}
+	
+	#subMenuList li {
+		margin-top: 10px;
+		margin-left: 20px;
+		float: left;
+		text-decoration-style: none;
+	}
+	/* 서브메뉴바 영역 */
+	
+	/* 서브메뉴바 메뉴버튼(기본) */
+	.subBtn {
+		border: 0;
+		width: 150px;
+		height: 50px;
+		font-size: 19px;
+		color: rgb(127, 127, 127);
+		background-color: white;
+		border-radius: 25px;
+	}
+	
+	.subBtn:hover {
+		cursor: pointer;
+	}
+	/* 서브메뉴바 메뉴버튼(기본) */
+	/* 서브메뉴바 메뉴버튼(현재페이지일때) */
+	.subActive {
+		border: 4px solid rgb(26, 188, 156);
+	}
+	/* 서브메뉴바 메뉴버튼(현재페이지일때) */
+	
+	/* 콘텐츠영역 */
+	.contentArea {
+		margin-top: 50px;
+		margin-left: 100px;
+		width: 1600px;
+		height: auto;
+		float: left;
+	}
+	/* 콘텐츠영역 */
 
 /* ==========페이지영역========== */
-
-/* 모달팝업 스타일 */
-.modal {
-	width: 850px;
-	max-width: 2000px;
-	height: 700px; /* 모달 크기지정 */
-	padding: 0px;
-	border-radius: 0px;
-}
-
-.modal-title {
-	margin: 0;
-	width: 100%;
-	height: 50px;
-	background-color: rgba(22, 160, 133, 0.68);
-	font-size: 25px;
-	padding: 10px;
-	color: white;
-	box-sizing: border-box;
-}
-
-.modal-content {
-	padding: 20px;
-}
-/* 모달팝업 스타일 */
-
-/*등록하기 버튼*/
-#enrollBtn {
-	width: 140px;
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
-	color: white;
-	font-size: 18px;
-	margin-left: 990px;
-}
-
-#enrollBtn:hover {
-	cursor: pointer;
-}
-/*등록하기 버튼*/
-/*등록하기 클릭 시 나오는 내용*/
-
-
-
-
-/*회의실 등록 부분 content*/
-.meetingroomEnroll {
-	width: 800px;
-	height: 500px;
-	border-top: 2px solid lightgray;
-	border-bottom: 2px solid lightgray;
-}
-/* 회의실 목록 */
-#mtrmManageOuter {
-	width: 1400px;
-	height: 500px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.mtrmManageInner {
-	width: 520px;
-	height: 230px;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	display: inline-block;
-	border: 1px solid rgb(160, 160, 160);
-	border-radius: 5px;
-	padding-top: 10px;
 	
-}
-
-.mmTdImg {
-	width: 250px;
-	height: 220px;
-	text-align: center;
-}
-
-.mmImg {
-	width: 180px;
-	height: 180px;
-	border-radius: 50%;
-	margin-bottom: 30px;
-}
-
-.mmTdContent {
-	width: 270px;
-	padding-left: 20px;
-}
-
-.mmLabel {
-	font-weight: 550;
-}
-
-.mmBtn {
-	width: 180px;
-	height: 35px;
-	border: 1px solid rgb(160, 160, 160);
-	color: rgb(160, 160, 160);
-	background: none;
-	border-radius: 5px;
-	font-size: 16px;
-}
-/* 회의실 목록 */
-
-
-/* 예약하기 버튼*/
-.btns {
-	margin-left: 30%;
-	margin-top: 30px;
-}
-
-.reservationBtn {
-	width: 140px;
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
-	color: white;
-	font-size: 18px;
-	margin-left: 50px;
-}
-
-.reservationBtn:hover {
-	cursor: pointer;
-}
-
-/* 취소 버튼 */
-.resetBtn {
-	width: 140px;
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	background: rgb(190, 190, 190);
-	color: white;
-	font-size: 18px;
-}
-
-.resetBtn:hover {
-	cursor: pointer;
-}
-
-.mrName {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-	border-bottom: 1px solid rgb(190, 190, 190);
-}
-
-.mrName2 {
-	border-bottom: 1px solid lightgray;
-}
-
-.mrLocation {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-	border-style: none;
-	border-bottom: 1px solid rgb(190, 190, 190);
-}
-
-.mrLocation2 {
-	border-bottom: 1px solid lightgray;
-}
-
-.mrPersonnel {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-	border-bottom: 1px solid rgb(190, 190, 190);
-}
-
-.mrPersonnel2 {
-	border-bottom: 1px solid lightgray;
-}
-
-.mrImg {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-}
-
-.meetingroomEnroll input {
-	height: 30px;
-	width: 350px;
-	margin-left: 5px;
-	border-radius: 5px 5px 5px 5px;
-    border:1px solid lightgray;
-}
-
-.meetingroomEnroll{
-	border-collapse: collapse;
-	border-bottom: 3px solid lightgray;
-	border-top: 3px solid #dddd;
-	border-left: none;
-	border-right: none;
-	font-size: 13px;
-
-}
-
-/*회의실 이미지 관련 css*/
-.meetingroomImg {
-	width: 100px;
-	height: 100px;
-	float: left;
-}
-
-.profile {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	border-radius: 70%;
-	float: left;
-	overflow: hidden;
-	margin-top: 10px;
-	margin-left: 20px;
-}
-
-.mcImg{
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-	border-radius: 70%;
-	float: left;
-	overflow: hidden;
-	margin-top: -20px;
-	margin-left: 20px;
-
-}
-
-/* 위에까지 등록하기 클릭 시 나오는 내용*/
-
-
-
-/* 아래부터 회의실 수정 부분 content*/
-.meetingroomEdit {
-	width: 800px;
-	height: 500px;
-	border-top: 2px solid lightgray;
-	border-bottom: 2px solid lightgray;
-}
-
-/* 수정하기 버튼*/
-.btns {
-	margin-left: 30%;
-	margin-top: 30px;
-}
-
-.editBtn {
-	width: 140px;
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
-	color: white;
-	font-size: 18px;
-	margin-left: 50px;
-}
-
-.editBtn:hover {
-	cursor: pointer;
-}
-
-/* 삭제 버튼 */
-.deleteBtn {
-	width: 140px;
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	background: rgb(190, 190, 190);
-	color: white;
-	font-size: 18px;
-}
-
-.deleteBtn:hover {
-	cursor: pointer;
-}
-
-.mrNameEdit{
-    background-color: lightgray;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    font-weight: 400px;
-    font-size: 16px;
-    border-bottom: 1px solid rgb(190, 190, 190);
-}
-
-.mrNameEdit2{
-    border-bottom: 1px solid lightgray;
-    font-size: 14px;  
-}
-
-.mrLocationEdit{
-    background-color: lightgray;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    font-weight: 400px;
-    font-size: 16px;
-    border-style: none;
-    border-bottom: 1px solid rgb(190, 190, 190);
-}
-
-.mrLocationEdit2{
-    border-bottom: 1px solid lightgray;
-    font-size: 14px;
-}
-.mrPersonnelEdit{
-    background-color: lightgray;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    font-weight: 400px;
-    font-size: 16px;
-    border-bottom: 1px solid rgb(190, 190, 190);
-}
-.mrPersonnelEdit2{
-    border-bottom: 1px solid lightgray;
-    font-size: 14px;
-}
-.mrImgEdit{
-    background-color: lightgray;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    font-weight: 400px;
-    font-size: 16px;
-}
-
-.meetingroomEdit input{
-    height: 30px;
-    width: 350px;
-    margin-left: 5px;
-    border-radius: 5px 5px 5px 5px;
-    border:1px solid lightgray;
-}
-.meetingroomEdit{
-    border-collapse: collapse;
-	border-bottom: 3px solid lightgray;
-	border-top: 3px solid #dddd;
-	border-left: none;
-	border-right: none;
-	font-size: 13px;
-
-}
-
-
-/* 페이징바 스타일 */
-.pagingBar {
-	list-style: none;
-	margin-top: 50px;
-	margin-left: 400px;
-}
-
-.pagingBar li {
-	float: left;
-}
-
-.pagingBar li * {
-	float: left;
-	padding: 4px;
-	margin-right: 3px;
-	width: 20px;
-	color: rgb(190, 190, 190);
-	font: bold 12px tahoma;
-	border: 1px solid rgb(190, 190, 190);
-	text-align: center;
-	text-decoration: none;
-	font-size: 15px;
-}
-
-.pagingBar li>span {
-	color: rgb(26, 188, 156);
-	border: 1px solid rgb(26, 188, 156);
-}
-
-.pagingBar li a:hover {
-	color: rgb(26, 188, 156);
-	border: 1px solid rgb(26, 188, 156);
-}
-/* 페이징바 스타일 */
+	/* 모달팝업 스타일 */
+	.modal {
+		width: 850px;
+		max-width: 2000px;
+		height: 700px; /* 모달 크기지정 */
+		padding: 0px;
+		border-radius: 0px;
+	}
+	
+	.modal-title {
+		margin: 0;
+		width: 100%;
+		height: 50px;
+		background-color: rgba(22, 160, 133, 0.68);
+		font-size: 25px;
+		padding: 10px;
+		color: white;
+		box-sizing: border-box;
+	}
+	
+	.modal-content {
+		padding: 20px;
+	}
+	/* 모달팝업 스타일 */
+	
+	/*등록하기 버튼*/
+	#enrollBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 18px;
+		margin-left: 990px;
+	}
+	
+	#enrollBtn:hover {
+		cursor: pointer;
+	}
+	/*등록하기 버튼*/
+	/*등록하기 클릭 시 나오는 내용*/
+	
+	
+	
+	
+	/*회의실 등록 부분 content*/
+	.meetingroomEnroll {
+		width: 800px;
+		height: 500px;
+		border-top: 2px solid lightgray;
+		border-bottom: 2px solid lightgray;
+	}
+	/* 회의실 목록 */
+	#mtrmManageOuter {
+		width: 1400px;
+		height: 500px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.mtrmManageInner {
+		width: 520px;
+		height: 230px;
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		display: inline-block;
+		border: 1px solid rgb(160, 160, 160);
+		border-radius: 5px;
+		padding-top: 10px;
+		}
+	
+	.mmTdImg {
+		width: 250px;
+		height: 220px;
+		text-align: center;
+	}
+	
+	.mmImg {
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		margin-bottom: 30px;
+	}
+	
+	.mmTdContent {
+		width: 270px;
+		padding-left: 20px;
+	}
+	
+	.mmLabel {
+		font-weight: 550;
+	}
+	
+	.mmBtn {
+		width: 180px;
+		height: 35px;
+		border: 1px solid rgb(160, 160, 160);
+		color: rgb(160, 160, 160);
+		background: none;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+	/* 회의실 목록 */
+	
+	
+	/* 예약하기 버튼*/
+	.btns {
+		margin-left: 30%;
+		margin-top: 30px;
+	}
+	
+	.reservationBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 18px;
+		margin-left: 50px;
+	}
+	
+	.reservationBtn:hover {
+		cursor: pointer;
+	}
+	
+	/* 취소 버튼 */
+	.resetBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(190, 190, 190);
+		color: white;
+		font-size: 18px;
+	}
+	
+	.resetBtn:hover {
+		cursor: pointer;
+	}
+	
+	.mrName {
+		background-color: lightgray;
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		font-weight: 400px;
+		font-size: 16px;
+		border-bottom: 1px solid rgb(190, 190, 190);
+	}
+	
+	.mrName2 {
+		border-bottom: 1px solid lightgray;
+	}
+	
+	.mrLocation {
+		background-color: lightgray;
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		font-weight: 400px;
+		font-size: 16px;
+		border-style: none;
+		border-bottom: 1px solid rgb(190, 190, 190);
+	}
+	
+	.mrLocation2 {
+		border-bottom: 1px solid lightgray;
+	}
+	
+	.mrPersonnel {
+		background-color: lightgray;
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		font-weight: 400px;
+		font-size: 16px;
+		border-bottom: 1px solid rgb(190, 190, 190);
+	}
+	
+	.mrPersonnel2 {
+		border-bottom: 1px solid lightgray;
+	}
+	
+	.mrImg {
+		background-color: lightgray;
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		font-weight: 400px;
+		font-size: 16px;
+	}
+	
+	.meetingroomEnroll input {
+		height: 30px;
+		width: 350px;
+		margin-left: 5px;
+		border-radius: 5px 5px 5px 5px;
+	    border:1px solid lightgray;
+	}
+	
+	.meetingroomEnroll{
+		border-collapse: collapse;
+		border-bottom: 3px solid lightgray;
+		border-top: 3px solid #dddd;
+		border-left: none;
+		border-right: none;
+		font-size: 13px;
+	
+	}
+	
+	/*회의실 이미지 관련 css*/
+	.meetingroomImg {
+		width: 100px;
+		height: 100px;
+		float: left;
+	}
+	
+	.profile {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 70%;
+		float: left;
+		overflow: hidden;
+		margin-top: 10px;
+		margin-left: 20px;
+	}
+	
+	.mcImg{
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 70%;
+		float: left;
+		overflow: hidden;
+		margin-top: -20px;
+		margin-left: 20px;
+	
+	}
+	
+	/* 위에까지 등록하기 클릭 시 나오는 내용*/
+	
+	
+	
+	/* 아래부터 회의실 수정 부분 content*/
+	.meetingroomEdit {
+		width: 800px;
+		height: 500px;
+		border-top: 2px solid lightgray;
+		border-bottom: 2px solid lightgray;
+	}
+	
+	/* 수정하기 버튼*/
+	.btns {
+		margin-left: 30%;
+		margin-top: 30px;
+	}
+	
+	.editBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(26, 188, 156); /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 18px;
+		margin-left: 50px;
+	}
+	
+	.editBtn:hover {
+		cursor: pointer;
+	}
+	
+	/* 삭제 버튼 */
+	.deleteBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: rgb(190, 190, 190);
+		color: white;
+		font-size: 18px;
+	}
+	
+	.deleteBtn:hover {
+		cursor: pointer;
+	}
+	
+	.mrNameEdit{
+	    background-color: lightgray;
+	    width: 200px;
+	    height: 50px;
+	    text-align: center;
+	    font-weight: 400px;
+	    font-size: 16px;
+	    border-bottom: 1px solid rgb(190, 190, 190);
+	}
+	
+	.mrNameEdit2{
+	    border-bottom: 1px solid lightgray;
+	    font-size: 14px;  
+	}
+	
+	.mrLocationEdit{
+	    background-color: lightgray;
+	    width: 200px;
+	    height: 50px;
+	    text-align: center;
+	    font-weight: 400px;
+	    font-size: 16px;
+	    border-style: none;
+	    border-bottom: 1px solid rgb(190, 190, 190);
+	}
+	
+	.mrLocationEdit2{
+	    border-bottom: 1px solid lightgray;
+	    font-size: 14px;
+	}
+	.mrPersonnelEdit{
+	    background-color: lightgray;
+	    width: 200px;
+	    height: 50px;
+	    text-align: center;
+	    font-weight: 400px;
+	    font-size: 16px;
+	    border-bottom: 1px solid rgb(190, 190, 190);
+	}
+	.mrPersonnelEdit2{
+	    border-bottom: 1px solid lightgray;
+	    font-size: 14px;
+	}
+	.mrImgEdit{
+	    background-color: lightgray;
+	    width: 200px;
+	    height: 50px;
+	    text-align: center;
+	    font-weight: 400px;
+	    font-size: 16px;
+	}
+	
+	.meetingroomEdit input{
+	    height: 30px;
+	    width: 350px;
+	    margin-left: 5px;
+	    border-radius: 5px 5px 5px 5px;
+	    border:1px solid lightgray;
+	}
+	.meetingroomEdit{
+	    border-collapse: collapse;
+		border-bottom: 3px solid lightgray;
+		border-top: 3px solid #dddd;
+		border-left: none;
+		border-right: none;
+		font-size: 13px;
+	
+	}
+	
+	
+	/* 페이징바 스타일 */
+	.pagingBar {
+		list-style: none;
+		margin-top: 50px;
+		margin-left: 400px;
+	}
+	
+	.pagingBar li {
+		float: left;
+	}
+	
+	.pagingBar li * {
+		float: left;
+		padding: 4px;
+		margin-right: 3px;
+		width: 20px;
+		color: rgb(190, 190, 190);
+		font: bold 12px tahoma;
+		border: 1px solid rgb(190, 190, 190);
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+	}
+	
+	.pagingBar li>span {
+		color: rgb(26, 188, 156);
+		border: 1px solid rgb(26, 188, 156);
+	}
+	
+	.pagingBar li a:hover {
+		color: rgb(26, 188, 156);
+		border: 1px solid rgb(26, 188, 156);
+	}
+	/* 페이징바 스타일 */
+	
 </style>
 </head>
 <body>
@@ -515,22 +515,22 @@
 						<td rowspan="5" class="mmTdImg">
 							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
-						<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
+						<td class="mmTdContent">
+							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
 						</td>
-						
 					</tr>
 				</table>
 				
@@ -539,19 +539,22 @@
 						<td rowspan="5" class="mmTdImg">
 							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent">
+							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
+						</td>
 					</tr>
 				</table>
 				
@@ -560,19 +563,22 @@
 						<td rowspan="5" class="mmTdImg">
 							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button">수정하기</button></td>
+						<td class="mmTdContent">
+							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
+						</td>
 					</tr>
 				</table>
 				
@@ -581,19 +587,22 @@
 						<td rowspan="5" class="mmTdImg">
 							<img class="mmImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mmTdContent"><span class="mmLabel">회의실명</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 회의실1</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실명</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>3층 301호</span></td>
+						<td class="mmTdContent"><span class="mmLabel">회의실 위치</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">3층 301호</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">수용인원</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>최대 6인</span></td>
+						<td class="mmTdContent"><span class="mmLabel">수용인원</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">최대 6인</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
+						<td class="mmTdContent"><span class="mmLabel">등록일</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="mmContent">2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button" onclick="">수정하기</button></td> 
+						<td class="mmTdContent">
+							<button class="mmBtn" type="button" onclick="open_modal2();">수정하기</button>
+							<a id="open_edit" class="open-modal" href="#edit" style="display: none;">모달</a> <br>
+						</td>
 					</tr>
 				</table>
 				
@@ -636,17 +645,17 @@
 				<div>
 					<table class="meetingroomEnroll">
 						<tr>
-							<td class="mrName">회의실 명</td>
+							<td class="mrName" style="height:50px">회의실 명</td>
 							<td class="mrName2"><input type="text"></td>
 						</tr>
 
 						<tr>
-							<td class="mrLocation">회의실 위치</td>
+							<td class="mrLocation" style="height:50px">회의실 위치</td>
 							<td class="mrLocation2"><input type="text"></td>
 						</tr>
 
 						<tr>
-							<td class="mrPersonnel">최대 수용인원</td>
+							<td class="mrPersonnel" style="height:50px">최대 수용인원</td>
 							<td class="mrPersonnel2"><input type="text"></td>
 						</tr>
 

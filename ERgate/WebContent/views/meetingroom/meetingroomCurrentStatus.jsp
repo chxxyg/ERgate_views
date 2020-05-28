@@ -53,8 +53,8 @@
     /* 서브메뉴바 메뉴버튼(기본) */
     .subBtn{
         border:0;
-        width:150px;
-        height:50px;
+        width: 150px;
+        height: 50px;
         font-size: 19px;
         color:rgb(127, 127, 127);
         background-color: white;
@@ -64,17 +64,17 @@
     /* 서브메뉴바 메뉴버튼(기본) */
     /* 서브메뉴바 메뉴버튼(현재페이지일때) */
     .subActive{
-        border:4px solid rgb(26, 188, 156);
+        border: 4px solid rgb(26, 188, 156);
     }
     /* 서브메뉴바 메뉴버튼(현재페이지일때) */
 
     /* 콘텐츠영역 */
     .contentArea {
         margin-top: 50px;
-        margin-left:100px;
-        width:1600px;
-        height:auto;
-        float:left;
+        margin-left: 100px;
+        width: 1600px;
+        height: auto;
+        float: left;
     }
     /* 콘텐츠영역 */
 
@@ -244,7 +244,7 @@
 		border-radius: 5px;
 		color: white;
 		font-size: 18px;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 	#reservBtn{
 		background: rgb(26, 188, 156);

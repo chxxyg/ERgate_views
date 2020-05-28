@@ -362,7 +362,7 @@
 
 		<!-- 모달~모달~ 핵어렵 -->
 		<!-- 모달 내용(예약하기 부분) -->
-		<div id="open_reservation" class="modal">
+		<div id="open_reservation" class="modal" style="height: 730px;">
 			<div class="modal-title">회의실 예약</div>
 			<div class="modal-content">
 				<table class="reservationContent">
@@ -370,15 +370,14 @@
 						<td id="r1">신청자</td>
 						<td id="r2">케빈</td>
 					</tr>
-
 					<tr>
 						<td id="r1">사용기간</td>
-						<td id="r2"><form name="" action="" method="post">
+						<td id="r2">
+							<form name="" action="" method="post">
 								<input type="date" value="" class="inputs" style="width:140px">
-							</form></td>
-						<!-- <td><form name="" action="" method="post"><input type="date" value=""></form></td> -->
+							</form>
+						</td>
 					</tr>
-
 					<tr>
 						<td id="r1">회의실</td>
 						<td id="r2">
@@ -392,24 +391,21 @@
 							<br>
 							<button id="searchBtn1" class="searchBtn">가용회의실 검색</button> 
 							<br> 
-							<input type="text" id="meetingroomBox" class="inputs" style="height: 30px" readonly>
+							<input type="text" id="meetingroomBox" class="inputs" style="height:30px" readonly>
 						</td>
 					</tr>
-
 					<tr>
 						<td id="r1">사용목적</td>
 						<td id="r2">
 							<input type="text" placeholder="내용을 입력하세요" class="inputs">
 						</td>
 					</tr>
-
 					<tr>
 						<td id="r1">참석자(내부)</td>
 						<td id="r2"><button id="searchBtn2" class="searchBtn" onclick="window.open('meetingroomAddparticipants.jsp','popup_name','_blank')">참석자 지정</button>
 							<textarea cols="60" rows="4" id="partArea" readonly></textarea>
 						</td>
 					</tr>
-
 					<tr>
 						<td id="r3">참석자(외부)</td>
 						<td id="r4"><input type="text" class="inputs"></td>

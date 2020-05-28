@@ -159,6 +159,15 @@
 		font-size: 15px;
 	}
 
+	#minusImg{
+		width: 15px;
+		height: 15px;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 5px;
+	}
+
 	/*select 옵션*/
 	.meetionroom {
 		float: left;

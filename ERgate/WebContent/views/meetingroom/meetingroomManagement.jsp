@@ -322,6 +322,18 @@
 	margin-left: 20px;
 }
 
+.mcImg{
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 70%;
+	float: left;
+	overflow: hidden;
+	margin-top: -20px;
+	margin-left: 20px;
+
+}
+
 /* 위에까지 등록하기 클릭 시 나오는 내용*/
 
 
@@ -488,7 +500,7 @@
 				<li><button class="subBtn">회의실 예약</button></li>
 				<li><button class="subBtn" style="width: 170px">회의실 예약현황</button></li>
 				<li><button class="subBtn subActive" onclick="open_modal();">회의실관리</button></li>
-				<!-- <a id="meetingroomManage" class="open-modal" href="#meetingroomManage" style="display: none;">모달</a> -->
+				
 			</ul>
 		</div>
 
@@ -581,7 +593,7 @@
 						<td class="mmTdContent"><span class="mmLabel">등록일</span class="mmContent">&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-04-04</span></td>
 					</tr>
 					<tr>
-						<td class="mmTdContent"><button class="mmBtn" type="button" onclick="">수정하기</button></td> <!-- 모달로 수정하기 페이지 열기 -->
+						<td class="mmTdContent"><button class="mmBtn" type="button" onclick="">수정하기</button></td> 
 					</tr>
 				</table>
 				

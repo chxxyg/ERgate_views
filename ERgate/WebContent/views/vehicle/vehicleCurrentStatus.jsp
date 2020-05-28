@@ -159,6 +159,15 @@
 		font-size: 15px;
 	}
 
+	#minusImg{
+		width: 15px;
+		height: 15px;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 5px;
+	}
+
 	/*select 옵션*/
 	.vehicle {
 		float: left;
@@ -251,7 +260,7 @@
 
 /* ==========나의 예약 현황 모달========== */
 	
-	.mtrmCurrentInner{
+	.vhclCurrentInner{
 		width: 420px;
 		height: 210px;
 		margin-left: 30px;
@@ -263,32 +272,32 @@
 		border-radius: 5px;
 		padding-top: 10px;
 	}
-	.mcTdImg{
+	.vcTdImg{
 		width: 200px;
 		height: 200px;
 		text-align: center;
 	}
-	.mcImg{
+	.vcImg{
 		width: 160px;
 		height: 160px;
 		border-radius: 50%;
 		margin-bottom: 30px;
 	}
-	.mcTdContent{
+	.vcTdContent{
 		width: 220px;
 		padding-left: 10px;
 	}
-	.mcContent1{
+	.vcContent1{
 		font-weight: 550;
 		font-size: 18px;
 	}
-	.mcContent2{
+	.vcContent2{
 		margin-top: 10px;
 	}
-	.mcContent3{
+	.vcContent3{
 		line-height: 140%;
 	}
-	.mcBtn{
+	.vcBtn{
 		width: 180px;
 		height: 35px;
 		border: 1px solid rgb(160, 160, 160);
@@ -374,7 +383,11 @@
 						<td id="r1">사용기간</td>
 						<td id="r2">
 							<form name="" action="" method="post">
-								<input type="date" value="" class="inputs" style="width:140px">
+								<input type="date" class="inputs" style="width:140px">
+								<input type="time" class="inputs" style="width:120px">
+								<img src="${ pageContext.servletContext.contextPath }/resources/icons/minus.png" id="minusImg">
+								<input type="date" class="inputs" style="width:140px">
+								<input type="time" class="inputs" style="width:120px">
 							</form>
 						</td>
 					</tr>
@@ -383,10 +396,10 @@
 						<td id="r2">
 							<select name="vehicle" class="inputs" style="width:120px">
 								<option selected>업무차량 선택</option>
-								<option value="5F 회의실1">5F 회의실1</option>
-								<option value="5F 회의실">5F 회의실2</option>
-								<option value="5F 회의실">5F 회의실3</option>
-								<option value="6F 회의실">6F회의실</option>
+								<option>5F 회의실1</option>
+								<option>5F 회의실2</option>
+								<option>5F 회의실3</option>
+								<option>6F회의실</option>
 							</select>
 							<br>
 							<button id="searchBtn1" class="searchBtn">가용회의실 검색</button> 

@@ -374,7 +374,11 @@
 						<td id="r1">사용기간</td>
 						<td id="r2">
 							<form name="" action="" method="post">
-								<input type="date" value="" class="inputs" style="width:140px">
+								<input type="date" class="inputs" style="width:140px">
+								<input type="time" class="inputs" style="width:120px">
+								<img src="${ pageContext.servletContext.contextPath }/resources/icons/minus.png" id="minusImg">
+								<input type="date" class="inputs" style="width:140px">
+								<input type="time" class="inputs" style="width:120px">
 							</form>
 						</td>
 					</tr>

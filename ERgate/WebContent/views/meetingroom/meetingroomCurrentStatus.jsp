@@ -94,7 +94,8 @@
 		border: 0px;
 		margin-top: 10px;
 	}
-	/* 나의 예약 버튼*/
+	
+	/* 나의 예약 현황 버튼*/
 	 #myReservationBtn {
 		width: 140px;
 		height: 40px;
@@ -105,7 +106,6 @@
 		font-size: 18px;
 		margin-left: 900px;
 	}
-	
 	 #myReservationBtn:hover {
 		cursor: pointer;
 	}
@@ -340,7 +340,6 @@
 		margin-bottom: 10px;
 	}
 	
-	
 	/* 페이징바 스타일 */
 	.pagingBar {
 		list-style: none;
@@ -372,6 +371,7 @@
 	}
 	/* 페이징바 스타일 */
 	
+/* ==========나의 예약 현황 모달========== */
 
 
 </style>
@@ -380,7 +380,7 @@
 
 	<!-- 메뉴바 -->
 
-	<div class="outer" style="border: 1px solid red">
+	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
 			<span>회의실</span>
@@ -391,7 +391,7 @@
 				<li><button class="subBtn subActive">회의실 예약</button></li>
 			</ul>
 		</div>
-		<div class="contentArea" style="border: 1px solid blue">
+		<div class="contentArea">
 
 			<button class="reservationBtn" onclick="open_modal();">예약하기</button>
 			<a id="open_reservation" class="open-modal" href="" style="display: none;">모달</a> <br> 
@@ -403,10 +403,10 @@
 
 		<!-- 모달~모달~ 핵어렵 -->
 		<!-- 모달 내용(예약하기 부분) -->
-		<div id="reservation" class="modal" style="border: 1px solid red">
+		<div id="reservation" class="modal">
 			<div class="modal-title">회의실 예약</div>
-			<div class="modal-content" style="border: 1px solid blue">
-				<table class="reservationContent" border="1">
+			<div class="modal-content">
+				<table class="reservationContent">
 					<tr>
 						<td id="r1">신청자</td>
 						<td id="r2">케빈과장</td>

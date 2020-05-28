@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>meetingroomCurrentStatus</title>
+<title>vehicleCurrentStatus</title>
 
 <!-- 이 부분  -->
 <jsp:include page="../common/menubar.jsp" />
@@ -160,7 +160,7 @@
 	}
 
 	/*select 옵션*/
-	.meetionroom {
+	.vehicle {
 		float: left;
 	}
 	.inputs {
@@ -202,7 +202,7 @@
 		border-radius: 3px;
 		resize: none;
 	}
-	#meetingroomBox {
+	#vehicleBox {
 		float: left;
 		height: 20px;
 	}
@@ -342,12 +342,12 @@
 	<div class="outer">
 		<div class="topBar">
 			<!-- 메뉴명 -->
-			<span>회의실</span>
+			<span>업무차량</span>
 		</div>
 		<div class="subMenuArea">
 			<ul id="subMenuList">
 				<!-- 서브메뉴 버튼 영역. 기본:subBtn , 활성화시: subBtn subActive 클래스 추가해주세요 -->
-				<li><button class="subBtn subActive">회의실 예약</button></li>
+				<li><button class="subBtn subActive">업무차량 예약</button></li>
 			</ul>
 		</div>
 		<div class="contentArea">
@@ -363,7 +363,7 @@
 		<!-- 모달~모달~ 핵어렵 -->
 		<!-- 모달 내용(예약하기 부분) -->
 		<div id="open_reservation" class="modal" style="height: 730px;">
-			<div class="modal-title">회의실 예약</div>
+			<div class="modal-title">업무차량 예약</div>
 			<div class="modal-content">
 				<table class="reservationContent">
 					<tr>
@@ -379,19 +379,19 @@
 						</td>
 					</tr>
 					<tr>
-						<td id="r1">회의실</td>
+						<td id="r1">업무차량</td>
 						<td id="r2">
-							<select name="meetingroom" class="inputs" style="width:120px">
-								<option selected>회의실 선택</option>
-								<option>5F 회의실1</option>
-								<option>5F 회의실2</option>
-								<option>5F 회의실3</option>
-								<option>6F회의실</option>
+							<select name="vehicle" class="inputs" style="width:120px">
+								<option selected>업무차량 선택</option>
+								<option value="5F 회의실1">5F 회의실1</option>
+								<option value="5F 회의실">5F 회의실2</option>
+								<option value="5F 회의실">5F 회의실3</option>
+								<option value="6F 회의실">6F회의실</option>
 							</select>
 							<br>
 							<button id="searchBtn1" class="searchBtn">가용회의실 검색</button> 
 							<br> 
-							<input type="text" id="meetingroomBox" class="inputs" style="height:30px" readonly>
+							<input type="text" id="vehicleBox" class="inputs" style="height:30px" readonly>
 						</td>
 					</tr>
 					<tr>
@@ -399,16 +399,6 @@
 						<td id="r2">
 							<input type="text" placeholder="내용을 입력하세요" class="inputs">
 						</td>
-					</tr>
-					<tr>
-						<td id="r1">참석자(내부)</td>
-						<td id="r2"><button id="searchBtn2" class="searchBtn" onclick="window.open('meetingroomAddparticipants.jsp','popup_name','_blank')">참석자 지정</button>
-							<textarea cols="60" rows="4" id="partArea" readonly></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td id="r3">참석자(외부)</td>
-						<td id="r4"><input type="text" class="inputs"></td>
 					</tr>
 				</table>
 			</div>
@@ -426,87 +416,87 @@
 			<div class="modal-title">나의 예약현황</div>
 			<div class="modal-content">
 			
-				<table class="mtrmCurrentInner">
+				<table class="vhclCurrentInner">
 					<tr>
-						<td rowspan="5" class="mcTdImg">
-							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vcTdImg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent">
-							<span class="mcContent3">2020-05-05 09:00 <br>
+						<td class="vcTdContent">
+							<span class="vcContent3">2020-05-05 09:00 <br>
 							 ~ 2020-05-05 12:00</span>
 						</td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+						<td class="vcTdContent"><button class="vcBtn" type="button">예약 취소</button></td>
 					</tr>
 				</table>
 				
-				<table class="mtrmCurrentInner">
+				<table class="vhclCurrentInner">
 					<tr>
-						<td rowspan="5" class="mcTdImg">
-							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vcTdImg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent">
-							<span class="mcContent3">2020-05-05 09:00 <br>
+						<td class="vcTdContent">
+							<span class="vcContent3">2020-05-05 09:00 <br>
 							 ~ 2020-05-05 12:00</span>
 						</td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+						<td class="vcTdContent"><button class="vcBtn" type="button">예약 취소</button></td>
 					</tr>
 				</table>
 				
-				<table class="mtrmCurrentInner">
+				<table class="vhclCurrentInner">
 					<tr>
-						<td rowspan="5" class="mcTdImg">
-							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vcTdImg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent">
-							<span class="mcContent3">2020-05-05 09:00 <br>
+						<td class="vcTdContent">
+							<span class="vcContent3">2020-05-05 09:00 <br>
 							 ~ 2020-05-05 12:00</span>
 						</td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+						<td class="vcTdContent"><button class="vcBtn" type="button">예약 취소</button></td>
 					</tr>
 				</table>
 				
-				<table class="mtrmCurrentInner">
+				<table class="vhclCurrentInner">
 					<tr>
-						<td rowspan="5" class="mcTdImg">
-							<img class="mcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
+						<td rowspan="5" class="vcTdImg">
+							<img class="vcImg" src="${ pageContext.servletContext.contextPath }/resources/siteImg/크기변환_KENN4462-1.jpg">
 						</td>
-						<td class="mcTdContent"><span class="mcContent1">3층 회의실1</span></td>
+						<td class="vcTdContent"><span class="vcContent1">3층 회의실1</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><span class="mcContent2">팀 미팅</span></td>
+						<td class="vcTdContent"><span class="vcContent2">팀 미팅</span></td>
 					</tr>
 					<tr>
-						<td class="mcTdContent">
-							<span class="mcContent3">2020-05-05 09:00 <br>
+						<td class="vcTdContent">
+							<span class="vcContent3">2020-05-05 09:00 <br>
 							 ~ 2020-05-05 12:00</span>
 						</td>
 					</tr>
 					<tr>
-						<td class="mcTdContent"><button class="mcBtn" type="button">예약 취소</button></td>
+						<td class="vcTdContent"><button class="vcBtn" type="button">예약 취소</button></td>
 					</tr>
 				</table>
 

@@ -91,9 +91,9 @@
 
 /* 모달팝업 스타일 */
 .modal {
-	width: 1000px;
+	width: 850px;
 	max-width: 2000px;
-	height: 800px; /* 모달 크기지정 */
+	height: 700px; /* 모달 크기지정 */
 	padding: 0px;
 	border-radius: 0px;
 }
@@ -132,6 +132,9 @@
 /*등록하기 버튼*/
 /*등록하기 클릭 시 나오는 내용*/
 
+
+
+
 /*회의실 등록 부분 content*/
 .meetingroomEnroll {
 	width: 800px;
@@ -139,6 +142,61 @@
 	border-top: 2px solid lightgray;
 	border-bottom: 2px solid lightgray;
 }
+/* 회의실 목록 */
+#mtrmManageOuter {
+	width: 1400px;
+	height: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.mtrmManageInner {
+	width: 520px;
+	height: 230px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	border: 1px solid rgb(160, 160, 160);
+	border-radius: 5px;
+	padding-top: 10px;
+	
+}
+
+.mmTdImg {
+	width: 250px;
+	height: 220px;
+	text-align: center;
+}
+
+.mmImg {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	margin-bottom: 30px;
+}
+
+.mmTdContent {
+	width: 270px;
+	padding-left: 20px;
+}
+
+.mmLabel {
+	font-weight: 550;
+}
+
+.mmBtn {
+	width: 180px;
+	height: 35px;
+	border: 1px solid rgb(160, 160, 160);
+	color: rgb(160, 160, 160);
+	background: none;
+	border-radius: 5px;
+	font-size: 16px;
+}
+/* 회의실 목록 */
+
 
 /* 예약하기 버튼*/
 .btns {
@@ -183,7 +241,7 @@
 	text-align: center;
 	font-weight: 400px;
 	font-size: 16px;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .mrName2 {
@@ -198,6 +256,7 @@
 	font-weight: 400px;
 	font-size: 16px;
 	border-style: none;
+	border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .mrLocation2 {
@@ -211,6 +270,7 @@
 	text-align: center;
 	font-weight: 400px;
 	font-size: 16px;
+	border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .mrPersonnel2 {
@@ -230,6 +290,18 @@
 	height: 30px;
 	width: 350px;
 	margin-left: 5px;
+	border-radius: 5px 5px 5px 5px;
+    border:1px solid lightgray;
+}
+
+.meetingroomEnroll{
+	border-collapse: collapse;
+	border-bottom: 3px solid lightgray;
+	border-top: 3px solid #dddd;
+	border-left: none;
+	border-right: none;
+	font-size: 13px;
+
 }
 
 /*회의실 이미지 관련 css*/
@@ -250,11 +322,11 @@
 	margin-left: 20px;
 }
 
-/*등록하기 클릭 시 나오는 내용*/
+/* 위에까지 등록하기 클릭 시 나오는 내용*/
 
-/* 수정하기 클릭 시 나오는 내용*/
 
-/*회의실 등록 부분 content*/
+
+/* 아래부터 회의실 수정 부분 content*/
 .meetingroomEdit {
 	width: 800px;
 	height: 500px;
@@ -262,7 +334,7 @@
 	border-bottom: 2px solid lightgray;
 }
 
-/* 예약하기 버튼*/
+/* 수정하기 버튼*/
 .btns {
 	margin-left: 30%;
 	margin-top: 30px;
@@ -283,7 +355,7 @@
 	cursor: pointer;
 }
 
-/* 취소 버튼 */
+/* 삭제 버튼 */
 .deleteBtn {
 	width: 140px;
 	height: 40px;
@@ -298,135 +370,75 @@
 	cursor: pointer;
 }
 
-.mrNameEdit {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-	border-bottom: 1px solid lightgray;
+.mrNameEdit{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(190, 190, 190);
 }
 
-.mrNameEdit2 {
-	border-bottom: 1px solid lightgray;
-	font-size: 14px;
+.mrNameEdit2{
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;  
 }
 
-.mrLocationEdit {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-	border-style: none;
+.mrLocationEdit{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+    border-style: none;
+    border-bottom: 1px solid rgb(190, 190, 190);
 }
 
-.mrLocationEdit {
-	border-bottom: 1px solid lightgray;
-	font-size: 14px;
+.mrLocationEdit2{
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+}
+.mrPersonnelEdit{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+.mrPersonnelEdit2{
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+}
+.mrImgEdit{
+    background-color: lightgray;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
 }
 
-.mrPersonnelEdit {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
+.meetingroomEdit input{
+    height: 30px;
+    width: 350px;
+    margin-left: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border:1px solid lightgray;
+}
+.meetingroomEdit{
+    border-collapse: collapse;
+	border-bottom: 3px solid lightgray;
+	border-top: 3px solid #dddd;
+	border-left: none;
+	border-right: none;
+	font-size: 13px;
+
 }
 
-.mrPersonnelEdit2 {
-	border-bottom: 1px solid lightgray;
-	font-size: 14px;
-}
-
-.mrImgEdit {
-	background-color: lightgray;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	font-weight: 400px;
-	font-size: 16px;
-}
-
-.meetingroomEnroll input {
-	height: 30px;
-	width: 350px;
-	margin-left: 5px;
-}
-
-.meetingroomImg {
-	width: 150px;
-	height: 150px;
-	float: left;
-}
-
-.profile {
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-	border-radius: 50%;
-	float: left;
-	overflow: hidden;
-	margin-top: 10px;
-	margin-left: 20px;
-}
-
-/* 회의실 목록 */
-#mtrmManageOuter {
-	width: 1400px;
-	height: 500px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.mtrmManageInner {
-	width: 520px;
-	height: 230px;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	display: inline-block;
-	border: 1px solid rgb(160, 160, 160);
-	border-radius: 5px;
-	padding-top: 10px;
-}
-
-.mmTdImg {
-	width: 250px;
-	height: 220px;
-	text-align: center;
-}
-
-.mmImg {
-	width: 180px;
-	height: 180px;
-	border-radius: 50%;
-	margin-bottom: 30px;
-}
-
-.mmTdContent {
-	width: 270px;
-	padding-left: 20px;
-}
-
-.mmLabel {
-	font-weight: 550;
-}
-
-.mmBtn {
-	width: 180px;
-	height: 35px;
-	border: 1px solid rgb(160, 160, 160);
-	color: rgb(160, 160, 160);
-	background: none;
-	border-radius: 5px;
-	font-size: 16px;
-}
-/* 회의실 목록 */
 
 /* 페이징바 스타일 */
 .pagingBar {

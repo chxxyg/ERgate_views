@@ -211,13 +211,14 @@
 		</div>
 		<div class="contentArea">
 			<h2 style="display: inline-block; margin-left: 530px;">
-				<span class="material-icons"> arrow_left </span> 2020년 5월
+				<span id="arrowLeft" class="material-icons"> arrow_left </span>
+				<b id="calYear"></b>년 <b id="calMonth"></b>월
 				<svg class="schedule_icons" xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24" fill="black" width="48px" height="48px">
 				<path
 						d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" />
 				<path d="M0 0h24v24H0z" fill="none" /></svg>
-				<span class="material-icons"> arrow_right </span>
+				<span id="arrowRight" class="material-icons"> arrow_right </span>
 			</h2>
 			<br> <br>
 
@@ -356,5 +357,40 @@
 			<!-- 페이징바 -->
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function() {
+				var date = new Date();
+				var year = date.getFullYear(); 
+				var month= date.getMonth() +1 ;
+				
+				$("#calYear").text(year);
+				$("#calMonth").text(month);
+				
+			$("#arrowLeft").click(function() {
+				console.log("클릭");
+				month = month-1;
+				if(month == 1){
+					month = 12;
+					year = year -1;
+				}
+				$("#calMonth").text(month);
+				$("#calYear").text(year);
+				
+			});
+
+			$("#arrowRight").click(function() {
+				console.log("클릭");
+				month = month + 1;
+				if(month > 12){
+					month = 1;
+					year = year + 1;
+				}
+				$("#calMonth").text(month);
+				$("#calYear").text(year);
+			});
+
+		});
+	</script>
 </body>
 </html>
